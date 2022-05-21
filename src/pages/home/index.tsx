@@ -1,10 +1,12 @@
 import "./index.css"
+import Sidebar from '../../components/sidebar'
 
 function Index() {
     
   return (
         <div className='home'>
-             <h1 className='title'> Social Education </h1>
+              <Sidebar/>
+              <div className="homeContainer"> container</div>
         </div>
     
   )

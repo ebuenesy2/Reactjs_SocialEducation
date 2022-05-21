@@ -3,7 +3,7 @@ import "./index.css"
 function Index() {
     
   return (
-        <div className='home'>
+        <div className='list'>
              <h1 className='title'> List </h1>
         </div>
     
