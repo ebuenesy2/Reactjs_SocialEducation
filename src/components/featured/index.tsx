@@ -22,7 +22,7 @@ export const Index =(props: any) => {
                           thickness={5}
                           percentileIcon={true}
                           /* backColor={"#0052CC"} */
-                          text={"Hak"} 
+                          text={"Balance"} 
                           value={120}
                           maxValue={200}
                           textColor={"#0052CC"}

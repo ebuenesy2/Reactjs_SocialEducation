@@ -24,7 +24,6 @@ function Index() {
                   <div className="Charts"> 
                         <Featured />
                         <Chart />
-                        
                   </div>
                   
                   Home
