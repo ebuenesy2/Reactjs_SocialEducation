@@ -5,12 +5,12 @@ import "./index.css"
 function Index() {
     
   return (
-        <div className='sabit'>
+        <div className='message'>
                <Sidebar/>
-               <div className="sabitHome">
+               <div className="messageHome">
                     <Navbar />
-                    <div className="sabitContainer">
-                           <p>  Sbit </p>
+                    <div className="messageContainer">
+                        <p>  Deneme </p>
                     </div>
                </div>
         </div>

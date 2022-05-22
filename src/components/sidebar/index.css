@@ -48,13 +48,17 @@ hr {
     background-color: #ece8ff;
  }
 
+ .sidebar .center ul li a{ 
+   text-decoration: none; /* Yazı Alt ve Üst Çizgileri Kaldırıyor */
+}
+
  .sidebar .center ul li .icon{
-    font-size: 18px;
+    font-size: 20px;
     color: #7451f8;
  }
 
  .sidebar .center ul li span{
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     color: #888;
     margin-left: 10px;

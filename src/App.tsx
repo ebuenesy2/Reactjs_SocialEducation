@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import NotFound from './pages/notfound';
 import Home from './pages/home';
 import Login from './pages/login';
+import Message from './pages/message';
 
  export default function App() {
   return (
@@ -12,6 +13,7 @@ import Login from './pages/login';
           <Route path="*" element={<NotFound/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/message" element={<Message/>} />
          
        </Routes>
     </React.Fragment>

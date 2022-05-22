@@ -21,46 +21,64 @@ function Index() {
                 <ul>
                    <p className="title">  MAIN</p>
                    <li>
-                      <DashboardIcon className="icon"/>
-                      <span> Dashboard </span>
+                     <a href="/">
+                        <DashboardIcon className="icon"/>
+                        <span> Dashboard </span>
+                     </a>
                    </li>
 
                    <p className="title">  LISTS</p>
                    <li>
-                      <PersonIcon className="icon" />
-                      <span> USERS </span>
+                     <a href="/#">
+                        <PersonIcon className="icon" />
+                        <span> USERS </span>
+                     </a>
                    </li>
                    <li>
-                      <StoreIcon className="icon" />
-                      <span> Products </span>
+                     <a href="/#">
+                        <StoreIcon className="icon" />
+                        <span> Products </span>
+                     </a>
                    </li>
                    <li>
-                      <PaymentIcon className="icon" />
-                      <span> Orders </span>
+                     <a href="/#">
+                        <PaymentIcon className="icon" />
+                        <span> Orders </span>
+                     </a>
                    </li>
 
                    <p className="title">  USEFUL</p>
                    <li>
-                      <NotificationsIcon className="icon" />
-                      <span> Notifications </span>
+                     <a href="/#">
+                        <NotificationsIcon className="icon" />
+                        <span> Notifications </span>
+                     </a>
                    </li>
                    <li>
-                      <MailOutlineIcon className="icon" />
-                      <span> Messages </span>
+                     <a href="/message">
+                        <MailOutlineIcon className="icon" />
+                        <span> Messages </span>
+                     </a>
                    </li>
 
                    <p className="title">  SERVICE</p>
                    <li>
-                      <SettingsSystemDaydreamIcon className="icon" />
-                      <span> System Health </span>
+                     <a href="/#">
+                        <SettingsSystemDaydreamIcon className="icon" />
+                        <span> System Health </span>
+                     </a>
                    </li>
                    <li>
-                      <SettingsBrightnessIcon className="icon" />
-                      <span> Logs </span>
+                     <a href="/#">
+                        <SettingsBrightnessIcon className="icon" />
+                        <span> Logs </span>
+                     </a>                     
                    </li>
                    <li>
-                      <SettingsIcon className="icon" />
-                      <span> Settings </span>
+                     <a href="/#">
+                        <SettingsIcon className="icon" />
+                        <span> Settings </span>
+                     </a>
                    </li>
                   
 

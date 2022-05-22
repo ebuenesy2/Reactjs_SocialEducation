@@ -1,7 +1,5 @@
 .home { display: flex;}
-.home .homeContainer {
-     flex: 1;
-}
+.home .homeContainer { flex: 1; }
 
 .home .homeContainer .Widgets {
      display: flex;
