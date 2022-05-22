@@ -3,7 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 
 export const Index =(props: any) => {
-  console.log("proops:",props);
+ //console.log("proops:",props);
 
   function perc2color(perc:any) { //! Otamatik Renk Seçme
     var r, g, b = 0;

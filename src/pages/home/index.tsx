@@ -4,6 +4,7 @@ import Navbar from '../../components/navbar';
 import Widget from '../../components/widgets';
 import Featured from '../../components/featured';
 import Chart from '../../components/charts';
+import Table from '../../components/table';
 
 
 
@@ -24,6 +25,11 @@ function Index() {
                   <div className="Charts"> 
                         <Featured />
                         <Chart />
+                  </div>
+
+                  <div className="listContainer"> 
+                     <div className="listTitle"> Lastest Transactions</div>
+                        <Table />
                   </div>
                   
                   Home
