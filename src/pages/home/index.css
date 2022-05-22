@@ -1,5 +1,21 @@
 .home { display: flex;}
 .home .homeContainer {
-    
      flex: 1;
+}
+
+.home .homeContainer .Widgets {
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     flex-direction: row;
+     justify-content: space-evenly;
+     gap: 15px;
+     padding: 15px;
+}
+
+.home .homeContainer .Charts {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     padding: 5px 20px;
 }

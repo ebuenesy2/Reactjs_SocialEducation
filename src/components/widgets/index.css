@@ -1,0 +1,74 @@
+.widget{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
+    border-radius: 15px;
+    height: 150px;
+}
+
+.widget .left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.widget .left .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(160, 160, 160);
+}
+
+.widget .left .counter {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.widget .left .link {
+    width: max-content;
+    font-size: 12px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+.widget .right  {
+   width: 90px;
+}
+
+.widget .right .percentafe {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.widget .right .percentafe.positive { color: green; }
+.widget .right .percentafe.negative { color: red; }
+
+.widget .right .iconBox {
+    position: relative;
+    font-size: 50px;
+    padding: 8px;
+    background-color: rgba(128 ,0, 128, 0.541);
+    border-radius: 10px;
+    align-items: flex-end;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 4px;
+}
+
+.widget .right .icon {
+    position: absolute;
+    font-size: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    align-items: flex-end;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -8px;
+    margin-left: -8px;
+    
+}
