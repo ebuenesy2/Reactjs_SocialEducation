@@ -32,8 +32,6 @@ function Index() {
                         <Table />
                   </div>
                   
-                  Home
-                  
               </div>
         </div>
     

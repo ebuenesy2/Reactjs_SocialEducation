@@ -1,6 +1,7 @@
 import "./index.css"
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PersonIcon from '@material-ui/icons/Person';
+import PeopleIcon from '@material-ui/icons/People';
 import StoreIcon from '@material-ui/icons/Store';
 import PaymentIcon from '@material-ui/icons/Payment';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -8,6 +9,17 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import SettingsSystemDaydreamIcon from '@material-ui/icons/SettingsSystemDaydream';
 import SettingsBrightnessIcon from '@material-ui/icons/SettingsBrightness';
 import SettingsIcon from '@material-ui/icons/Settings';
+import ListIcon from '@material-ui/icons/List';
+import NoteIcon from '@material-ui/icons/Note';
+import PermMediaIcon from '@material-ui/icons/PermMedia';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
+import ContactPhoneOutlinedIcon from '@material-ui/icons/ContactPhoneOutlined';
+import CalendarTodayOutlinedIcon from '@material-ui/icons/CalendarTodayOutlined';
+import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import VideocamIcon from '@material-ui/icons/Videocam';
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 
 function Index() {
     
@@ -36,6 +48,67 @@ function Index() {
                    </li>
                    <li>
                      <a href="/#">
+                        <PeopleIcon className="icon" />
+                        <span> Clients </span>
+                     </a>
+                   </li>
+
+                   <p className="title">  Education </p>
+                   <li>
+                     <a href="/#">
+                        <HelpOutlineIcon className="icon" />
+                        <span> Question </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <MenuBookIcon className="icon" />
+                        <span> Trial Exams </span>
+                     </a>
+                   </li>
+                   <p className="title">  Lesson </p>
+                   <li>
+                     <a href="/#">
+                        <VideocamIcon className="icon" />
+                        <span> Lesson Video </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <InsertDriveFileIcon className="icon" />
+                        <span> Lesson Notes </span>
+                     </a>
+                   </li>
+
+                   <p className="title">  USEFUL</p>
+                   <li>
+                     <a href="/message">
+                        <MailOutlineIcon className="icon" />
+                        <span> Messages </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <NotificationsIcon className="icon" />
+                        <span> Notifications </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <NoteIcon className="icon" />
+                        <span> Notes </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <ListIcon className="icon" />
+                        <span> Todo List </span>
+                     </a>
+                   </li>
+
+                   <p className="title">  SHOPS </p>
+                   <li>
+                     <a href="/#">
                         <StoreIcon className="icon" />
                         <span> Products </span>
                      </a>
@@ -47,17 +120,29 @@ function Index() {
                      </a>
                    </li>
 
-                   <p className="title">  USEFUL</p>
+                   <p className="title">  App </p>
                    <li>
                      <a href="/#">
-                        <NotificationsIcon className="icon" />
-                        <span> Notifications </span>
+                        <PermMediaIcon className="icon" />
+                        <span> Galery </span>
                      </a>
                    </li>
                    <li>
-                     <a href="/message">
-                        <MailOutlineIcon className="icon" />
-                        <span> Messages </span>
+                     <a href="/#">
+                        <FileCopyOutlinedIcon className="icon" />
+                        <span> FileManager </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <ContactPhoneOutlinedIcon className="icon" />
+                        <span> Contact </span>
+                     </a>
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <CalendarTodayOutlinedIcon className="icon" />
+                        <span> Calendar </span>
                      </a>
                    </li>
 
@@ -73,6 +158,12 @@ function Index() {
                         <SettingsBrightnessIcon className="icon" />
                         <span> Logs </span>
                      </a>                     
+                   </li>
+                   <li>
+                     <a href="/#">
+                        <PersonOutlinedIcon className="icon" />
+                        <span> Profile </span>
+                     </a>
                    </li>
                    <li>
                      <a href="/#">
