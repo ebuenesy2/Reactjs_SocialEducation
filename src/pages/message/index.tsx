@@ -31,6 +31,10 @@ function Index() {
                                   <div className="messageContainerLeftIcon"> <GroupIcon className="icon" /> </div>
                             </div>
                             <div className="messageContainerLeftTitle"> Chats</div>
+                            <div className="messageInbox">
+                                 
+                            </div>
+
                         </div>
                         <div className="messageContainerRight">
                             <div className="messageContainerRightTop">
@@ -111,8 +115,7 @@ function Index() {
                                                <div className="chatMessage" > There are many variations of passages of Lorem Ipsum available </div>
                                                <div className="chatStatus" >  <p className="chatTime"> 08:45</p> <DoneIcon className="chatIcon" />  </div>
                                           </div>
-                                      </li>
-                                      
+                                      </li>                                      
                                   </ul>
                              </div>
                              <div className="messageContainerRightBottomText">
