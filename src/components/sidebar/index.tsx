@@ -20,6 +20,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 
 function Index() {
     
@@ -55,7 +56,7 @@ function Index() {
 
                    <p className="title">  Education </p>
                    <li>
-                     <a href="/#">
+                     <a href="/question">
                         <HelpOutlineIcon className="icon" />
                         <span> Question </span>
                      </a>
@@ -147,6 +148,12 @@ function Index() {
                    </li>
 
                    <p className="title">  SERVICE</p>
+                   <li>
+                     <a href="/#">
+                        <LiveHelpIcon className="icon" />
+                        <span> Faq </span>
+                     </a>
+                   </li>
                    <li>
                      <a href="/#">
                         <SettingsSystemDaydreamIcon className="icon" />
