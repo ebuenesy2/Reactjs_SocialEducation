@@ -11,11 +11,35 @@
     border-radius: 15px;
 }
 
+hr {
+    height: 4px !important;
+    border: 0.5px solid rgb(230,227,227);
+}
+
 .avatar{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    border:1px solid;
+    vertical-align: middle;
  }
+
+ .avatarStatus {
+     content: ' ';
+     width: 11px;
+     height: 11px;
+     border-radius: 40px;
+     background-color: green;
+     position: absolute;
+     border: 1px solid;
+     display: inline-block;
+     bottom: 2px;
+     left: 46px;
+ }
+
+ .avatar:hover{ border:2px solid red; }
 
 .message .messageContainer .messageContainerLeft {
     width: 375px;
@@ -23,7 +47,6 @@
 }
 
 .message .messageContainer .messageContainerLeft .messageContainerLeftIconBox {
- 
     width: 100%;
     height: 58px;
     display: flex;
@@ -45,16 +68,23 @@
     border-radius: 15px;
 }
 
+.messageContainerLeftIcon:hover { border: 1px solid red; }
+
 .message .messageContainer .messageContainerLeft .messageContainerLeftIconBox .messageContainerLeftIcon .icon {
    font-size: 30px;
    color: chocolate;
 }
 
-.message .messageContainer .messageContainerLeft .messageContainerLeftTitle {
+.messageContainerLeft .messageContainerLeftTitle {
     font-size: 2rem;
     margin: 25px 20px 15px 20px;
     font-weight: 900;
     color: #6439ff;
+}
+
+.messageContainerLeftBottom {
+    width: 100%;
+    overflow: overlay;
 }
 
 .message .messageContainer .messageContainerRight {
@@ -74,6 +104,35 @@
     padding: 25px 30px;
 }
 
+.messageInbox {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+
+.messageInboxInfo { display: flex;  transition:all 0.5s ease; }
+
+.messageInboxInfo:hover .messageContainerRightTopProfileInfo { border: 1px solid red; }
+.messageInboxInfo:hover .avatar { border: 1px solid red; }
+
+.messageInboxInfo .messageContainerRightTopProfileInfo {
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: #6439ff;
+    color: azure;
+    margin-right: 30px;
+    gap: 10px;
+    position: relative;
+}
+
 
 .message .messageContainer .messageContainerRight .messageContainerRightTop .messageContainerRightTopProfileInfo {
     display: flex;
@@ -85,18 +144,24 @@
     align-items: center;
  }
 
-.message .messageContainer .messageContainerRight .messageContainerRightTop .messageContainerRightTopProfileInfo .messageContainerRightTopProfileInfoTitle {
+ .messageContainerRightTopProfileInfoTitle {
    display: flex;
    flex-direction: column;
 }
 
-.message .messageContainer .messageContainerRight .messageContainerRightTop .messageContainerRightTopProfileInfo .messageContainerRightTopProfileInfoTitle .nameSurname {
+.messageContainerRightTopProfileInfoTitle .nameSurname {
    font-size: 14px;
    font-weight: 900;
    margin: 0;
  }
 
- .message .messageContainer .messageContainerRight .messageContainerRightTop .messageContainerRightTopProfileInfo .messageContainerRightTopProfileInfoTitle .status {
+ .messageContainerRightTopProfileInfoTitle .message {
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0;
+  }
+
+ .messageContainerRightTopProfileInfo .messageContainerRightTopProfileInfoTitle .status {
     font-size: 12px;
     font-weight: 400;
   }
@@ -118,10 +183,7 @@
     border-radius: 8px;
  }
 
- hr {
-    height: 4px !important;
-    border: 0.5px solid rgb(230,227,227);
-}
+ .messageContainerRightTop .messageContainerRightTopIconBox .icon:hover { border: 1px solid red; }
 
 .message .messageContainer .messageContainerRight .messageContainerRightBottom {
     width: 100%;

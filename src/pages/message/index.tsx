@@ -16,7 +16,6 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAlt';
 
 function Index() {
-    
   return (
         <div className='message'>
                <Sidebar/>
@@ -31,8 +30,142 @@ function Index() {
                                   <div className="messageContainerLeftIcon"> <GroupIcon className="icon" /> </div>
                             </div>
                             <div className="messageContainerLeftTitle"> Chats</div>
-                            <div className="messageInbox">
-                                 
+                             <hr />
+                            <div className="messageContainerLeftBottom">
+                                <ul className="messageInbox">
+                                     <li onClick={ ()=> { alert("gelenMessage")} } className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/1.jpg"  alt="" />
+                                            <div className="avatarStatus" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Olga Sukhorukova  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div style={{ backgroundColor:"red" }} className="avatarStatus" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/3.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/4.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+
+                                     <li className="messageInboxInfo">
+                                         <div className="messageContainerRightTopProfileInfo">
+                                            <img className="avatar" src="./assets/img/2.jpg"  alt="" />
+                                            <div className="messageContainerRightTopProfileInfoTitle">
+                                                <p className="nameSurname"> Teresa McCall  </p>
+                                                <p className="message">  Project has been already </p>
+                                                <p className="status">  08:45 </p>
+                                            </div>
+                                         </div>
+                                     </li>
+                                </ul>
                             </div>
 
                         </div>
