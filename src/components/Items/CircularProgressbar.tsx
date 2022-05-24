@@ -63,7 +63,7 @@ export const Index =(props: any) => {
                       <p style={{ marginTop:"auto", marginBottom:"auto",  color: props.textColor ? props.textColor : '#344563', fontSize: props.textSize ? props.textSize :  "12px", fontWeight: props.textWeight ? props.textWeight : "normal"}}> {props.value} </p> 
                       <p style={{ marginTop:"auto", marginBottom:"auto",  fontSize: props.textSize ? props.textSize :  "12px", fontWeight: props.textWeight ? props.textWeight : "normal" }}>  {props.percentileIcon && "%" }  </p>  
                   </div>
-                  <div style={{fontWeight:props.subtextWeight ? props.subtextWeight : "normal"  ,fontSize: props.subTextSize ? props.subTextSize : "16px", textTransform:"uppercase" , marginTop:"-18px"}} > {props.text} </div>
+                  <div style={{fontWeight:props.subtextWeight ? props.subtextWeight : "normal"  ,fontSize: props.subTextSize ? props.subTextSize : "16px", textTransform:"uppercase" , marginTop: props.marginTop ? props.marginTop : "0px"}} > {props.text} </div>
               </div>
             
 
