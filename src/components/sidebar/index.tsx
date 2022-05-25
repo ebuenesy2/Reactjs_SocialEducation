@@ -42,7 +42,7 @@ function Index() {
 
                    <p className="title">  LISTS</p>
                    <li>
-                     <a href="/#">
+                     <a href="/users">
                         <PersonIcon className="icon" />
                         <span> USERS </span>
                      </a>

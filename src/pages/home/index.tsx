@@ -28,8 +28,8 @@ function Index() {
                   </div>
 
                   <div className="listContainer"> 
-                     <div className="listTitle"> Lastest Transactions</div>
-                        <Table />
+                     <div className="listTitle">  Tüm Kullanıcılar  </div>
+                        <Table pageSize="6" />
                   </div>
                   
               </div>

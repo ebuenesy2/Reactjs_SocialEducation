@@ -72,7 +72,7 @@ export const Index =(props: any) => {
              <DataGrid
               rows={products}
               columns={columns}
-              pageSize={5}
+              pageSize={props.pageSize ? props.pageSize : "8"}
               checkboxSelection
               disableSelectionOnClick
               components={{
