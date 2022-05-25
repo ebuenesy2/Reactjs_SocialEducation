@@ -33,7 +33,7 @@ function Index() {
                              <hr />
                             <div className="messageContainerLeftBottom">
                                 <ul className="messageInbox">
-                                     <li onClick={ ()=> { alert("gelenMessage")} } className="messageInboxInfo">
+                                     <li onClick={ ()=> { alert("gelenMessage")} } className="messageInboxInfo active">
                                          <div className="messageContainerRightTopProfileInfo">
                                             <img className="avatar" src="./assets/img/1.jpg"  alt="" />
                                             <div className="avatarStatus" />
@@ -253,7 +253,6 @@ function Index() {
                              </div>
                              <div className="messageContainerRightBottomText">
                                  <div className="messageContainerRightBottomTextTop">
-                                        <img className="avatar" src="./assets/img/2.jpg"  alt="" />
                                          <AttachFileIcon style={{ color:"blue"}} className="icon" />
                                          <SentimentSatisfiedAltIcon style={{ color:"blue"}} className="icon" />
                                          <textarea placeholder="Send Message"></textarea>
