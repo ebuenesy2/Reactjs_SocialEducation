@@ -6,6 +6,7 @@ import Login from './pages/login';
 import Users from './pages/users';
 import Question from './pages/question';
 import Message from './pages/message';
+import Logs from './pages/logs';
 
 
  export default function App() {
@@ -19,6 +20,7 @@ import Message from './pages/message';
           <Route path="/users" element={<Users/>} />
           <Route path="/question" element={<Question/>} />
           <Route path="/message" element={<Message/>} />
+          <Route path="/logs" element={<Logs/>} />
         
         
          
