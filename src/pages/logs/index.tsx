@@ -1,7 +1,10 @@
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
-import Timeline from "../../components/timeline";
-import "./index.css"
+import "./index.css";
+
+//! Timeline
+import TimeLine from '../../components/timeline';
+
 
 function Index() {
     
@@ -13,7 +16,7 @@ function Index() {
                     <div className="logsContainer">
                           
                           <div className="timeLineBox">
-                                     <Timeline />
+                                 <TimeLine />
                           </div>
 
                     </div>
