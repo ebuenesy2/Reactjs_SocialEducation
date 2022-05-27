@@ -2,3 +2,85 @@
     height: 94vh;
     overflow: auto;
 }
+
+
+.timeLineContainer .description {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.timeLineContainer .logLocation {
+   display: flex;
+   gap:5px;
+   margin-top: 15px;
+}
+
+.timeLineContainer .logLocation .visibility {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0052CC;
+    margin-top: 3px; 
+}
+
+.timeLineContainer .logLocation .table ,
+.timeLineContainer .logLocation .title  {
+    width: auto;
+    height: 35px;
+    background-color: #0052CC;
+    color: azure;
+    text-align: center;
+    padding: 4px;
+    vertical-align: middle;
+    text-decoration: auto;
+ }
+
+ .timeLineContainer .logLocation .title {
+     background-color: #6a1b9a;
+ }
+
+ .timeLineContainer .logIdPanel {
+    display: flex;
+    gap:5px;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.timeLineContainer .created_by {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1px;
+}
+
+
+.timeLineContainer .created_byPanel {
+    width: auto;
+    height: 35px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;    
+    text-decoration: none; /* Yazı Alt ve Üst Çizgileri Kaldırıyor */
+    background-color: black;   
+    border-radius: 15px;
+}
+
+.timeLineContainer .created_byPanel:hover {
+    background-color: #516ccf;
+    color: aliceblue;
+}
+
+.timeLineContainer .created_byPanel .created_byNameSurname {
+    margin-top: 3px;
+    font-size: 16px;
+    font-weight: 900;
+    color: aliceblue;
+}

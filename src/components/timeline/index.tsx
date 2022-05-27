@@ -4,14 +4,14 @@ import "./index.css";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-//! icon
-import AlarmOnIcon from '@material-ui/icons/AlarmOn';
-import SchoolIcon from '@material-ui/icons/School';
-import WorkIcon from '@material-ui/icons/Work';
 
+//! Metariul
+import Alert from '@material-ui/lab/Alert';
 
-
-
+//! İcon
+import PersonIcon from '@material-ui/icons/Person';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import FingerprintIcon from '@material-ui/icons/Fingerprint';
 
 export const Index =(props: any) => {
   console.log("proops:",props);
@@ -20,97 +20,179 @@ export const Index =(props: any) => {
   return (
         <div className='list'>
 
-            <VerticalTimeline>
-              <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                    date="2011 - present"
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    icon={<WorkIcon />}
-                    >
-                    <h3 className="vertical-timeline-element-title">Creative Director  </h3>
-                    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                    <p>
-                          Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-                    </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                  className="vertical-timeline-element--work"
-                  date="2010 - 2011"
-                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                  icon={<WorkIcon />}
-                  >
-                  <h3 className="vertical-timeline-element-title">Art Director</h3>
-                  <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-                  <p>
-                        Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-                  </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
+          <VerticalTimeline>
+
+            <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2008 - 2010"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              date="20th may, 2010 - 15:25:90"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<WorkIcon />}
-              >
-              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-              <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-              <p>
-                    User Experience, Visual Design
-              </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
+              icon={<PersonIcon />}
+            >
+
+            <div className="timeLineContainer">
+                  
+                    <Alert variant="filled" severity="success">
+                      Dosya Ekleme Başarılı
+                  </Alert>
+                
+                  <div className="logLocation">
+                      <VisibilityIcon className="visibility" />
+                      <a className="table"> file </a>
+                      <a className="title"> file_add_successful </a>
+                  </div>
+                  <div className="logIdPanel">
+                        <FingerprintIcon />
+                        <div className="logId"> 1</div>
+                  </div>
+                
+
+                  <a className="created_byPanel"  href="/user/1">
+                        <PersonIcon /> 
+                        <p className="created_byNameSurname"> Peter Butusov  </p>
+                  </a>
+            </div>
+              
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date="2006 - 2008"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              date="20th may, 2010 - 15:25:90"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<WorkIcon />}
-              >
-              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-              <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-              <p>
-                    User Experience, Visual Design
-              </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="April 2013"
-              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-              icon={<SchoolIcon />}
-              >
-              <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-              <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-              <p>
-                    Strategy, Social Media
-              </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="November 2012"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                icon={<SchoolIcon />}
-                >
-                <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-                <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-                <p>
-                      Creative Direction, User Experience, Visual Design
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="2002 - 2006"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                icon={<SchoolIcon />}
-                >
-                <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-                <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-                <p>
-                      Creative Direction, Visual Design
-                </p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-                icon={<AlarmOnIcon />}
-              />
+              icon={<PersonIcon />}
+            >
+              
+            <div className="timeLineContainer">
+                  
+                    <Alert variant="filled" severity="success">
+                      Dosya Ekleme Başarılı
+                  </Alert>
+                
+                  <div className="logLocation">
+                      <VisibilityIcon className="visibility" />
+                      <a className="table"> file </a>
+                      <a className="title"> file_add_successful </a>
+                  </div>
+                  <div className="logIdPanel">
+                        <FingerprintIcon />
+                        <div className="logId"> 1</div>
+                  </div>
+                
+
+                  <a className="created_byPanel"  href="/user/1">
+                        <PersonIcon /> 
+                        <p className="created_byNameSurname"> Peter Butusov  </p>
+                  </a>
+            </div>
+              
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              date="20th may, 2010 - 15:25:90"
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              icon={<PersonIcon />}
+            >
+              
+            <div className="timeLineContainer">
+                  
+                    <Alert variant="filled" severity="success">
+                      Dosya Ekleme Başarılı
+                  </Alert>
+                
+                  <div className="logLocation">
+                      <VisibilityIcon className="visibility" />
+                      <a className="table"> file </a>
+                      <a className="title"> file_add_successful </a>
+                  </div>
+                  <div className="logIdPanel">
+                        <FingerprintIcon />
+                        <div className="logId"> 1</div>
+                  </div>
+                
+
+                  <a className="created_byPanel"  href="/user/1">
+                        <PersonIcon /> 
+                        <p className="created_byNameSurname"> Peter Butusov  </p>
+                  </a>
+            </div>
+              
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              date="20th may, 2010 - 15:25:90"
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              icon={<PersonIcon />}
+            >
+              
+            <div className="timeLineContainer">
+                  
+                    <Alert variant="filled" severity="success">
+                      Dosya Ekleme Başarılı
+                  </Alert>
+                
+                  <div className="logLocation">
+                      <VisibilityIcon className="visibility" />
+                      <a className="table"> file </a>
+                      <a className="title"> file_add_successful </a>
+                  </div>
+                  <div className="logIdPanel">
+                        <FingerprintIcon />
+                        <div className="logId"> 1</div>
+                  </div>
+                
+
+                  <a className="created_byPanel"  href="/user/1">
+                        <PersonIcon /> 
+                        <p className="created_byNameSurname"> Peter Butusov  </p>
+                  </a>
+            </div>
+              
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              date="20th may, 2010 - 15:25:90"
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              icon={<PersonIcon />}
+            >
+              
+            <div className="timeLineContainer">
+                  
+                    <Alert variant="filled" severity="success">
+                      Dosya Ekleme Başarılı
+                  </Alert>
+                
+                  <div className="logLocation">
+                      <VisibilityIcon className="visibility" />
+                      <a className="table"> file </a>
+                      <a className="title"> file_add_successful </a>
+                  </div>
+                  <div className="logIdPanel">
+                        <FingerprintIcon />
+                        <div className="logId"> 1</div>
+                  </div>
+                
+
+                  <a className="created_byPanel"  href="/user/1">
+                        <PersonIcon /> 
+                        <p className="created_byNameSurname"> Peter Butusov  </p>
+                  </a>
+            </div>
+              
+            </VerticalTimelineElement>
+            
+             
           </VerticalTimeline> 
         
         </div>
