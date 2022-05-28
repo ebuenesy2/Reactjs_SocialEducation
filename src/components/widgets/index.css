@@ -28,6 +28,14 @@
     font-weight: 300;
 }
 
+.widget .left .onlinePanel {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(160, 160, 160);
+}
+
 .widget .left .link {
     width: max-content;
     font-size: 12px;

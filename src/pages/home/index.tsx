@@ -16,21 +16,18 @@ function Index() {
               <div className="homeContainer"> 
                   <Navbar />
                   <div className="Widgets"> 
-                          <Widget type="onlineUser" counter="212" status="positive" statusCount="20" />
-                          <Widget type="user" counter="300" status="negative" statusCount="30" />
-                          <Widget type="revenue" counter="₺ 250" status="negative" statusCount="65" />
-                          <Widget type="orders" counter="450" status="positive" statusCount="10000" />
-                          <Widget type="commets" counter="922" status="positive" statusCount="150" />
+                          <Widget type="user" counter="212" status="positive" statusCount="20" onlineCount="15" />
+                          <Widget type="teachers" counter="300" status="negative" statusCount="30" onlineCount="25" />
+                          <Widget type="advertisers" counter="350" status="negative" statusCount="65" onlineCount="35" />
+                          <Widget type="sponsors" counter="450" status="positive" statusCount="10000"  onlineCount="45"/>
+                          <Widget type="totallessonhours" counter="922" status="positive" statusCount="150" onlineCount="55" />
                   </div>
                   <div className="Charts"> 
                         <Featured />
                         <Chart />
                   </div>
 
-                  <div className="listContainer"> 
-                     <div className="listTitle">  Tüm Kullanıcılar  </div>
-                        <Table pageSize="6" />
-                  </div>
+               
                   
               </div>
         </div>

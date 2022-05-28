@@ -1,55 +1,60 @@
 import "./index.css"
 import KeyboardArrowUpOutlinedIcon from '@material-ui/icons/KeyboardArrowUpOutlined';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import LanguageIcon from '@material-ui/icons/Language';
+import FaceIcon from '@material-ui/icons/Face';
+import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import AlarmIcon from '@material-ui/icons/Alarm';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
-import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import CommentIcon from '@material-ui/icons/Comment';
+import BlurCircularIcon from '@material-ui/icons/BlurCircular';
+
 
 export const Index =(props: any) => {  //console.log("proops:",props);
   
     let data;
 
     switch(props.type) {
-       case "onlineUser":
-        data = {
-           title: "Online Connect",
-           linkName:"See Link Name",
-           linkUrl: "./linkUrl",
-           icon: <LanguageIcon className="icon" style={{ color:"#495057" , backgroundColor:"#d0e1fd"}} />
-       };
-       break;
        case "user":
         data = {
-            title: "Users",
+            title: "Kullanıcılar",
             linkName:"See Link Name",
             linkUrl: "./linkUrl",
             icon: <PersonOutlineOutlinedIcon className="icon" style={{ color:"#495057" , backgroundColor:"#feddc7"}} />
        };
        break;
-       case "revenue":
+
+       case "teachers":
         data = {
-            title: "Revenue",
+            title: "Öğretmenler",
             linkName:"See Link Name",
             linkUrl: "./linkUrl",
-            icon: <AccountBalanceWalletIcon className="icon" style={{ color:"#495057" , backgroundColor:"#65d2e4"}} />
+            icon: <FaceIcon className="icon" style={{ color:"#495057" , backgroundColor:"#65d2e4"}} />
        };
        break;
-       case "orders":
+
+       case "advertisers":
         data = {
-            title: "Orders",
+            title: "Reklam Verenler",
             linkName:"See Link Name",
             linkUrl: "./linkUrl",
-            icon: <ShoppingCartIcon className="icon" style={{ color:"#495057" , backgroundColor:"#dab6fc"}} />
+            icon: <ImportContactsIcon className="icon" style={{ color:"#495057" , backgroundColor:"#dab6fc"}} />
        };
        break;
-       case "commets":
+
+       case "sponsors":
         data = {
-            title: "Comments",
+            title: "Sponsorlar",
             linkName:"See Link Name",
             linkUrl: "./linkUrl",
-            icon: <CommentIcon className="icon" style={{ color:"black" , backgroundColor:"darkseagreen"}} />
+            icon: <BlurCircularIcon className="icon" style={{ color:"black" , backgroundColor:"darkseagreen"}} />
+       };
+       break;
+
+       case "totallessonhours":
+        data = {
+           title: "Toplam Yapılan Ders Saati",
+           linkName:"See Link Name",
+           linkUrl: "./linkUrl",
+           icon: <AlarmIcon className="icon" style={{ color:"#495057" , backgroundColor:"#d0e1fd"}} />
        };
        break;
 
@@ -63,6 +68,10 @@ export const Index =(props: any) => {  //console.log("proops:",props);
             <div className="left" > 
                 <span className="title"> {data?.title} </span>
                 <span className="counter">  {props.counter ?  props.counter : "0"} </span>
+                <div className="onlinePanel">
+                  <span className="onlineCountTitle" > Online Sayısı: </span>
+                    <span className="onlineCount" >   {props.onlineCount ?  props.onlineCount : "0"}  </span>
+                </div>
                 <a className="link" href={data?.linkUrl} > {data?.linkName} </a>
             </div>
             <div className="right"> 
