@@ -48,7 +48,7 @@ function Index() {
                      </a>
                    </li>
                    <li>
-                     <a href="/#">
+                     <a href="/clients">
                         <PeopleIcon className="icon" />
                         <span> Clients </span>
                      </a>
@@ -123,9 +123,9 @@ function Index() {
 
                    <p className="title">  App </p>
                    <li>
-                     <a href="/#">
+                     <a href="/gallery">
                         <PermMediaIcon className="icon" />
-                        <span> Galery </span>
+                        <span> Gallery </span>
                      </a>
                    </li>
                    <li>
