@@ -94,7 +94,7 @@ function getOnlinePage(params:any) {
 
 //! Online Duration Değişimi
 function getOnlineDuration(params:any) {
-  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.onlineDurationMs} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
+  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.totalDurationMs} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
 }
 
 //! Online Mod Değişimi
@@ -117,7 +117,7 @@ const columns = [
   { field: 'username', headerName: 'Username', width: 225,  editable: false},
   { field: 'created_at', headerName: 'Oluşturduğu Zaman', width: 250,  editable: false},
   { field: 'onlinePage', headerName: 'Online Sayfasi', width: 225, renderCell:getOnlinePage, editable: false},
-  { field: 'onlineDurationMs', headerName: 'Toplam Online Süresi(ms)', width: 300, renderCell:getOnlineDuration, editable: false},
+  { field: 'totalDurationMs', headerName: 'Toplam Online Süresi(ms)', width: 300, renderCell:getOnlineDuration, editable: false},
   { field: 'onlineMod', headerName: 'OnlineMod', width: 175, renderCell:getOnlineMod, editable: false},
   { field: 'onlineLastLogin_At', headerName: 'Login Zaman', width: 250,  editable: false},
   { field: 'onlineLastLoginout_At', headerName: 'Loginout Zaman', width: 250,  editable: false},
