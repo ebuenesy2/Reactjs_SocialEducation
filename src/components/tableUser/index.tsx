@@ -1,14 +1,16 @@
 import "./index.css";
-import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import { DataGrid, GridToolbarExport, GridToolbarContainer } from '@material-ui/data-grid';
 import axios from "axios";
+import { useEffect, useState } from 'react';
+import { DataGrid, GridToolbarExport, GridToolbarContainer } from '@material-ui/data-grid';
+
 
 //! icons
 import DeleteIcon from '@material-ui/icons/Delete';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import EditIcon from '@material-ui/icons/Edit';
 import EmailIcon from '@material-ui/icons/Email';
+
+
 
 
 /* Function */
@@ -80,9 +82,24 @@ function getStatus(params:any) {
   return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> Online </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
 }
 
-//! Durum Değişimi
+//! Aktif Değişimi
 function getActive(params:any) { 
   return <div style={{ display:"flex", gap:"5px" }}> {params.row.isActive == true ? <div style={{ color:"darkgreen" }}> Active </div> : <div style={{ color:"red" }}> Pasif </div> } </div>;
+}
+
+//! Online Page Değişimi
+function getOnlinePage(params:any) {
+  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.onlinePage} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
+}
+
+//! Online Duration Değişimi
+function getOnlineDuration(params:any) {
+  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.onlineDurationMs} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
+}
+
+//! Online Mod Değişimi
+function getOnlineMod(params:any) {
+  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.onlineMod} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
 }
 
 
@@ -91,14 +108,19 @@ function getActive(params:any) {
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'actions', headerName: 'Actions', width: 250,  renderCell:getActions, editable: false},
+  { field: 'actions', headerName: 'Actions', width: 150,  renderCell:getActions, editable: false},
   { field: 'name', headerName: 'Name', width: 250,  renderCell:getFullNameImage, editable: false},
-  { field: 'role', headerName: 'Role', width: 250,  editable: false},
-  { field: 'online', headerName: 'Online', width: 250, renderCell:getStatus, editable: false},
-  { field: 'aktif', headerName: 'Aktif', width: 250, renderCell:getActive, editable: false},
-  { field: 'email', headerName: 'Email', width: 250,  editable: false},
-  { field: 'username', headerName: 'Username', width: 250,  editable: false},
-  { field: 'created_at', headerName: 'Oluşturduğu Tarih', width: 250,  editable: false},
+  { field: 'role', headerName: 'Role', width: 150,  editable: false},
+  { field: 'online', headerName: 'Online', width: 150, renderCell:getStatus, editable: false},
+  { field: 'aktif', headerName: 'Aktif', width: 150, renderCell:getActive, editable: false},
+  { field: 'email', headerName: 'Email', width: 225,  editable: false},
+  { field: 'username', headerName: 'Username', width: 225,  editable: false},
+  { field: 'created_at', headerName: 'Oluşturduğu Zaman', width: 250,  editable: false},
+  { field: 'onlinePage', headerName: 'Online Sayfasi', width: 225, renderCell:getOnlinePage, editable: false},
+  { field: 'onlineDurationMs', headerName: 'Toplam Online Süresi(ms)', width: 300, renderCell:getOnlineDuration, editable: false},
+  { field: 'onlineMod', headerName: 'OnlineMod', width: 175, renderCell:getOnlineMod, editable: false},
+  { field: 'onlineLastLogin_At', headerName: 'Login Zaman', width: 250,  editable: false},
+  { field: 'onlineLastLoginout_At', headerName: 'Loginout Zaman', width: 250,  editable: false},
 
 ];
 
@@ -114,33 +136,11 @@ function MyExportButton() {
 export const Index =(props: any) => {
   //console.log("props:",props);
 
-
-  const [products, setProducts] = useState<any[]>([])
-  const [productsData, setProductsData] = useState<any[]>([])
-
-
-  useEffect(() => {
-    const apiUrl_table=process.env.REACT_APP_API_URL+"/api/user/all";
-    
-    axios.get(apiUrl_table)
-      .then(response => {
-
-        //! State
-        setProducts(response.data);
-        setProductsData(response.data.DB);
-          
-      })
-      .catch(error => {  console.log("Api Error:",error.message); });
-      
-    
-  }, []);
-
-
     
   return (
         <div  className='TableUserList'>
           <DataGrid
-              rows={productsData}
+              rows={props.data}
               columns={columns}
               pageSize={ Number(props.pageSize) ? Number(props.pageSize) : 8 }
               checkboxSelection
