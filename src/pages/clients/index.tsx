@@ -10,7 +10,8 @@ function Index() {
                <div className="sabitHome">
                     <Navbar />
                     <div className="sabitContainer">
-                           <p>  Sbit </p>
+                         <p> Deneme </p>
+                         <p> % Port% </p>
                     </div>
                </div>
         </div>

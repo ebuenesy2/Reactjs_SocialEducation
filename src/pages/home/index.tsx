@@ -4,7 +4,6 @@ import Navbar from '../../components/navbar';
 import Widget from '../../components/widgets';
 import Featured from '../../components/featured';
 import Chart from '../../components/charts';
-import Table from '../../components/table';
 
 
 

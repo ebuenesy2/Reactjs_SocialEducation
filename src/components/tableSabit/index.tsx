@@ -26,6 +26,11 @@ function getImage(params:any) {
   return <img  style={{ width: "50px", height:"50px", borderRadius:"50%" }} src={params.row.image} />;
 }
 
+//! Resim Ad - Soyad Kullanma
+function getFullNameImage(params:any) {  console.log("params:",params);
+  return <div style={{ display:"flex", gap:"5px" }}> <a> {params.row.name} </a> <a> {params.row.surname} </a> </div>;
+}
+
 //! Div Kullanma
 function getDiv(params:any) {
   return <div style={{ display:"flex", gap:"5px" }}> <a> {params.row.firstName} </a> <a> {params.row.lastName} </a> </div>;
@@ -35,7 +40,7 @@ function getDiv(params:any) {
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'link', headerName: 'LINK', width: 250,  renderCell:getLink, editable: false},
+  { field: 'name', headerName: 'NAME', width: 250,  renderCell:getFullNameImage, editable: false},
   { field: 'image', headerName: 'IMG', width: 250,  renderCell: getImage, editable: false },
   { field: 'category', headerName: 'Kategoriler',  width: 200,   editable: false},
   { field: 'lastName', headerName: 'Last name', width: 200, editable: false },
@@ -48,31 +53,43 @@ const columns = [
 //! Export
 function MyExportButton() {
   return (<GridToolbarContainer style={{justifyContent: 'flex-end'}}>
-        <GridToolbarExport csvOptions={{ allColumns: true }} value="deneme" />
-    </GridToolbarContainer>
-  );
+           <GridToolbarExport csvOptions={{ allColumns: true }} value="deneme" />
+           </GridToolbarContainer>
+         );
 }
 
 export const Index =(props: any) => {
-  console.log("proops:",props);
+  //console.log("props:",props);
 
-  const [products, setProducts] = useState([]);
+
+  const [products, setProducts] = useState<any[]>([])
+  const [productsData, setProductsData] = useState<any[]>([])
+
 
   useEffect(() => {
-    axios
-     .get("https://fakestoreapi.com/products")
-     .then((res) => {setProducts(res.data)})
+    const apiUrl_table=process.env.REACT_APP_API_URL+"/api/user/all";
+    
+    axios.get(apiUrl_table)
+      .then(response => {
 
-     
-     
+        //! State
+        setProducts(response.data);
+        setProductsData(response.data.DB);
+          
+      })
+      .catch(error => {  console.log("Api Error:",error.message); });
+      
+    
   }, []);
+
+
     
   return (
-        <div  className='list'>
-             <DataGrid
-              rows={products}
+        <div  className='TableUserList'>
+          <DataGrid
+              rows={productsData}
               columns={columns}
-              pageSize={props.pageSize ? props.pageSize : "8"}
+              pageSize={ Number(props.pageSize) ? Number(props.pageSize) : 8 }
               checkboxSelection
               disableSelectionOnClick
               components={{

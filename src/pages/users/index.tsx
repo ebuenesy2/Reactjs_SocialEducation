@@ -1,10 +1,34 @@
 import "./index.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import Widget from '../../components/widgets';
-import Table from '../../components/table';
+import TableUser from '../../components/tableUser';
+
+
 
 function Index() {
+
+       const [products, setProducts] = useState<any[]>([])
+       const [productsData, setProductsData] = useState<any[]>([])
+     
+     
+       useEffect(() => {
+         const apiUrl_table=process.env.REACT_APP_API_URL+"/api/user/all";
+         
+         axios.get(apiUrl_table)
+           .then(response => {
+     
+             //! State
+             setProducts(response.data);
+             setProductsData(response.data.DB);
+               
+           })
+           .catch(error => {  console.log("Api Error:",error.message); });
+           
+         
+       }, []);
     
   return (
         <div className='users'>
@@ -13,13 +37,12 @@ function Index() {
                     <Navbar />
                     <div className="usersContainer">
                             <div className="Widgets"> 
-                                   <Widget type="onlineUser" counter="212" status="positive" statusCount="20" />
-                                   <Widget type="user" counter="300" status="negative" statusCount="30" />
+                                   <Widget type="user" counter={productsData.length} status="negative" statusCount="30" />
                             </div>
 
                             <div className="listContainer"> 
                                <div className="listTitle">  Tüm Kullanıcılar  </div>
-                               <Table pageSize="40" />
+                               <TableUser pageSize="10" />
                             </div>
                     </div>
                </div>
