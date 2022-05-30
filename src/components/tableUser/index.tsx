@@ -3,12 +3,16 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import { DataGrid, GridToolbarExport, GridToolbarContainer } from '@material-ui/data-grid';
 
-
 //! icons
 import DeleteIcon from '@material-ui/icons/Delete';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import EditIcon from '@material-ui/icons/Edit';
 import EmailIcon from '@material-ui/icons/Email';
+
+
+//! Date
+import Moment from 'moment'; //! Date
+Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
 
 
 
@@ -87,19 +91,16 @@ function getActive(params:any) {
   return <div style={{ display:"flex", gap:"5px" }}> {params.row.isActive == true ? <div style={{ color:"darkgreen" }}> Active </div> : <div style={{ color:"red" }}> Pasif </div> } </div>;
 }
 
-//! Online Page Değişimi
-function getOnlinePage(params:any) {
-  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.onlinePage} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
+
+//! Online  Değişimi
+function getOnlinChange(params:any) {
+  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.formattedValue} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
 }
 
-//! Online Duration Değişimi
-function getOnlineDuration(params:any) {
-  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.totalDurationMs} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
-}
 
-//! Online Mod Değişimi
-function getOnlineMod(params:any) {
-  return <div style={{ display:"flex", gap:"5px" }}> {params.row.onlineStatus == true ? <div style={{ color:"darkgreen" }}> {params.row.onlineMod} </div> : <div style={{ color:"red" }}> Offline </div> } </div>;
+//! Zaman Kullanma - Otomatik bulur
+function getTime (params:any) { 
+  return <div style={{ display:"flex", gap:"5px" }}> {params.formattedValue != null ?  <p> {Moment(params.formattedValue).format('DD-MM-YYYY')} - {Moment(params.formattedValue).format('HH:mm:ss')} </p> : <div style={{ color:"darkgreen" }}> Online</div> } </div>;
 }
 
 
@@ -115,12 +116,12 @@ const columns = [
   { field: 'aktif', headerName: 'Aktif', width: 150, renderCell:getActive, editable: false},
   { field: 'email', headerName: 'Email', width: 225,  editable: false},
   { field: 'username', headerName: 'Username', width: 225,  editable: false},
-  { field: 'created_at', headerName: 'Oluşturduğu Zaman', width: 250,  editable: false},
-  { field: 'onlinePage', headerName: 'Online Sayfasi', width: 225, renderCell:getOnlinePage, editable: false},
-  { field: 'totalDurationMs', headerName: 'Toplam Online Süresi(ms)', width: 300, renderCell:getOnlineDuration, editable: false},
-  { field: 'onlineMod', headerName: 'OnlineMod', width: 175, renderCell:getOnlineMod, editable: false},
-  { field: 'onlineLastLogin_At', headerName: 'Login Zaman', width: 250,  editable: false},
-  { field: 'onlineLastLoginout_At', headerName: 'Loginout Zaman', width: 250,  editable: false},
+  { field: 'created_at', headerName: 'Oluşturduğu Zaman', width: 250, renderCell:getTime, editable: false},
+  { field: 'onlinePage', headerName: 'Online Sayfasi', width: 225, renderCell:getOnlinChange, editable: false},
+  { field: 'totalDurationMs', headerName: 'Toplam Online Süresi(ms)', width: 300, editable: false},
+  { field: 'onlineMod', headerName: 'OnlineMod', width: 175, renderCell:getOnlinChange, editable: false},
+  { field: 'onlineLastLogin_At', headerName: 'Login Zaman', width: 250, renderCell:getTime,  editable: false},
+  { field: 'onlineLastLoginout_At', headerName: 'Loginout Zaman', width: 250,  renderCell:getTime, editable: false},
 
 ];
 

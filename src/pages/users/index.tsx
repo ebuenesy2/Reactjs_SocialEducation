@@ -34,8 +34,6 @@ function Index() {
        };
 
        useEffect(() => { apiGet(); }, []);
-
-
        
        useEffect(() => {
               const userId= 0;
@@ -72,7 +70,7 @@ function Index() {
                      //Return Log
                      console.log("obj:",obj);
 
-              // Bağlantı Bilgileri
+                   // Bağlantı Bilgileri
                      if(obj.dataType == "Connect" &&  obj.fromUserID == userId ) { 
                             //console.log("Bağlantı Durumu:",obj.dataTypeDescription);
                       }
@@ -85,8 +83,8 @@ function Index() {
 
               };
               socket.onclose = function (evt) {
-                alert("bye");
-                console.log("I'm sorry. Bye!");
+                alert("Socket has been closed");
+                console.log("Socket has been closed");
               };
               socket.onmessage = function (evt:any) {
                 // handle messages here
@@ -96,6 +94,8 @@ function Index() {
               };
               
        }, []);
+
+      
 
   return (
         <div className='users'>
