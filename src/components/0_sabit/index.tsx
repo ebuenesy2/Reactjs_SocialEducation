@@ -1,7 +1,7 @@
 import "./index.css"
 
 export const Index =(props: any) => {
-  console.log("proops:",props);
+  console.log("props:",props);
 
     
   return (

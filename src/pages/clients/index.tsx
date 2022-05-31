@@ -8,6 +8,9 @@ Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
 
 function Index() {
 
+
+     
+
      useEffect(() => { 
          
           //! DATE
