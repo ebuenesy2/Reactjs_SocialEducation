@@ -9,6 +9,7 @@ import Question from './pages/question';
 import Message from './pages/message';
 import Gallery from './pages/gallery';
 import Logs from './pages/logs';
+import Profile from './pages/profile';
 
 
  export default function App() {
@@ -25,6 +26,7 @@ import Logs from './pages/logs';
           <Route path="/message" element={<Message/>} />
           <Route path="/gallery" element={<Gallery/>} />
           <Route path="/logs" element={<Logs/>} />
+          <Route path="/profile" element={<Profile/>} />
         
         
          
