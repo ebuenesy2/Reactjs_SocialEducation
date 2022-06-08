@@ -1,0 +1,77 @@
+.widgetInfo{
+    width: 300px;
+    height: 180px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
+    border-radius: 15px;
+    
+}
+
+.widgetInfo .top {
+   width: 280px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.topTitle{
+    display: flex;
+    gap: 5px;
+}
+
+.widgetInfo .middle {
+    width: 280px;
+    display: flex;
+  
+}
+
+.widgetInfo .middle .icon {
+   font-size: 30px;
+   margin-top: auto;
+   margin-bottom: auto;
+   color: crimson;
+}
+
+.widgetInfo .middle h1 {
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+ }
+
+.widgetInfo .middleBottom {
+    display: flex;
+    gap: 2px;
+ }
+
+
+.widgetInfo .middleBottom .title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.widgetInfo .middleBottom .time {
+    font-size: 12px;
+}
+
+
+ .widgetInfo .bottom .BottomIconGroup {
+    width:fit-content;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: 1px solid;
+    padding: 3px;
+ }
+
+ .widgetInfo .bottom .BottomIconGroup p {
+    font-size: 12px;
+    font-weight: 300;
+ }
+
+
+
