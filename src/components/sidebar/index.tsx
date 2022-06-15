@@ -167,7 +167,7 @@ function Index() {
                      </a>                     
                    </li>
                    <li>
-                     <a href="/Profile">
+                     <a href="/Profile?id=1">
                         <PersonOutlinedIcon className="icon" />
                         <span> Profile </span>
                      </a>
