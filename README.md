@@ -22,6 +22,10 @@ https://yildirimdev-server.herokuapp.com/api/note/all
 ```
 npm i
 ``` 
+
+```
+npm i --force
+```
 ```
 npm start
 ``` 
