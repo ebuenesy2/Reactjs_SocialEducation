@@ -1,5 +1,6 @@
 .widgetInfo{
-    width: 320px;
+    /* width: 320px; */
+    width: 100%;
     height: 210px;
     padding: 10px;
     display: flex;

@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
-import WidgetCardData from '../../components/widgetCardData';
-
 import "./index.css";
 
 
@@ -32,7 +30,10 @@ function Index() {
                <div className="profileHome">
                     <Navbar />
                     <div className="profileContainer">
-                          <WidgetCardData />
+
+                          <div style={{ width:"720px", display:"flex", gap:"10px" }}>
+                              
+                          </div>
                     </div>
                </div>
         </div>

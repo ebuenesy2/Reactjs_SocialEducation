@@ -1,7 +1,11 @@
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import WidgetInfo from '../../components/widgetsInfo';
-import "./index.css"
+import WidgetCardData from '../../components/widgetCardData'; 
+import "./index.css";
+
+import BatteryFullIcon from '@material-ui/icons/BatteryFull'; //! icon
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
 
 function Index() {
     
@@ -11,9 +15,8 @@ function Index() {
                <div className="widgetsHome">
                     <Navbar />
                     <div className="widgetsContainer">
-                     <h1> Widget: WidgetInfo </h1>
+                     <h1> Widget: widgetInfo </h1>
                     <div style={{ display:"flex",gap:"10px"}}>
-
                             <WidgetInfo userId={"15"}
                                    userAvatar={"./assets/img/1.jpg"}
                                    userStatus={true}
@@ -39,7 +42,22 @@ function Index() {
                                    userActive={false}
                                    onlineTime={"22gun/8ay/2yıl 13sa:39dak:44sn:900ms"}
                             />   
+                     </div>
+                     <h1 style={{marginTop:"15px"}}> Widget: widgetCardData </h1>
 
+                     <div style={{ width:"720px", display:"flex", gap:"10px"}}>
+                            <WidgetCardData
+                                   icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
+                                   title={"Battery Health"}
+                                   value={"99 %"}
+                                   OnlineStatus={true}
+                            />
+                            <WidgetCardData
+                                   icon={<WbSunnyIcon style={{ fontSize:"50px"}} />}
+                                   title={"Aydınlık Seviyesi"}
+                                   value={"99 %"}
+                                   OnlineStatus={true}
+                            />
                      </div>
 
                     </div>

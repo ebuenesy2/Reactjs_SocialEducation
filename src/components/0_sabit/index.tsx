@@ -16,7 +16,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
     
   return (
-        <div className='widgetInfo'>
+        <div className='sbtwidgetInfo'>
            <p> {props.title} </p>
                
         </div>
