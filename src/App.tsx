@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NotFound from './pages/notfound';
 import Home from './pages/home';
+import Widgets from './pages/widgets';
 import Login from './pages/login';
 import Users from './pages/users';
 import Clients from './pages/clients';
@@ -19,6 +20,7 @@ import Profile from './pages/profile';
       <Routes>
           <Route path="*" element={<NotFound/>} />
           <Route path="/" element={<Home/>} />
+          <Route path="/widgets" element={<Widgets/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/users" element={<Users/>} />
           <Route path="/clients" element={<Clients/>} />
