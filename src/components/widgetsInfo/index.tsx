@@ -1,8 +1,6 @@
 import "./index.css"
 import EditIcon from '@material-ui/icons/Edit';
-import RssFeedIcon from '@material-ui/icons/RssFeed';
-import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
-import HourglassEmptyIcon from '@material-ui/icons/HourglassEmpty';
+
 
 //! Date
 import Moment from 'moment'; //! Date
@@ -14,34 +12,29 @@ export const Index =(props: any) => {  //console.log("proops:",props);
     
   return (
         <div className='widgetInfo'>
-           <div className="top">
-                <div className="topTitle">
-                    <RssFeedIcon className="icon" />
-                    <div className="title">Online</div>
-                </div>
-                <EditIcon className="icon" />
-           </div>
-           <div className="middle">
-                 <QueryBuilderIcon className="icon" />
-                 <h1>  1545</h1>
-                 <p> ms </p>
-           </div>
-           <div className="middleBottom">
-              <p className="title"> Son Online Zamanı:</p>
-              <p className="time"> {Moment('2022-05-20T11:47:26.329Z').format('DD-MM-YYYY HH:mm:ss')} </p> 
-           </div>
-
-           <div className="bottom">
-              <div className="BottomIconGroup">
-                     <HourglassEmptyIcon className="icon" />
-                     <p> 98988789878 </p>
+         <div className="top"> Kullanıcı Bilgileri  <EditIcon className="icon" /> </div>
+          <div className="topUser"> UserId: <p className="userId">12</p> </div>
+          <hr/>
+          
+         <div className="bottom">
+              <div className="bottomLeft"> 
+                <img className="userAvatar" src="./assets/img/1.jpg"  alt="" />
+                <div className="userStatus"> Online </div>
               </div>
-           </div>
-           
-         
+              <div className="bottomRigth">
+                <div className="username"> @username </div>
+                <div className="nameSurname"> Olga Sukhorukova </div>
+                <div className="registerName"> Ankara / Turkiye </div>
+                <div className="registerName"> Doğum Tarihi:<div className="registerValue"> 17/03/1995</div> </div>
+                
+                <div className="registerName"> Kayıt Tarihi:<div className="registerValue">17/04/2024 - 04:25</div> </div>
+                <div className="registerName"> Durum:<div className="registerValue" style={{ color: "green"}}>Active</div> </div>
+                <div className="OnlineName">  1 yıl 11 ay 10 gün 9 saat 13 dk 12 sn</div>
+              </div>
+         </div>
                
         </div>
-    
+     
   )
 }
 
