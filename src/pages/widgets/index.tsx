@@ -2,9 +2,11 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import WidgetInfo from '../../components/widgetsInfo';
 import WidgetCardData from '../../components/widgetCardData'; 
+import WidgetValue from "../../components/widgetValue";
 import "./index.css";
 
-import BatteryFullIcon from '@material-ui/icons/BatteryFull'; //! icon
+//! icon
+import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 
 function Index() {
@@ -43,8 +45,8 @@ function Index() {
                                    onlineTime={"22gun/8ay/2yıl 13sa:39dak:44sn:900ms"}
                             />   
                      </div>
-                     <h1 style={{marginTop:"15px"}}> Widget: widgetCardData </h1>
 
+                     <h1 style={{marginTop:"15px"}}> Widget: widgetCardData </h1>
                      <div style={{ width:"720px", display:"flex", gap:"10px"}}>
                             <WidgetCardData
                                    icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
@@ -58,6 +60,28 @@ function Index() {
                                    value={"99 %"}
                                    OnlineStatus={true}
                             />
+                     </div>
+
+                      <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
+                     <div style={{ width:"610px", display:"flex", gap:"10px" }}>
+                            <WidgetValue
+                            title={"Mutfak Odası"}
+                            type={"Sıcaklık"}
+                            OnlineStatus={true}
+                            valueColor={"red"}
+                            value={"21"}
+                            valueKey={"°C"}
+                            />
+
+                            <WidgetValue
+                            title={"Yemek Odası"}
+                            type={"Nem"}
+                            OnlineStatus={true}
+                            valueColor={"blue"}
+                            value={"45"}
+                            valueKey={"%"}
+                            />
+
                      </div>
 
                     </div>

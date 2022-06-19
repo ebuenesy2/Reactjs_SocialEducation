@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
+import WidgetValue from "../../components/widgetValue";
 
 
 function Index() {    
@@ -31,8 +32,25 @@ function Index() {
                     <Navbar />
                     <div className="profileContainer">
 
-                          <div style={{ width:"720px", display:"flex", gap:"10px" }}>
-                              
+                          <div style={{ width:"610px", display:"flex", gap:"10px" }}>
+                              <WidgetValue
+                                   title={"Mutfak Odası"}
+                                   type={"Sıcaklık"}
+                                   OnlineStatus={true}
+                                   valueColor={"red"}
+                                   value={"21"}
+                                   valueKey={"°C"}
+                              />
+
+                              <WidgetValue
+                                   title={"Yemek Odası"}
+                                   type={"Nem"}
+                                   OnlineStatus={true}
+                                   valueColor={"blue"}
+                                   value={"45"}
+                                   valueKey={"%"}
+                              />
+
                           </div>
                     </div>
                </div>
