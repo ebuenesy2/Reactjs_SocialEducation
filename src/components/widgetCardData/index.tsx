@@ -1,5 +1,5 @@
 import "./index.css"
-
+import BatteryFullIcon from '@material-ui/icons/BatteryFull';
 
 
 //! Date
@@ -17,7 +17,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
     
   return (
         <div className='widgetInfo'>
-           <p> {props.title} </p>
+          
                
         </div>
      
