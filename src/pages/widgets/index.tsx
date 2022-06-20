@@ -99,7 +99,7 @@ function Index() {
                      </div>
 
                      <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
-                     <div style={{ width:"610px", display:"flex", gap:"10px" }}>
+                     <div style={{ width:"420px", display:"flex", gap:"10px" }}>
                             <WidgetValue
                              title={"Mutfak Odası"}
                              type={"Sıcaklık"}
@@ -120,7 +120,7 @@ function Index() {
 
                      </div>
                      <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
-                     <div style={{ width:"610px", display:"flex", gap:"10px" }}>
+                     <div style={{ width:"420px", display:"flex", gap:"10px" }}>
                             <WidgetControl
                                    title={"Wifi"}
                                    icon={<WifiIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
@@ -140,7 +140,7 @@ function Index() {
                      </div>
 
                      <h1 style={{marginTop:"25px"}}> Widget: widgetAddCard </h1>
-                     <div style={{ width:"300px", display:"flex", gap:"10px" }}>
+                     <div style={{ width:"200px", display:"flex", gap:"10px" }}>
                             <WidgetAddCard 
                                title="Yeni Cihaz"
                                onClick={()=> {alert("yeni")}}

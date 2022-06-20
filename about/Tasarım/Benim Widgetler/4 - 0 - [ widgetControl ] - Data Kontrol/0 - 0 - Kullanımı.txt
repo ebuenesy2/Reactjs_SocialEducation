@@ -20,7 +20,7 @@ Component Kullanımı - Veri Gönderme
 ----------------------------------------
                           
                           <p> widgetControlStatus: {widgetControlStatus == true ? "True": "False"} </p>
-                          <div style={{ width:"300px", display:"flex", gap:"10px" }}>
+                          <div style={{ width:"200px", display:"flex", gap:"10px" }}>
                             <WidgetControl
                                title={"Wifi"}
                                icon={<WifiIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}

@@ -14,7 +14,7 @@ import WbSunnyIcon from '@material-ui/icons/WbSunny';
 Component Kullanımı - Veri Gönderme
 ----------------------------------------
 
-                          <div style={{ width:"720px", display:"flex", gap:"10px" }}>
+                          <div style={{ width:"450px", display:"flex", gap:"10px" }}>
                                  <WidgetCardData
                                     icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
                                     title={"Battery Health"}
