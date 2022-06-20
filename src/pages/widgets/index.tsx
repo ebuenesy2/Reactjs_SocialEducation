@@ -3,13 +3,21 @@ import Sidebar from "../../components/sidebar";
 import WidgetInfo from '../../components/widgetsInfo';
 import WidgetCardData from '../../components/widgetCardData'; 
 import WidgetValue from "../../components/widgetValue";
+import WidgetControl from "../../components/widgetControl";
 import "./index.css";
 
 //! icon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
+import WifiIcon from '@material-ui/icons/Wifi';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import { useState } from "react";
 
 function Index() {
+
+     //! State
+     const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
+     const [ widgetControlStatus1 , setWidgetControlStatus1] = useState(false);
     
   return (
         <div className='widgets'>
@@ -52,36 +60,53 @@ function Index() {
                                    icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
                                    title={"Battery Health"}
                                    value={"99 %"}
-                                   OnlineStatus={true}
+                                   onlineStatus={true}
                             />
                             <WidgetCardData
                                    icon={<WbSunnyIcon style={{ fontSize:"50px"}} />}
                                    title={"Aydınlık Seviyesi"}
                                    value={"99 %"}
-                                   OnlineStatus={true}
+                                   onlineStatus={false}
                             />
                      </div>
 
-                      <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
+                     <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
                      <div style={{ width:"610px", display:"flex", gap:"10px" }}>
                             <WidgetValue
-                            title={"Mutfak Odası"}
-                            type={"Sıcaklık"}
-                            OnlineStatus={true}
-                            valueColor={"red"}
-                            value={"21"}
-                            valueKey={"°C"}
+                             title={"Mutfak Odası"}
+                             type={"Sıcaklık"}
+                             onlineStatus={true}
+                             valueColor={"red"}
+                             value={"21"}
+                             valueKey={"°C"}
                             />
 
                             <WidgetValue
-                            title={"Yemek Odası"}
-                            type={"Nem"}
-                            OnlineStatus={true}
-                            valueColor={"blue"}
-                            value={"45"}
-                            valueKey={"%"}
+                             title={"Yemek Odası"}
+                             type={"Nem"}
+                             onlineStatus={true}
+                             valueColor={"blue"}
+                             value={"45"}
+                             valueKey={"%"}
                             />
 
+                     </div>
+                     <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
+                     <div style={{ width:"610px", display:"flex", gap:"10px" }}>
+                            <WidgetControl
+                                   title={"Wifi"}
+                                   icon={<WifiIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
+                                   status={widgetControlStatus}
+                                   setStatus={setWidgetControlStatus}
+                                   onlineStatus={false}
+                            />
+                                   <WidgetControl
+                                   title={"Lamba"}
+                                   icon={<EmojiObjectsIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
+                                   status={widgetControlStatus1}
+                                   setStatus={setWidgetControlStatus1}
+                                   onlineStatus={true}
+                            />
                      </div>
 
                     </div>

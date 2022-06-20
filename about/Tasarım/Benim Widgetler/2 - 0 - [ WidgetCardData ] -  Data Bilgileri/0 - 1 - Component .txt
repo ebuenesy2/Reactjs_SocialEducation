@@ -8,10 +8,10 @@ Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
 
 export const Index =(props: any) => {  //console.log("proops:",props);
   
-   console.log("props:",props);
-   console.log("created_at:",props.created_at);
-   console.log("Moment:",Moment(props.created_at).format('L'));
-   console.log("Moment:",Moment(props.created_at).format('LTS'));
+   //console.log("props:",props);
+   //console.log("created_at:",props.created_at);
+   //console.log("Moment:",Moment(props.created_at).format('L'));
+   //console.log("Moment:",Moment(props.created_at).format('LTS'));
 
 
     
@@ -22,7 +22,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
                   <div className="widgetDetail">
                      <div className="widgetDetailTitle">{props.title}</div>
                      <div className="widgetDetailContent">{props.value}</div>
-                     <div className="widgetOnlineStatus" style={{ color:props.OnlineStatus==true ? "green": "red"}}> {props.OnlineStatus == true ? "Online": "Offline"}</div>
+                     <div className="widgetOnlineStatus" style={{ color:props.onlineStatus==true ? "green": "red"}}> {props.onlineStatus == true ? "Online": "Offline"}</div>
                   </div>
              </div>
                

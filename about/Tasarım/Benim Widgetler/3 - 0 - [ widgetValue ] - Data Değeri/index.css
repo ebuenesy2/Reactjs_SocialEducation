@@ -1,74 +1,44 @@
-.widgetCardData{
+.widgetValue{
+    /* width: 320px; */
     width: 100%;
-    height: 100px;
+    height: 210px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     -webkit-box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgb(0, 0, 0, 0.47);
     border-radius: 15px;
-}
-
-.widgetCardData .widgetContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 90px;
-}
-
-.widgetCardData .widgetContainer .widgetBox {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
-    background:linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232));
-    color: #fff;
 }
 
-
-
-.widgetCardData .widgetContainer .widgetDetail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 6px;
-    text-align: right;
-}
-
-.widgetCardData .widgetContainer .widgetDetail .widgetDetailTitle {
-    margin: 0px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0.02857em;
-    opacity: 1;
-    text-transform: capitalize;
-    vertical-align: unset;
-    text-decoration: none;
-    color: rgb(123, 128, 154);
-}
-
-.widgetCardData .widgetContainer .widgetDetail .widgetDetailContent {
-    margin: 0px;
-    font-size: 1.25rem;
-    line-height: 1.375;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    letter-spacing: 0em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
-    color: rgb(52, 71, 103);
+.widgetValue .widgetValueValue { 
+    font-size: 44px;
     font-weight: 700;
-}
+ } 
 
+.widgetValue .widgetValueType {
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: -8px;
+} 
 
-.widgetCardData .widgetContainer .widgetDetail .widgetOnlineStatus {
+.widgetValue .widgetValueH6 {
+    font-size: 1rem;
+    font-weight: 700;
+} 
+
+.widgetValue .widgetValuep {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(103, 116, 142);
+    margin-top: 1px;
+    margin-bottom: 3px;
+} 
+
+.widgetValue .widgetOnlineStatus {
     font-size: 12px;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.375;
     letter-spacing: 1px;
 }

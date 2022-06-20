@@ -3,7 +3,7 @@
                               <WidgetValue
                                    title={"Mutfak Odası"}
                                    type={"Sıcaklık"}
-                                   OnlineStatus={true}
+                                   onlineStatus={true}
                                    valueColor={"red"}
                                    value={"21"}
                                    valueKey={"°C"}
@@ -12,7 +12,7 @@
                               <WidgetValue
                                    title={"Yemek Odası"}
                                    type={"Nem"}
-                                   OnlineStatus={true}
+                                   onlineStatus={true}
                                    valueColor={"blue"}
                                    value={"45"}
                                    valueKey={"%"}

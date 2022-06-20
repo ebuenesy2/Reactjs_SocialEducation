@@ -19,13 +19,13 @@ Component Kullanımı - Veri Gönderme
                                     icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
                                     title={"Battery Health"}
                                     value={"99 %"}
-                                    OnlineStatus={true}
+                                    onlineStatus={true}
                                  />
                                  <WidgetCardData
                                     icon={<WbSunnyIcon style={{ fontSize:"50px"}} />}
                                     title={"Aydınlık Seviyesi"}
                                     value={"99 %"}
-                                    OnlineStatus={true}
+                                    onlineStatus={true}
                                  />
                           </div>
 ************************************************************************

@@ -11,7 +11,7 @@ Component Kullanımı - Veri Gönderme
                               <WidgetValue
                                    title={"Mutfak Odası"}
                                    type={"Sıcaklık"}
-                                   OnlineStatus={true}
+                                   onlineStatus={true}
                                    valueColor={"red"}
                                    value={"21"}
                                    valueKey={"°C"}

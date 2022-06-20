@@ -18,7 +18,7 @@ Component Kullanımı - Veri Gönderme
                                     icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
                                     title={"Battery Health"}
                                     value={"99 %"}
-                                    OnlineStatus={true}
+                                    onlineStatus={true}
                                  />
                           </div>
 
