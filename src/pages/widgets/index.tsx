@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import WidgetInfo from '../../components/widgetsInfo';
@@ -5,6 +6,7 @@ import WidgetCardData from '../../components/widgetCardData';
 import WidgetValue from "../../components/widgetValue";
 import WidgetControl from "../../components/widgetControl";
 import WidgetAddCard from "../../components/widgetAddCard";
+import WidgetCategories from "../../components/widgetCategories";
 import "./index.css";
 
 //! icon
@@ -12,13 +14,38 @@ import BatteryFullIcon from '@material-ui/icons/BatteryFull';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import WifiIcon from '@material-ui/icons/Wifi';
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
-import { useState } from "react";
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
+
 
 function Index() {
 
      //! State
      const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
      const [ widgetControlStatus1 , setWidgetControlStatus1] = useState(false);
+
+          
+     const JsonData = [
+       {
+          "title":"Toplam Dosyalar",
+          "content":"Sayısı: 1451 / 1 TB 200 GB 150 MB 100 KB",
+          "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
+          "onClick":()=> { alert("Toplam Dosyalar"); }
+       },
+       {
+          "title":"Toplam Fotoğraflar",
+          "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+          "icon": <PhotoLibraryIcon style={{ fontSize:"20px"}}/>,
+          "onClick":()=> { alert("Toplam Fotoğraflar"); }
+        },
+        {
+          "title":"Toplam Videolar",
+          "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+          "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+          "onClick":()=> { alert("Toplam Videolar"); }
+        }
+   ];
     
   return (
         <div className='widgets'>
@@ -102,7 +129,7 @@ function Index() {
                                    onlineStatus={false}
                                    onClick={()=> {alert("tiklama wifi")}}
                             />
-                                   <WidgetControl
+                            <WidgetControl
                                    title={"Lamba"}
                                    icon={<EmojiObjectsIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
                                    status={widgetControlStatus1}
@@ -112,13 +139,22 @@ function Index() {
                             />
                      </div>
 
-                     <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
+                     <h1 style={{marginTop:"25px"}}> Widget: widgetAddCard </h1>
                      <div style={{ width:"300px", display:"flex", gap:"10px" }}>
                             <WidgetAddCard 
                                title="Yeni Cihaz"
                                onClick={()=> {alert("yeni")}}
                              />
                      </div>
+
+                     
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetCategories </h1>
+                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                             <WidgetCategories 
+                                title={"Tüm Veriler"}
+                                JsonData={JsonData}
+                              />
+                          </div>
                      
                     </div>
                </div>
