@@ -3,9 +3,12 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetAddCard from "../../components/widgetAddCard";
+import WidgetCategories from "../../components/widgetCategories";
 
-
+//! İcon
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 
 function Index() {    
 
@@ -24,7 +27,28 @@ function Index() {
            
      }, []);
 
-
+     
+     const JsonData = [
+         {
+            "title":"Toplam Dosyalar",
+            "content":"Sayısı: 1451 / 1 TB 200 GB 150 MB 100 KB",
+            "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Dosyalar"); }
+         },
+         {
+            "title":"Toplam Fotoğraflar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <PhotoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Fotoğraflar"); }
+          },
+          {
+            "title":"Toplam Videolar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Videolar"); }
+          }
+];
+     
 
   return (
         <div className='profile'>
@@ -33,11 +57,11 @@ function Index() {
                     <Navbar />
                     <div className="profileContainer">
                         
-                          <div style={{ width:"300px", display:"flex", gap:"10px" }}>
-                            <WidgetAddCard 
-                               title="Yeni Cihaz"
-                               onClick={()=> {alert("yeni")}}
-                             />
+                           <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                             <WidgetCategories 
+                                title={"Tüm Veriler"}
+                                JsonData={JsonData}
+                              />
                           </div>
                     </div>
                </div>
