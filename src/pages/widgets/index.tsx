@@ -4,6 +4,7 @@ import WidgetInfo from '../../components/widgetsInfo';
 import WidgetCardData from '../../components/widgetCardData'; 
 import WidgetValue from "../../components/widgetValue";
 import WidgetControl from "../../components/widgetControl";
+import WidgetAddCard from "../../components/widgetAddCard";
 import "./index.css";
 
 //! icon
@@ -109,6 +110,14 @@ function Index() {
                             />
                      </div>
 
+                     <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
+                     <div style={{ width:"300px", display:"flex", gap:"10px" }}>
+                            <WidgetAddCard 
+                               title="Yeni Cihaz"
+                               onClick={()=> {alert("yeni")}}
+                             />
+                     </div>
+                     
                     </div>
                </div>
         </div>

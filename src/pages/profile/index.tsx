@@ -3,10 +3,9 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetControl from "../../components/widgetControl";
+import WidgetAddCard from "../../components/widgetAddCard";
 
-import WifiIcon from '@material-ui/icons/Wifi';
-import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+
 
 function Index() {    
 
@@ -25,10 +24,7 @@ function Index() {
            
      }, []);
 
-     //! State
-     const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
-     const [ widgetControlStatus1 , setWidgetControlStatus1] = useState(false);
-     
+
 
   return (
         <div className='profile'>
@@ -36,23 +32,12 @@ function Index() {
                <div className="profileHome">
                     <Navbar />
                     <div className="profileContainer">
-                          
-                          <p> widgetControlStatus: {widgetControlStatus == true ? "True": "False"} </p>
-                          <div style={{ width:"610px", display:"flex", gap:"10px" }}>
-                            <WidgetControl
-                               title={"Wifi"}
-                               icon={<WifiIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
-                               status={widgetControlStatus}
-                               setStatus={setWidgetControlStatus}
-                               onlineStatus={false}
-                            />
-                             <WidgetControl
-                               title={"Lamba"}
-                               icon={<EmojiObjectsIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
-                               status={widgetControlStatus1}
-                               setStatus={setWidgetControlStatus1}
-                               onlineStatus={true}
-                            />
+                        
+                          <div style={{ width:"300px", display:"flex", gap:"10px" }}>
+                            <WidgetAddCard 
+                               title="Yeni Cihaz"
+                               onClick={()=> {alert("yeni")}}
+                             />
                           </div>
                     </div>
                </div>
