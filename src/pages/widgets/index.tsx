@@ -100,6 +100,7 @@ function Index() {
                                    status={widgetControlStatus}
                                    setStatus={setWidgetControlStatus}
                                    onlineStatus={false}
+                                   onClick={()=> {alert("tiklama wifi")}}
                             />
                                    <WidgetControl
                                    title={"Lamba"}
@@ -107,6 +108,7 @@ function Index() {
                                    status={widgetControlStatus1}
                                    setStatus={setWidgetControlStatus1}
                                    onlineStatus={true}
+                                   onClick={()=> {alert("tiklama lamba")}}
                             />
                      </div>
 

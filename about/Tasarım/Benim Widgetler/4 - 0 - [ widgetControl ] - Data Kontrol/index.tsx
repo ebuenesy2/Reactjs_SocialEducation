@@ -18,7 +18,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
         <div className='widgetControl'>
             <div className="widgetControlTop">
                <p className="checkValue">{props.status==true? "Açık": "Kapalı"}</p>
-               <div onClick={()=> {{props.setStatus(!props.status)}}} className={props.status==true ? "checkType active" : "checkType"}></div>
+               <div onClick={()=> {{props.setStatus(!props.status); props.onClick();}}} className={props.status==true ? "checkType active" : "checkType"}></div>
             </div>
             <div className="widgetControlBottom">
                 <div className="widgetControlBottomIcon"> {props.icon} </div>

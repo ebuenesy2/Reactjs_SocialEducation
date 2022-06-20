@@ -27,6 +27,7 @@ Component Kullanımı - Veri Gönderme
                                status={widgetControlStatus}
                                setStatus={setWidgetControlStatus}
  					 onlineStatus={true}
+					 onClick={()=> {alert("tiklama wifi")}}
                             />
                           </div>
                                

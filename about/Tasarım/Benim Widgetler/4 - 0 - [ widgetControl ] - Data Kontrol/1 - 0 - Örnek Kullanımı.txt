@@ -24,6 +24,7 @@ const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
                                status={widgetControlStatus}
                                setStatus={setWidgetControlStatus}
                                onlineStatus={false}
+                               onClick={()=> {alert("tiklama wifi")}}
                             />
                              <WidgetControl
                                title={"Lamba"}
@@ -31,5 +32,6 @@ const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
                                status={widgetControlStatus}
                                setStatus={setWidgetControlStatus}
                                onlineStatus={true}
+                               onClick={()=> {alert("tiklama lamba")}}
                             />
                           </div>
