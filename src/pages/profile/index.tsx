@@ -33,21 +33,55 @@ function Index() {
             "title":"Toplam Dosyalar",
             "content":"Sayısı: 1451 / 1 TB 200 GB 150 MB 100 KB",
             "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Dosyalar"); }
+            "onClick":()=> { alert("Toplam Dosyalar"); },
+            "backgroundColor":"rgb(76, 175, 80)"
          },
          {
             "title":"Toplam Fotoğraflar",
             "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
             "icon": <PhotoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Fotoğraflar"); }
+            "onClick":()=> { alert("Toplam Fotoğraflar"); },
+            "backgroundColor":"rgb(244, 67, 53)"
           },
           {
             "title":"Toplam Videolar",
             "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
             "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); }
+            "onClick":()=> { alert("Toplam Videolar"); },
+            "backgroundColor":"rgb(26, 115, 232)"
+          },
+          {
+            "title":"Toplam Videolar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Videolar"); },
+            "backgroundColor":"rgb(26, 115, 232)"
+          },
+          {
+            "title":"Toplam Videolar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Videolar"); },
+            "backgroundColor":"rgb(26, 115, 232)"
+          },
+          {
+            "title":"Toplam Videolar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Videolar"); },
+            "backgroundColor":"rgb(26, 115, 232)"
+          },
+          {
+            "title":"Toplam Videolar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Videolar"); },
+            "backgroundColor":"rgb(26, 115, 232)"
           }
+          
      ];
+
+     
      
 
   return (
@@ -59,6 +93,7 @@ function Index() {
                         
                            <div style={{ width:"450px", display:"flex", gap:"10px" }}>
                              <WidgetCategories 
+                                backgroundColor={"#F1F1F1"}
                                 title={"Tüm Veriler"}
                                 JsonData={JsonData}
                               />

@@ -16,7 +16,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
     
   return (
-        <div className='widgetCategories'>
+        <div className='widgetCategories' style={{ backgroundColor: props.backgroundColor ? props.backgroundColor : "#F1F1F1" }}>
           <div className="widgetCategoriesTop">{props.title}</div>
           <hr/>
           <div className="widgetCategoriesBottom">
