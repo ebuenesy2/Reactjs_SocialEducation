@@ -7,6 +7,7 @@ import WidgetValue from "../../components/widgetValue";
 import WidgetControl from "../../components/widgetControl";
 import WidgetAddCard from "../../components/widgetAddCard";
 import WidgetCategories from "../../components/widgetCategories";
+import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
 import "./index.css";
 
 //! icon
@@ -183,7 +184,17 @@ function Index() {
                      
                      <h1 style={{marginTop:"45px"}}> Widget: widgetCategories </h1>
                      <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                             <WidgetCategories 
+                            <WidgetCategories 
+                                   title={"Tüm Veriler"}
+                                   JsonData={JsonData}
+                            />
+                    </div>
+
+                                         
+                    <h1 style={{marginTop:"45px"}}> Widget: widgetCardDataTimeLine </h1>
+                    <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                             <WidgetCardDataTimeLine 
+                                backgroundColor={WidgetCardDataTimeLine}
                                 title={"Tüm Veriler"}
                                 JsonData={JsonData}
                               />

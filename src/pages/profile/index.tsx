@@ -77,6 +77,13 @@ function Index() {
             "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
             "onClick":()=> { alert("Toplam Videolar"); },
             "backgroundColor":"rgb(26, 115, 232)"
+          },
+          {
+            "title":"Toplam Videolar",
+            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
+            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
+            "onClick":()=> { alert("Toplam Videolar"); },
+            "backgroundColor":"rgb(26, 115, 232)"
           }
           
      ];

@@ -1,4 +1,5 @@
-import "./index.css"
+import "./index.css";
+import EjectIcon from '@material-ui/icons/Eject';
 
 
 
@@ -16,9 +17,33 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
     
   return (
-        <div className='sbtwidgetInfo'>
-           <p> {props.title} </p>
-               
+        <div className='widgetCardDataTimeLine'>
+           <div className="widgetCardDataTimeLineContainer">
+              <div className="widgetCardDataTimeLineBox">
+                 <div className="widgetCardDataTimeLineDetailTitle" > Tüm Veriler TimeLine </div>
+               <div className="widgetCardDataTimeLineDetailBox">
+                  <EjectIcon style={{ color: "darkgreen" }} />
+                  <span className="widgetCardDataTimeLineDetailBoxDescription"> 30 % </span>
+                  <span className="widgetCardDataTimeLineDetailBoxContent"> this month </span>
+               </div>
+
+               <div className="widgetCardDataTimeLineBottom" >
+
+                  {Array(props.JsonData.length).fill(0).map((el, i) => 
+                     <div className="widgetCardDataTimeLineBottomBox">
+                        <div className="widgetCardDataTimeLineBottomIconBox"> {props.JsonData[i].icon} </div>
+                     <div className="widgetCardDataTimeLineBottomInfoBox">
+                         <div className="widgetCardDataTimeLineBottomInfoBoxTitle"> {props.JsonData[i].title} </div>
+                         <div className="widgetCardDataTimeLineBottomInfoBoxDescription"> {props.JsonData[i].content} </div>
+                     </div>                   
+
+                     </div>
+                  )}
+
+               </div>
+
+              </div>
+           </div>
         </div>
      
   )
