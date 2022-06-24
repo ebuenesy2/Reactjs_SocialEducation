@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetCategories from "../../components/widgetCategories";
+import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
 
 //! İcon
 import AttachFileIcon from '@material-ui/icons/AttachFile';
@@ -92,7 +92,7 @@ function Index() {
                     <div className="profileContainer">
                         
                            <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                             <WidgetCategories 
+                             <WidgetCardDataTimeLine 
                                 backgroundColor={"#F1F1F1"}
                                 title={"Tüm Veriler"}
                                 JsonData={JsonData}
