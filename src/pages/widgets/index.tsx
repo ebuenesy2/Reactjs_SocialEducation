@@ -193,12 +193,33 @@ function Index() {
                                          
                     <h1 style={{marginTop:"45px"}}> Widget: widgetCardDataTimeLine </h1>
                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                             <WidgetCardDataTimeLine 
-                                backgroundColor={WidgetCardDataTimeLine}
-                                title={"Tüm Veriler"}
-                                JsonData={JsonData}
-                              />
-                          </div>
+                            <WidgetCardDataTimeLine 
+                            backgroundColor={"#F1F1F1"}
+                            colorTitle={"#344563"}
+                            title={"Tüm Veriler TimeLine"}
+                            fontSizeTitle={"16px"}
+                            fontWeightTitle={"700"}
+
+                            status={"positive"}
+
+                            titleDetailDescription={"20%"}
+                            fontSizeDetailDescription={"14px"}
+                            fontWeightDetailDescription={"400"}
+
+                            titleDetailContent={"Bu ay"}
+                            colorDetailContent={"#344563"}
+                            fontSizeDetailContent={"15px"}
+                            fontWeightDetailContent={"700"}
+                            
+                            JsonData={JsonData}
+                            colorBoxTitle={"#344563"}
+                            fontSizeBoxTitle={"14px"}
+                            fontWeightBoxTitle={"700"}
+                            colorBoxDescription={"#344563"}
+                            fontSizeBoxDescription={"12px"}
+                            fontWeightBoxDescription={"400"}
+                            />
+                     </div>
                      
                     </div>
                </div>
