@@ -2,7 +2,6 @@ import "./index.css"
 
 //! Date
 import Moment from 'moment'; //! Date
-import { useState } from "react";
 Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
 
 export const Index =(props: any) => {  //console.log("proops:",props);
