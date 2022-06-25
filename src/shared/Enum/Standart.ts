@@ -1,5 +1,5 @@
 export enum standart {
-    fontFamily="monospace",
+    fontFamily="Nunito",
     borderRadius="15px",
     padding="10px"
 }

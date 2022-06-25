@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetCardData from '../../components/widgetCardData'; 
+import WidgetValue from "../../components/widgetValue";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
@@ -99,26 +99,35 @@ function Index() {
                     <Navbar />
                     <div className="profileContainer">
                         
-                           <div style={{ width:"350px" }}>
-                           <WidgetCardData
-                                   backgroundColor={"#F1F1F1"}
-                                   WidgetBoxColor={"#0052CC"}
-                                   icon={<BatteryFullIcon style={{ fontSize:"40px"}} />}
-                                   
-                                   title={"Battery Health"}
-                                   colorTitle={"#888888"}
-                                   fontSizeTitle={"16px"}
-                                   fontWeightTitle={"700"}
+                           <div style={{ width:"200px" }}>
+                              <WidgetValue
+                                backgroundColor={"#F1F1F1"}
+                              
+                                value={"21"}
+                                colorValue={"red"}
+                                fontSizeValue={"44px"}
+                                fontWeightValue={"700"}
+                                
+                                valueKey={"°C"}
+                                colorValueKey={"red"}
+                                fontSizeValueKey={"18px"}
+                                fontWeightValueKey={"700"}
 
-                                   value={"99 %"}
-                                   colorValue={"black"}
-                                   fontSizeValue={"16px"}
-                                   fontWeightValue={"700"}
+                                title={"Mutfak Odası"}
+                                colorTitle={"black"}
+                                fontSizeTitle={"16px"}
+                                fontWeightTitle={"700"}
+                                  
+                                type={"Sıcaklık"}
+                                colorType={"rgb(103, 116, 142)"}
+                                fontSizeType={"12px"}
+                                fontWeightType={"500"}
 
-                                   onlineStatus={true}
-                                   fontSizeStatus={"14px"}
-                                   fontWeightStatus={"700"}
-                            />
+                                onlineStatus={true}
+                                fontSizeStatus={"14px"}
+                                fontWeightStatus={"700"}
+
+                              />
                           </div>
                     </div>
                </div>

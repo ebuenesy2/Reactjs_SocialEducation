@@ -170,23 +170,66 @@ function Index() {
 
                      <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
                      <div style={{ width:"420px", display:"flex", gap:"10px" }}>
-                            <WidgetValue
-                             title={"Mutfak Odası"}
-                             type={"Sıcaklık"}
-                             onlineStatus={true}
-                             valueColor={"red"}
-                             value={"21"}
-                             valueKey={"°C"}
-                            />
+                                     
+                     <div style={{ width:"200px" }}>
+                         <WidgetValue
+                            backgroundColor={"#F1F1F1"}
+                            
+                            value={"21"}
+                            colorValue={"red"}
+                            fontSizeValue={"44px"}
+                            fontWeightValue={"700"}
+                            
+                            valueKey={"°C"}
+                            colorValueKey={"red"}
+                            fontSizeValueKey={"18px"}
+                            fontWeightValueKey={"700"}
 
-                            <WidgetValue
-                             title={"Yemek Odası"}
-                             type={"Nem"}
-                             onlineStatus={true}
-                             valueColor={"blue"}
-                             value={"45"}
-                             valueKey={"%"}
-                            />
+                            title={"Mutfak Odası"}
+                            colorTitle={"black"}
+                            fontSizeTitle={"16px"}
+                            fontWeightTitle={"700"}
+                            
+                            type={"Sıcaklık"}
+                            colorType={"rgb(103, 116, 142)"}
+                            fontSizeType={"12px"}
+                            fontWeightType={"500"}
+
+                            onlineStatus={true}
+                            fontSizeStatus={"14px"}
+                            fontWeightStatus={"700"}
+                         />
+                     </div>
+                                                 
+                     <div style={{ width:"200px" }}>
+                         <WidgetValue
+                            backgroundColor={"#F1F1F1"}
+                            
+                            value={"45"}
+                            colorValue={"blue"}
+                            fontSizeValue={"44px"}
+                            fontWeightValue={"700"}
+                            
+                            valueKey={"%"}
+                            colorValueKey={"blue"}
+                            fontSizeValueKey={"18px"}
+                            fontWeightValueKey={"700"}
+
+                            title={"Yemek Odası"}
+                            colorTitle={"black"}
+                            fontSizeTitle={"16px"}
+                            fontWeightTitle={"700"}
+                            
+                            type={"Nem"}
+                            colorType={"rgb(103, 116, 142)"}
+                            fontSizeType={"12px"}
+                            fontWeightType={"500"}
+
+                            onlineStatus={false}
+                            fontSizeStatus={"14px"}
+                            fontWeightStatus={"700"}
+                         />
+                     </div>
 
                      </div>
                      <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
