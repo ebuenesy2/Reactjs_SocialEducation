@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
+import WidgetInfo from '../../components/widgetsInfo';
 
 //! İcon
 import AttachFileIcon from '@material-ui/icons/AttachFile';
@@ -99,32 +99,20 @@ function Index() {
                     <div className="profileContainer">
                         
                            <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                             <WidgetCardDataTimeLine 
-                                backgroundColor={"#F1F1F1"}
-                                colorTitle={"#344563"}
-                                title={"Tüm Veriler TimeLine"}
-                                fontSizeTitle={"16px"}
-                                fontWeightTitle={"700"}
-
-                                status={"positive"}
-
-                                titleDetailDescription={"20%"}
-                                fontSizeDetailDescription={"14px"}
-                                fontWeightDetailDescription={"400"}
-
-                                titleDetailContent={"Bu ay"}
-                                colorDetailContent={"#344563"}
-                                fontSizeDetailContent={"15px"}
-                                fontWeightDetailContent={"700"}
-                                
-                                JsonData={JsonData}
-                                colorBoxTitle={"#344563"}
-                                fontSizeBoxTitle={"14px"}
-                                fontWeightBoxTitle={"700"}
-                                colorBoxDescription={"#344563"}
-                                fontSizeBoxDescription={"12px"}
-                                fontWeightBoxDescription={"400"}
-                              />
+                              <WidgetInfo userId={"15"}
+                                   userAvatar={"./assets/img/1.jpg"}
+                                   userStatus={true}
+                                   username={"username1"}
+                                   nameSurname={"Olga Sukhorukova"}
+                                   country={"Turkiye"}
+                                   city={"Ankara"}
+                                   dateofBirth={"17-03-1998"}
+                                   created_at={"2022-06-19T13:56:51+03:00"}
+                                   userActive={true}
+                                   onlineTime={"22gun/8ay/2yıl 13sa:39dak:44sn:900ms"}
+                                   editClick={()=> {alert("editClick")}}
+                                   viewClick={()=> {alert("viewClick")}}
+                            />
                           </div>
                     </div>
                </div>

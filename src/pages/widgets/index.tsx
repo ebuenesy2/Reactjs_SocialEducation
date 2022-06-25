@@ -100,6 +100,8 @@ function Index() {
                                    created_at={"2022-06-19T13:56:51+03:00"}
                                    userActive={true}
                                    onlineTime={"22gun/8ay/2yıl 13sa:39dak:44sn:900ms"}
+                                   editClick={()=> {alert("editClick")}}
+                                   viewClick={()=> {alert("viewClick")}}
                             />
                                                  
                             <WidgetInfo userId={"657"}
@@ -113,6 +115,8 @@ function Index() {
                                    created_at={"2022-06-19T13:56:51+03:00"}
                                    userActive={false}
                                    onlineTime={"22gun/8ay/2yıl 13sa:39dak:44sn:900ms"}
+                                   editClick={()=> {alert("editClick")}}
+                                   viewClick={()=> {alert("viewClick")}}
                             />   
                      </div>
 

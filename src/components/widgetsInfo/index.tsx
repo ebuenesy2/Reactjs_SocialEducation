@@ -1,5 +1,6 @@
 import "./index.css"
 import EditIcon from '@material-ui/icons/Edit';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 
 //! Date
@@ -17,23 +18,23 @@ export const Index =(props: any) => {  //console.log("proops:",props);
     
   return (
         <div className='widgetInfo'>
-         <div className="top"> Kullanıcı Bilgileri  <EditIcon className="icon" /> </div>
+         <div className="top"> Kullanıcı Bilgileri <div> <EditIcon onClick={()=> {props.editClick();}} className="icon" /> <VisibilityIcon onClick={()=> {props.viewClick();}} className="icon" /> </div>  </div>
           <div className="topUser"> UserId: <p className="userId">{props.userId}</p> </div>
           <hr/>
           
          <div className="bottom">
               <div className="bottomLeft"> 
                 <img className="userAvatar" src={props.userAvatar}  alt="" />
-                <div className="userStatus" style={{ color:props.userStatus==true ? "green": "red"}}> {props.userStatus == true ? "Online": "Offline"} </div>
+                <div className="userStatus" style={{ color:props.userStatus===true ? "green": "red"}}> {props.userStatus === true ? "Online": "Offline"} </div>
               </div>
               <div className="bottomRigth">
-                <div className="username"> @{props.username} </div>
+                <a className="username" href={"/Profile?id="+props.userId}> @{props.username} </a>
                 <div className="nameSurname"> {props.nameSurname} </div>
                 <div className="registerName"> {props.city} / {props.country} </div>
                 <div className="registerName"> Doğum Tarihi:<div className="registerValue"> {props.dateofBirth}</div> </div>
                 
                 <div className="registerName"> Kayıt Tarihi:<div className="registerValue">{Moment(props.created_at).format('L')} {Moment(props.created_at).format('LTS')} </div> </div>
-                <div className="registerName"> Durum:<div className="registerValue" style={{ color:props.userActive==true ? "green": "red"}}>{props.userActive == true ? "Active": "Passive"}</div> </div>
+                <div className="registerName"> Durum:<div className="registerValue" style={{ color:props.userActive===true ? "green": "red"}}>{props.userActive === true ? "Active": "Passive"}</div> </div>
                 <div className="onlineTime"> {props.onlineTime}</div>
               </div>
          </div>

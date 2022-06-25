@@ -73,6 +73,9 @@
     font-size: 15px;
     font-family: sans-serif;
     font-weight: bold;
+    text-decoration: auto;
+    color: black;
+    cursor: pointer;
 }
 
 .widgetInfo .bottom .bottomRigth .nameSurname {
