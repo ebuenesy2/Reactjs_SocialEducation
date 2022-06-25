@@ -70,10 +70,6 @@
     color: darkgreen;
     line-height: 1.5;
     letter-spacing: 0.02857em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
 }
 
 .widgetCardDataTimeLineDetailBoxDescription.negative {  color: red; }

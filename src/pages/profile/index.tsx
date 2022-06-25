@@ -3,11 +3,13 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetCategories from "../../components/widgetCategories";
+import WidgetDataIstatisticsfrom from "../../components/widgetDataIstatistics";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
@@ -103,23 +105,24 @@ function Index() {
                     <div className="profileContainer">
                    
                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                            <WidgetCategories 
-                              backgroundColor={"#F1F1F1"}
-                            
-                              title={"Tüm Veriler"}
-                              colorTitle={"#344563"}
-                              fontSizeTitle={"16px"}
-                              fontWeightTitle={"900"}
+                          <WidgetDataIstatisticsfrom
+                            backgroundColor={"#F1F1F1"}
+                            colorTitle={"#344563"}
+                            title={"Kullanıcılar"}
+                            fontSizeTitle={"16px"}
+                            fontWeightTitle={"700"}
+                            status={"negative"}
+                            titleDetailDescription={"20%"}
+                            fontSizeDetailDescription={"14px"}
+                            fontWeightDetailDescription={"400"}
 
-                              JsonData={JsonData}
-                              colorBoxTitle={"#344563"}
-                              fontSizeBoxTitle={"14px"}
-                              fontWeightBoxTitle={"700"}
-                              colorBoxDescription={"rgb(123, 128, 154)"}
-                              fontSizeBoxDescription={"12px"}
-                              fontWeightBoxDescription={"400"}
-                              
-                            />
+                            titleDetailContent={"Bu ay"}
+                            colorDetailContent={"#344563"}
+                            fontSizeDetailContent={"15px"}
+                            fontWeightDetailContent={"700"}
+
+                            icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
+                          />
                     </div>
                    
                     </div>
