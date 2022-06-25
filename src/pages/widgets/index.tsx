@@ -122,18 +122,50 @@ function Index() {
 
                      <h1 style={{marginTop:"15px"}}> Widget: widgetCardData </h1>
                      <div style={{ width:"720px", display:"flex", gap:"10px"}}>
+                         <div style={{ width:"350px" }}>
                             <WidgetCardData
-                                   icon={<BatteryFullIcon style={{ fontSize:"50px"}} />}
-                                   title={"Battery Health"}
-                                   value={"99 %"}
-                                   onlineStatus={true}
-                            />
+                                backgroundColor={"#F1F1F1"}
+                                WidgetBoxColor={"#0052CC"}
+                                icon={<BatteryFullIcon style={{ fontSize:"40px"}} />}
+                                          
+                                title={"Battery Health"}
+                                colorTitle={"#888888"}
+                                fontSizeTitle={"16px"}
+                                fontWeightTitle={"700"}
+
+                                value={"99 %"}
+                                colorValue={"black"}
+                                fontSizeValue={"16px"}
+                                fontWeightValue={"700"}
+
+                                onlineStatus={true}
+                                fontSizeStatus={"14px"}
+                                fontWeightStatus={"700"}
+                             />
+                          </div>
+                          <div style={{ width:"350px" }}>
                             <WidgetCardData
-                                   icon={<WbSunnyIcon style={{ fontSize:"50px"}} />}
-                                   title={"Aydınlık Seviyesi"}
-                                   value={"99 %"}
-                                   onlineStatus={false}
-                            />
+                                backgroundColor={"#F1F1F1"}
+                                WidgetBoxColor={"#0052CC"}
+                                icon={<WbSunnyIcon style={{ fontSize:"40px"}} />}
+                                          
+                                title={"Aydınlık Seviyesi"}
+                                colorTitle={"#888888"}
+                                fontSizeTitle={"16px"}
+                                fontWeightTitle={"700"}
+
+                                value={"99 %"}
+                                colorValue={"black"}
+                                fontSizeValue={"16px"}
+                                fontWeightValue={"700"}
+
+                                onlineStatus={true}
+                                fontSizeStatus={"14px"}
+                                fontWeightStatus={"700"}
+                             />
+                          </div>
+
+
                      </div>
 
                      <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
@@ -203,9 +235,7 @@ function Index() {
                             title={"Tüm Veriler TimeLine"}
                             fontSizeTitle={"16px"}
                             fontWeightTitle={"700"}
-
                             status={"positive"}
-
                             titleDetailDescription={"20%"}
                             fontSizeDetailDescription={"14px"}
                             fontWeightDetailDescription={"400"}

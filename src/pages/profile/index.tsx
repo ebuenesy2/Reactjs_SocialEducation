@@ -3,9 +3,10 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetInfo from '../../components/widgetsInfo';
+import WidgetCardData from '../../components/widgetCardData'; 
 
 //! İcon
+import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
@@ -98,20 +99,25 @@ function Index() {
                     <Navbar />
                     <div className="profileContainer">
                         
-                           <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                              <WidgetInfo userId={"15"}
-                                   userAvatar={"./assets/img/1.jpg"}
-                                   userStatus={true}
-                                   username={"username1"}
-                                   nameSurname={"Olga Sukhorukova"}
-                                   country={"Turkiye"}
-                                   city={"Ankara"}
-                                   dateofBirth={"17-03-1998"}
-                                   created_at={"2022-06-19T13:56:51+03:00"}
-                                   userActive={true}
-                                   onlineTime={"22gun/8ay/2yıl 13sa:39dak:44sn:900ms"}
-                                   editClick={()=> {alert("editClick")}}
-                                   viewClick={()=> {alert("viewClick")}}
+                           <div style={{ width:"350px" }}>
+                           <WidgetCardData
+                                   backgroundColor={"#F1F1F1"}
+                                   WidgetBoxColor={"#0052CC"}
+                                   icon={<BatteryFullIcon style={{ fontSize:"40px"}} />}
+                                   
+                                   title={"Battery Health"}
+                                   colorTitle={"#888888"}
+                                   fontSizeTitle={"16px"}
+                                   fontWeightTitle={"700"}
+
+                                   value={"99 %"}
+                                   colorValue={"black"}
+                                   fontSizeValue={"16px"}
+                                   fontWeightValue={"700"}
+
+                                   onlineStatus={true}
+                                   fontSizeStatus={"14px"}
+                                   fontWeightStatus={"700"}
                             />
                           </div>
                     </div>
