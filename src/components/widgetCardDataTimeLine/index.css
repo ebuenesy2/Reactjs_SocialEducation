@@ -51,12 +51,23 @@
     gap: 5px;
 }
 
+.widgetCardDataTimeLineDetailBoxStatus {
+    color: darkgreen;
+    transform: rotate(0deg);
+}
+
+.widgetCardDataTimeLineDetailBoxStatus.negative {
+    color: red;
+    transform: rotate(180deg);
+}
+
+
 .widgetCardDataTimeLineDetailBoxDescription {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 14px;
     font-weight: 400;
-    color: #344563;
+    color: darkgreen;
     line-height: 1.5;
     letter-spacing: 0.02857em;
     opacity: 1;
@@ -64,6 +75,8 @@
     vertical-align: unset;
     text-decoration: none;
 }
+
+.widgetCardDataTimeLineDetailBoxDescription.negative {  color: red; }
 
 .widgetCardDataTimeLineDetailBoxContent {
     margin-top: auto;
