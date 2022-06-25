@@ -1,6 +1,7 @@
 import "./index.css"
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 
 //! Date
@@ -18,7 +19,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
     
   return (
         <div className='widgetInfo'>
-         <div className="top"> Kullanıcı Bilgileri <div> <EditIcon onClick={()=> {props.editClick();}} className="icon" /> <VisibilityIcon onClick={()=> {props.viewClick();}} className="icon" /> </div>  </div>
+         <div className="top"> Kullanıcı Bilgileri <div> <VisibilityIcon onClick={()=> {props.viewClick();}} className="icon" /> <EditIcon onClick={()=> {props.editClick();}} className="icon" /> <DeleteIcon  onClick={()=> {props.deleteClick();}} style={{ color:"red" }} className="icon" /> </div>  </div>
           <div className="topUser"> UserId: <p className="userId">{props.userId}</p> </div>
           <hr/>
           
