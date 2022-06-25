@@ -23,7 +23,7 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 function Index() {
 
      //! State
-     const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
+     const [ widgetControlStatus , setWidgetControlStatus] = useState(true);
      const [ widgetControlStatus1 , setWidgetControlStatus1] = useState(false);
 
           
@@ -236,22 +236,44 @@ function Index() {
                      </div>
                      <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
                      <div style={{ width:"420px", display:"flex", gap:"10px" }}>
-                            <WidgetControl
-                                   title={"Wifi"}
-                                   icon={<WifiIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
-                                   status={widgetControlStatus}
-                                   setStatus={setWidgetControlStatus}
-                                   onlineStatus={false}
-                                   onClick={()=> {alert("tiklama wifi")}}
-                            />
-                            <WidgetControl
-                                   title={"Lamba"}
-                                   icon={<EmojiObjectsIcon style={{ fontSize:"70px",opacity:"0.3" }}/>}
-                                   status={widgetControlStatus1}
-                                   setStatus={setWidgetControlStatus1}
-                                   onlineStatus={true}
-                                   onClick={()=> {alert("tiklama lamba")}}
-                            />
+                                                        
+                          <div style={{ width:"200px" }}>
+                              <WidgetControl
+                                 title={"Wifi"}
+                                 colorTitle={"white"}
+                                 fontSizeTitle={"40px"}
+                                 fontWeightTitle={"700"}
+                                   
+                                 icon={<WifiIcon style={{ fontSize:"70px"}}/>}
+                                 status={widgetControlStatus1}
+                                 setStatus={setWidgetControlStatus1}
+                                   
+                                 onlineStatus={false}
+                                 fontSizeStatus={"14px"}
+                                 fontWeightStatus={"700"}
+                                   
+                                 onClick={()=> {alert("tiklama wifi")}}
+                               />
+                          </div>
+
+                           <div style={{ width:"200px" }}>
+                              <WidgetControl
+                                 title={"Lamba"}
+                                 colorTitle={"white"}
+                                 fontSizeTitle={"40px"}
+                                 fontWeightTitle={"700"}
+                                   
+                                 icon={<EmojiObjectsIcon style={{ fontSize:"70px" }}/>}
+                                 status={widgetControlStatus}
+                                 setStatus={setWidgetControlStatus}
+                                   
+                                 onlineStatus={false}
+                                 fontSizeStatus={"14px"}
+                                 fontWeightStatus={"700"}
+                                   
+                                 onClick={()=> {alert("tiklama lamba")}}
+                               />
+                          </div>
                      </div>
 
                      <h1 style={{marginTop:"25px"}}> Widget: widgetAddCard </h1>

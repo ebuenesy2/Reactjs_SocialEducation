@@ -3,13 +3,15 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetValue from "../../components/widgetValue";
+import WidgetControl from "../../components/widgetControl";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
+
 
 function Index() {    
 
@@ -90,6 +92,8 @@ function Index() {
      ];
 
      
+    //! State
+    const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
      
 
   return (
@@ -100,34 +104,22 @@ function Index() {
                     <div className="profileContainer">
                         
                            <div style={{ width:"200px" }}>
-                              <WidgetValue
-                                backgroundColor={"#F1F1F1"}
+                            <WidgetControl
+                              title={"Lamba"}
+                              colorTitle={"white"}
+                              fontSizeTitle={"40px"}
+                              fontWeightTitle={"700"}
                               
-                                value={"21"}
-                                colorValue={"red"}
-                                fontSizeValue={"44px"}
-                                fontWeightValue={"700"}
-                                
-                                valueKey={"°C"}
-                                colorValueKey={"red"}
-                                fontSizeValueKey={"18px"}
-                                fontWeightValueKey={"700"}
-
-                                title={"Mutfak Odası"}
-                                colorTitle={"black"}
-                                fontSizeTitle={"16px"}
-                                fontWeightTitle={"700"}
-                                  
-                                type={"Sıcaklık"}
-                                colorType={"rgb(103, 116, 142)"}
-                                fontSizeType={"12px"}
-                                fontWeightType={"500"}
-
-                                onlineStatus={true}
-                                fontSizeStatus={"14px"}
-                                fontWeightStatus={"700"}
-
-                              />
+                              icon={<EmojiObjectsIcon style={{ fontSize:"70px" }}/>}
+                              status={widgetControlStatus}
+                              setStatus={setWidgetControlStatus}
+                              
+                              onlineStatus={false}
+                              fontSizeStatus={"14px"}
+                              fontWeightStatus={"700"}
+                              
+                              onClick={()=> {alert("tiklama lamba")}}
+                            />
                           </div>
                     </div>
                </div>

@@ -14,15 +14,15 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
     
   return (
-        <div className='widgetControl'>
+        <div className='widgetControl'  style={{ backgroundColor:props.status==true ? "green": "red"}} >
             <div className="widgetControlTop">
-               <p className="checkValue">{props.status==true? "Açık": "Kapalı"}</p>
+               <p className="checkValue" style={{ color:"black" }} >{props.status==true? "Açık": "Kapalı"}</p>
                <div onClick={()=> {{props.setStatus(!props.status); props.onClick();}}} className={props.status==true ? "checkType active" : "checkType"}></div>
             </div>
-            <div className="widgetControlBottom">
+            <div className="widgetControlBottom" onClick={()=> {{props.setStatus(!props.status); props.onClick();}}} >
                 <div className="widgetControlBottomIcon"> {props.icon} </div>
-                <h1 className="widgetControlBottomH1"> {props.title} </h1>
-                <div className="widgetControlOnlineStatus" style={{ color:props.onlineStatus==true ? "green": "red"}}> {props.onlineStatus == true ? "Online": "Offline"}</div>
+                <h1 className="widgetControlBottomH1" style={{ color:props.colorTitle ? props.colorTitle: "black", fontSize: props.fontSizeTitle ? props.fontSizeTitle : "16px", fontWeight:props.fontWeightTitle ? props.fontWeightTitle : "700" }} > {props.title} </h1>
+                <div className="widgetControlOnlineStatus" style={{ color:"black", fontSize: props.fontSizeStatus ? props.fontSizeStatus : "16px", fontWeight:props.fontWeightStatus ? props.fontWeightStatus : "700" }} > {props.onlineStatus == true ? "Online": "Offline"}</div>
             </div>
                
         </div>
