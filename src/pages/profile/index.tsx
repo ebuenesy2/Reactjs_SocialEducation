@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetControl from "../../components/widgetControl";
+import WidgetAddCard from "../../components/widgetAddCard";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
@@ -92,8 +92,7 @@ function Index() {
      ];
 
      
-    //! State
-    const [ widgetControlStatus , setWidgetControlStatus] = useState(false);
+   
      
 
   return (
@@ -104,22 +103,15 @@ function Index() {
                     <div className="profileContainer">
                         
                            <div style={{ width:"200px" }}>
-                            <WidgetControl
-                              title={"Lamba"}
-                              colorTitle={"white"}
-                              fontSizeTitle={"40px"}
-                              fontWeightTitle={"700"}
-                              
-                              icon={<EmojiObjectsIcon style={{ fontSize:"70px" }}/>}
-                              status={widgetControlStatus}
-                              setStatus={setWidgetControlStatus}
-                              
-                              onlineStatus={false}
-                              fontSizeStatus={"14px"}
-                              fontWeightStatus={"700"}
-                              
-                              onClick={()=> {alert("tiklama lamba")}}
-                            />
+                             <WidgetAddCard 
+                               backgroundColor="#F1F1F1"
+                               title="Yeni Cihaz"
+                               colorTitle={"#8392ab"}
+                               fontSizeTitle={"20px"}
+                               fontWeightTitle={"700"}
+
+                               onClick={()=> {alert("yeni")}}
+                             />
                           </div>
                     </div>
                </div>

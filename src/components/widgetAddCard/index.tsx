@@ -11,10 +11,10 @@ export const Index =(props: any) => {  //console.log("proops:",props);
    //console.log("props:",props);
        
   return (
-        <div className='widgetAddCard'>
+        <div className='widgetAddCard' style={{ backgroundColor:props.backgroundColor ? props.backgroundColor : "#F1F1F1" }} >
           <div onClick={()=> {props.onClick()}} className="widgetAddCardContainer">
                <div className="widgetIcon"> <AddIcon style={{ color:"#8392ab", fontSize:"50px", fontWeight:"600"}} /></div>
-               <h1 className="widgetText">{props.title}</h1>
+               <h1 className="widgetText" style={{ color: props.colorTitle ? props.colorTitle : "black", fontSize: props.fontSizeTitle ? props.fontSizeTitle : "16px", fontWeight:props.fontWeightTitle ? props.fontWeightTitle : "700"  }} >{props.title}</h1>
           </div>
                
         </div>

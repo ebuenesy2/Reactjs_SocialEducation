@@ -277,12 +277,16 @@ function Index() {
                      </div>
 
                      <h1 style={{marginTop:"25px"}}> Widget: widgetAddCard </h1>
-                     <div style={{ width:"200px", display:"flex", gap:"10px" }}>
-                            <WidgetAddCard 
-                               title="Yeni Cihaz"
-                               onClick={()=> {alert("yeni")}}
-                             />
-                     </div>
+                     <div style={{ width:"200px" }}>
+                         <WidgetAddCard 
+                            backgroundColor="#F1F1F1"
+                            title="Yeni Cihaz"
+                            colorTitle={"#8392ab"}
+                            fontSizeTitle={"20px"}
+                            fontWeightTitle={"700"}
+                            onClick={()=> {alert("yeni")}}
+                         />
+                      </div>
 
                      
                      <h1 style={{marginTop:"45px"}}> Widget: widgetCategories </h1>
