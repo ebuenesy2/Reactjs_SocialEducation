@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetAddCard from "../../components/widgetAddCard";
+import WidgetCategories from "../../components/widgetCategories";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
@@ -101,18 +101,27 @@ function Index() {
                <div className="profileHome">
                     <Navbar />
                     <div className="profileContainer">
-                        
-                           <div style={{ width:"200px" }}>
-                             <WidgetAddCard 
-                               backgroundColor="#F1F1F1"
-                               title="Yeni Cihaz"
-                               colorTitle={"#8392ab"}
-                               fontSizeTitle={"20px"}
-                               fontWeightTitle={"700"}
+                   
+                    <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                            <WidgetCategories 
+                              backgroundColor={"#F1F1F1"}
+                            
+                              title={"Tüm Veriler"}
+                              colorTitle={"#344563"}
+                              fontSizeTitle={"16px"}
+                              fontWeightTitle={"900"}
 
-                               onClick={()=> {alert("yeni")}}
-                             />
-                          </div>
+                              JsonData={JsonData}
+                              colorBoxTitle={"#344563"}
+                              fontSizeBoxTitle={"14px"}
+                              fontWeightBoxTitle={"700"}
+                              colorBoxDescription={"rgb(123, 128, 154)"}
+                              fontSizeBoxDescription={"12px"}
+                              fontWeightBoxDescription={"400"}
+                              
+                            />
+                    </div>
+                   
                     </div>
                </div>
         </div>

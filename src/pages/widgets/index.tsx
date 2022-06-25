@@ -292,15 +292,28 @@ function Index() {
                      <h1 style={{marginTop:"45px"}}> Widget: widgetCategories </h1>
                      <div style={{ width:"450px", display:"flex", gap:"10px" }}>
                             <WidgetCategories 
-                                   title={"Tüm Veriler"}
-                                   JsonData={JsonData}
+                              backgroundColor={"#F1F1F1"}
+                            
+                              title={"Tüm Veriler"}
+                              colorTitle={"#344563"}
+                              fontSizeTitle={"16px"}
+                              fontWeightTitle={"900"}
+
+                              JsonData={JsonData}
+                              colorBoxTitle={"#344563"}
+                              fontSizeBoxTitle={"14px"}
+                              fontWeightBoxTitle={"700"}
+                              colorBoxDescription={"rgb(123, 128, 154)"}
+                              fontSizeBoxDescription={"12px"}
+                              fontWeightBoxDescription={"400"}
+                              
                             />
                     </div>
 
                                          
                     <h1 style={{marginTop:"45px"}}> Widget: widgetCardDataTimeLine </h1>
                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                            <WidgetCardDataTimeLine 
+                       <WidgetCardDataTimeLine 
                             backgroundColor={"#F1F1F1"}
                             colorTitle={"#344563"}
                             title={"Tüm Veriler TimeLine"}
@@ -323,7 +336,7 @@ function Index() {
                             colorBoxDescription={"#344563"}
                             fontSizeBoxDescription={"12px"}
                             fontWeightBoxDescription={"400"}
-                            />
+                        />
                      </div>
                      
                     </div>
