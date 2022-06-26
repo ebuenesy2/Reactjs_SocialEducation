@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
+import WidgetPost from "../../components/widgetPost";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
@@ -105,49 +105,46 @@ function Index() {
                     <Navbar />
                     <div className="profileContainer">
                    
-                    <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                          <WidgetDataIstatistics
-                            backgroundColor={"#F1F1F1"}                            
-                           
-                            title={"Kullanıcılar"}
-                            colorTitle={"#344563"}
-                            fontSizeTitle={"16px"}
-                            fontWeightTitle={"700"}
+                    <div style={{ width:"450px" }}>
+                      <WidgetPost
+                        backgroundColor={"#344563"}
+                        postUrl="./assets/img/16.jpg"
+                        
+                        userId="1"
+                        userUrl="Profile?id=1"
+                        userImage="./assets/img/1.jpg"
+                        userNameSurname="Olga Sukhorukova"
+                        colorUserNameSurname="aliceblue"
+                        fontSizeUserNameSurname="14px"
+                        fontWeightUserNameSurname="900"
 
-                            value={"19"}
-                            colorValue={"black"}
-                            fontSizeValue={"28px"}
-                            fontWeightValue={"400"}
+                        Time="12 saat önce"
+                        colorTime="aliceblue"
+                        fontSizeTime="12px"
+                        fontWeightTime="400"
 
-                            titleDescription={"Online Sayısı: "}
-                            colorDescription={"rgb(160, 160, 160)"}
-                            fontSizeDescription={"12px"}
-                            fontWeightDescription={"700"}
+                        liked="true"
+                        likeOnClick={()=> { alert("beğenildi") } }
+                        countLiked="300"
+                        colorLike="aliceblue"
+                        fontSizeLike="12px"
+                        fontWeightLike="400"
 
-                            titleDescriptionValue={"121"}
-                            colorDescriptionValue={"rgb(160, 160, 160)"}
-                            fontSizeDescriptionValue={"12px"}
-                            fontWeightDescriptionValue={"700"}
+                        commentOnClick={()=> { alert("yorum yap") } }
+                        countComment="200"
+                        colorComment="aliceblue"
+                        fontSizeComment="12px"
+                        fontWeightComment="400"
 
-                            LinkName={"Link Name"}
-                            LinkUrl={"/linkUrl"}
-                            colorLink={"blue"}
-                            fontSizeLink={"12px"}
-                            fontWeightLink={"700"}
+                        visibilityOnClick={()=> { alert("Görüntüleyenler") } }
+                        countVisibility="100"
+                        colorVisibility="aliceblue"
+                        fontSizeVisibility="12px"
+                        fontWeightVisibility="400"
 
-                            status={"positive"}
-                            titleDetailDescription={"20%"}
-                            fontSizeDetailDescription={"14px"}
-                            fontWeightDetailDescription={"400"}
-
-                            titleDetailContent={"Bu ay"}
-                            colorDetailContent={"#344563"}
-                            fontSizeDetailContent={"15px"}
-                            fontWeightDetailContent={"700"}
-
-                            WidgetBoxColor={"#FEDDC7"}
-                            icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
-                          />
+                        shareOnClick={()=> { alert("paylaş") } }
+                        deleteOnClick={()=> { alert("Sil") } }                           
+                      />
                     </div>
                    
                     </div>

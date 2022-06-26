@@ -9,6 +9,7 @@ import WidgetAddCard from "../../components/widgetAddCard";
 import WidgetCategories from "../../components/widgetCategories";
 import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
 import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
+import WidgetPost from "../../components/widgetPost";
 import "./index.css";
 
 //! icon
@@ -343,50 +344,93 @@ function Index() {
 
                      <h1 style={{marginTop:"45px"}}> Widget: widgetDataIstatistics </h1>                                        
                      <div style={{ width:"450px" }}>
-                            <WidgetDataIstatistics
-                                   backgroundColor={"#F1F1F1"}                            
-                            
-                                   title={"Kullanıcılar"}
-                                   colorTitle={"#344563"}
-                                   fontSizeTitle={"16px"}
-                                   fontWeightTitle={"700"}
-
-                                   value={"19"}
-                                   colorValue={"black"}
-                                   fontSizeValue={"28px"}
-                                   fontWeightValue={"400"}
-
-                                   titleDescription={"Online Sayısı: "}
-                                   colorDescription={"rgb(160, 160, 160)"}
-                                   fontSizeDescription={"12px"}
-                                   fontWeightDescription={"700"}
-
-                                   titleDescriptionValue={"121"}
-                                   colorDescriptionValue={"rgb(160, 160, 160)"}
-                                   fontSizeDescriptionValue={"12px"}
-                                   fontWeightDescriptionValue={"700"}
-
-                                   LinkName={"Link Name"}
-                                   LinkUrl={"/linkUrl"}
-                                   colorLink={"blue"}
-                                   fontSizeLink={"12px"}
-                                   fontWeightLink={"700"}
-
-                                   status={"positive"}
-                                   titleDetailDescription={"20%"}
-                                   fontSizeDetailDescription={"14px"}
-                                   fontWeightDetailDescription={"400"}
-
-                                   titleDetailContent={"Bu ay"}
-                                   colorDetailContent={"#344563"}
-                                   fontSizeDetailContent={"15px"}
-                                   fontWeightDetailContent={"700"}
-
-                                   WidgetBoxColor={"#FEDDC7"}
-                                   icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
-                            />
-                     </div>
+                         <WidgetDataIstatistics
+                            backgroundColor={"#F1F1F1"}                            
                      
+                            title={"Kullanıcılar"}
+                            colorTitle={"#344563"}
+                            fontSizeTitle={"16px"}
+                            fontWeightTitle={"700"}
+
+                            value={"19"}
+                            colorValue={"black"}
+                            fontSizeValue={"28px"}
+                            fontWeightValue={"400"}
+
+                            titleDescription={"Online Sayısı: "}
+                            colorDescription={"rgb(160, 160, 160)"}
+                            fontSizeDescription={"12px"}
+                            fontWeightDescription={"700"}
+
+                            titleDescriptionValue={"121"}
+                            colorDescriptionValue={"rgb(160, 160, 160)"}
+                            fontSizeDescriptionValue={"12px"}
+                            fontWeightDescriptionValue={"700"}
+
+                            LinkName={"Link Name"}
+                            LinkUrl={"/linkUrl"}
+                            colorLink={"blue"}
+                            fontSizeLink={"12px"}
+                            fontWeightLink={"700"}
+
+                            status={"positive"}
+                            titleDetailDescription={"20%"}
+                            fontSizeDetailDescription={"14px"}
+                            fontWeightDetailDescription={"400"}
+
+                            titleDetailContent={"Bu ay"}
+                            colorDetailContent={"#344563"}
+                            fontSizeDetailContent={"15px"}
+                            fontWeightDetailContent={"700"}
+
+                            WidgetBoxColor={"#FEDDC7"}
+                            icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
+                         />
+                     </div>
+
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetPost </h1>    
+                     <div style={{ width:"450px" }}>
+                        <WidgetPost
+                            backgroundColor={"#344563"}
+                            postUrl="./assets/img/16.jpg"
+                            
+                            userId="1"
+                            userUrl="Profile?id=1"
+                            userImage="./assets/img/1.jpg"
+                            userNameSurname="Olga Sukhorukova"
+                            colorUserNameSurname="aliceblue"
+                            fontSizeUserNameSurname="14px"
+                            fontWeightUserNameSurname="900"
+
+                            Time="12 saat önce"
+                            colorTime="aliceblue"
+                            fontSizeTime="12px"
+                            fontWeightTime="400"
+
+                            liked="true"
+                            likeOnClick={()=> { alert("beğenildi") } }
+                            countLiked="300"
+                            colorLike="aliceblue"
+                            fontSizeLike="12px"
+                            fontWeightLike="400"
+
+                            commentOnClick={()=> { alert("yorum yap") } }
+                            countComment="200"
+                            colorComment="aliceblue"
+                            fontSizeComment="12px"
+                            fontWeightComment="400"
+
+                            visibilityOnClick={()=> { alert("Görüntüleyenler") } }
+                            countVisibility="100"
+                            colorVisibility="aliceblue"
+                            fontSizeVisibility="12px"
+                            fontWeightVisibility="400"
+
+                            shareOnClick={()=> { alert("paylaş") } }
+                            deleteOnClick={()=> { alert("Sil") } }                           
+                        />
+                     </div>
+
                     </div>
                </div>
         </div>
