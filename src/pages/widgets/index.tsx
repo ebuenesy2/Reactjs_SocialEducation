@@ -8,9 +8,11 @@ import WidgetControl from "../../components/widgetControl";
 import WidgetAddCard from "../../components/widgetAddCard";
 import WidgetCategories from "../../components/widgetCategories";
 import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
+import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
 import "./index.css";
 
 //! icon
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import WifiIcon from '@material-ui/icons/Wifi';
@@ -337,6 +339,52 @@ function Index() {
                             fontSizeBoxDescription={"12px"}
                             fontWeightBoxDescription={"400"}
                         />
+                     </div>
+
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetDataIstatistics </h1>                                        
+                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                            <WidgetDataIstatistics
+                                   backgroundColor={"#F1F1F1"}                            
+                            
+                                   title={"Kullanıcılar"}
+                                   colorTitle={"#344563"}
+                                   fontSizeTitle={"16px"}
+                                   fontWeightTitle={"700"}
+
+                                   value={"19"}
+                                   colorValue={"black"}
+                                   fontSizeValue={"28px"}
+                                   fontWeightValue={"400"}
+
+                                   titleDescription={"Online Sayısı: "}
+                                   colorDescription={"rgb(160, 160, 160)"}
+                                   fontSizeDescription={"12px"}
+                                   fontWeightDescription={"700"}
+
+                                   titleDescriptionValue={"121"}
+                                   colorDescriptionValue={"rgb(160, 160, 160)"}
+                                   fontSizeDescriptionValue={"12px"}
+                                   fontWeightDescriptionValue={"700"}
+
+                                   LinkName={"Link Name"}
+                                   LinkUrl={"/linkUrl"}
+                                   colorLink={"blue"}
+                                   fontSizeLink={"12px"}
+                                   fontWeightLink={"700"}
+
+                                   status={"positive"}
+                                   titleDetailDescription={"20%"}
+                                   fontSizeDetailDescription={"14px"}
+                                   fontWeightDetailDescription={"400"}
+
+                                   titleDetailContent={"Bu ay"}
+                                   colorDetailContent={"#344563"}
+                                   fontSizeDetailContent={"15px"}
+                                   fontWeightDetailContent={"700"}
+
+                                   WidgetBoxColor={"#FEDDC7"}
+                                   icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
+                            />
                      </div>
                      
                     </div>

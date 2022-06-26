@@ -3,12 +3,13 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetDataIstatisticsfrom from "../../components/widgetDataIstatistics";
+import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import FaceIcon from '@material-ui/icons/Face';
 
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
@@ -105,13 +106,36 @@ function Index() {
                     <div className="profileContainer">
                    
                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
-                          <WidgetDataIstatisticsfrom
-                            backgroundColor={"#F1F1F1"}
-                            colorTitle={"#344563"}
+                          <WidgetDataIstatistics
+                            backgroundColor={"#F1F1F1"}                            
+                           
                             title={"Kullanıcılar"}
+                            colorTitle={"#344563"}
                             fontSizeTitle={"16px"}
                             fontWeightTitle={"700"}
-                            status={"negative"}
+
+                            value={"19"}
+                            colorValue={"black"}
+                            fontSizeValue={"28px"}
+                            fontWeightValue={"400"}
+
+                            titleDescription={"Online Sayısı: "}
+                            colorDescription={"rgb(160, 160, 160)"}
+                            fontSizeDescription={"12px"}
+                            fontWeightDescription={"700"}
+
+                            titleDescriptionValue={"121"}
+                            colorDescriptionValue={"rgb(160, 160, 160)"}
+                            fontSizeDescriptionValue={"12px"}
+                            fontWeightDescriptionValue={"700"}
+
+                            LinkName={"Link Name"}
+                            LinkUrl={"/linkUrl"}
+                            colorLink={"blue"}
+                            fontSizeLink={"12px"}
+                            fontWeightLink={"700"}
+
+                            status={"positive"}
                             titleDetailDescription={"20%"}
                             fontSizeDetailDescription={"14px"}
                             fontWeightDetailDescription={"400"}
@@ -121,6 +145,7 @@ function Index() {
                             fontSizeDetailContent={"15px"}
                             fontWeightDetailContent={"700"}
 
+                            WidgetBoxColor={"#FEDDC7"}
                             icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
                           />
                     </div>

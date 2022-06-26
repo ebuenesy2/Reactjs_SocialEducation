@@ -11,3 +11,10 @@ export enum standartColor {
     positive="darkgreen",
     negative="red"
 }
+
+
+export enum myFavoriteColor {
+     green="#8FBC8F",
+     grey="#D0E1FD",
+     orange="#FEDDC7"
+}
