@@ -342,7 +342,7 @@ function Index() {
                      </div>
 
                      <h1 style={{marginTop:"45px"}}> Widget: widgetDataIstatistics </h1>                                        
-                     <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                     <div style={{ width:"450px" }}>
                             <WidgetDataIstatistics
                                    backgroundColor={"#F1F1F1"}                            
                             

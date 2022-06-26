@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
-import Widget from '../../components/widgets';
+import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
 import TableUser from '../../components/tableUser';
 
-
+//! İcon
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 
 function Index() {
 
@@ -104,7 +105,51 @@ function Index() {
                     <Navbar />
                     <div className="usersContainer">
                             <div className="Widgets"> 
-                                   <Widget type="user" counter={productsData.length} status="negative" statusCount="30" onlineCount={productsCount}/>
+                                                     
+                    <div style={{ width:"450px", display:"flex", gap:"10px" }}>
+                          <WidgetDataIstatistics
+                            backgroundColor={"#F1F1F1"}                            
+                           
+                            title={"Kullanıcılar"}
+                            colorTitle={"#344563"}
+                            fontSizeTitle={"16px"}
+                            fontWeightTitle={"700"}
+
+                            value={"19"}
+                            colorValue={"black"}
+                            fontSizeValue={"28px"}
+                            fontWeightValue={"400"}
+
+                            titleDescription={"Online Sayısı: "}
+                            colorDescription={"rgb(160, 160, 160)"}
+                            fontSizeDescription={"12px"}
+                            fontWeightDescription={"700"}
+
+                            titleDescriptionValue={"121"}
+                            colorDescriptionValue={"rgb(160, 160, 160)"}
+                            fontSizeDescriptionValue={"12px"}
+                            fontWeightDescriptionValue={"700"}
+
+                            LinkName={"Link Name"}
+                            LinkUrl={"/linkUrl"}
+                            colorLink={"blue"}
+                            fontSizeLink={"12px"}
+                            fontWeightLink={"700"}
+
+                            status={"positive"}
+                            titleDetailDescription={"20%"}
+                            fontSizeDetailDescription={"14px"}
+                            fontWeightDetailDescription={"400"}
+
+                            titleDetailContent={"Bu ay"}
+                            colorDetailContent={"#344563"}
+                            fontSizeDetailContent={"15px"}
+                            fontWeightDetailContent={"700"}
+
+                            WidgetBoxColor={"#FEDDC7"}
+                            icon={<PersonOutlineOutlinedIcon style={{ fontSize:"35px",color:"black"}} />}
+                          />
+                    </div>
                             </div>
 
                             <div className="listContainer"> 
