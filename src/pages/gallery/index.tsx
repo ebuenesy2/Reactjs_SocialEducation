@@ -1,9 +1,6 @@
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import WidgetPost from "../../components/widgetPost";
-
-import Post from "../../components/post";
-
 import "./index.css";
 
 
