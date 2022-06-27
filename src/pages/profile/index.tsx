@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetPost from "../../components/widgetPost";
+import WidgetInbox from "../../components/widgetInbox";
 
 //! İcon
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
@@ -33,71 +33,6 @@ function Index() {
            
      }, []);
 
-     
-     const JsonData = [
-         {
-            "title":"Toplam Dosyalar",
-            "content":"Sayısı: 1451 / 1 TB 200 GB 150 MB 100 KB",
-            "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Dosyalar"); },
-            "backgroundColor":"rgb(76, 175, 80)"
-         },
-         {
-            "title":"Toplam Fotoğraflar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <PhotoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Fotoğraflar"); },
-            "backgroundColor":"rgb(244, 67, 53)"
-          },
-          {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-          },
-          {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-          },
-          {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-          },
-          {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-          },
-          {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-          },
-          {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-          }
-          
-     ];
-
-     
-   
-     
-
   return (
         <div className='profile'>
                <Sidebar/>
@@ -105,47 +40,32 @@ function Index() {
                     <Navbar />
                     <div className="profileContainer">
                    
-                    <div style={{ width:"450px" }}>
-                      <WidgetPost
-                        backgroundColor={"#344563"}
-                        postUrl="./assets/img/16.jpg"
-                        
-                        userId="1"
-                        userUrl="Profile?id=1"
-                        userImage="./assets/img/1.jpg"
-                        userNameSurname="Olga Sukhorukova"
-                        colorUserNameSurname="aliceblue"
-                        fontSizeUserNameSurname="14px"
-                        fontWeightUserNameSurname="900"
+                        <div style={{ display:"flex", gap:"5px" }}>
+                          <div style={{ width:"350px" }}> 
+                             <WidgetInbox
+                                backgroundColor={"#F1F1F1"}
+                                onlineStatus={false}
 
-                        Time="12 saat önce"
-                        colorTime="aliceblue"
-                        fontSizeTime="12px"
-                        fontWeightTime="400"
+                                userId="1"
+                                userUrl="Profile?id=1"
+                                userImage="./assets/img/1.jpg"
+                                userNameSurname="Olga Sukhorukova"
+                                colorUserNameSurname="black"
+                                fontSizeUserNameSurname="14px"
+                                fontWeightUserNameSurname="900"
 
-                        liked="true"
-                        likeOnClick={()=> { alert("beğenildi") } }
-                        countLiked="300"
-                        colorLike="aliceblue"
-                        fontSizeLike="12px"
-                        fontWeightLike="400"
+                                message="Project has been already"
+                                colorMessage="#540A0A"
+                                fontSizeMessage="14px"
+                                fontWeightMessage="100"
 
-                        commentOnClick={()=> { alert("yorum yap") } }
-                        countComment="200"
-                        colorComment="aliceblue"
-                        fontSizeComment="12px"
-                        fontWeightComment="400"
-
-                        visibilityOnClick={()=> { alert("Görüntüleyenler") } }
-                        countVisibility="100"
-                        colorVisibility="aliceblue"
-                        fontSizeVisibility="12px"
-                        fontWeightVisibility="400"
-
-                        shareOnClick={()=> { alert("paylaş") } }
-                        deleteOnClick={()=> { alert("Sil") } }                           
-                      />
-                    </div>
+                                time="08:45"
+                                colorTime="#540A0A"
+                                fontSizeTime="12px"
+                                fontWeightTime="400"
+                             />
+                          </div>
+                        </div>
                    
                     </div>
                </div>

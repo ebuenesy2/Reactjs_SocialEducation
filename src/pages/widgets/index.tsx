@@ -10,6 +10,7 @@ import WidgetCategories from "../../components/widgetCategories";
 import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
 import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
 import WidgetPost from "../../components/widgetPost";
+import WidgetInbox from "../../components/widgetInbox";
 import "./index.css";
 
 //! icon
@@ -428,6 +429,32 @@ function Index() {
 
                             shareOnClick={()=> { alert("paylaş") } }
                             deleteOnClick={()=> { alert("Sil") } }                           
+                        />
+                     </div>
+
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetInbox </h1>
+                     <div style={{ width:"350px" }}> 
+                        <WidgetInbox
+                           backgroundColor={"#F1F1F1"}
+                           onlineStatus={false}
+
+                           userId="1"
+                           userUrl="Profile?id=1"
+                           userImage="./assets/img/1.jpg"
+                           userNameSurname="Olga Sukhorukova"
+                           colorUserNameSurname="black"
+                           fontSizeUserNameSurname="14px"
+                           fontWeightUserNameSurname="900"
+
+                           message="Project has been already"
+                           colorMessage="#540A0A"
+                           fontSizeMessage="14px"
+                           fontWeightMessage="100"
+
+                           time="08:45"
+                           colorTime="#540A0A"
+                           fontSizeTime="12px"
+                           fontWeightTime="400"
                         />
                      </div>
 
