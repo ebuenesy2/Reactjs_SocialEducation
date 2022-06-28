@@ -11,6 +11,8 @@ import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
 import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
 import WidgetPost from "../../components/widgetPost";
 import WidgetInbox from "../../components/widgetInbox";
+
+import Progressbar from "../../components/progressbar";
 import "./index.css";
 
 //! icon
@@ -456,6 +458,22 @@ function Index() {
                            fontSizeTime="12px"
                            fontWeightTime="400"
                         />
+                     </div>
+
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetInbox </h1>
+                     <div style={{ display:"flex", gap:"10px", flexDirection:"column"}}>
+                        <div style={{ width:"200px" }}> 
+                           <Progressbar 
+                              value="70"
+                              maxValue="100"
+                           />
+                        </div>
+                        <div style={{ width:"200px" }}> 
+                           <Progressbar 
+                              value="80"
+                              maxValue="100"
+                           />
+                        </div>
                      </div>
 
                     </div>
