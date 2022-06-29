@@ -13,6 +13,7 @@ import WidgetPost from "../../components/widgetPost";
 import WidgetInbox from "../../components/widgetInbox";
 
 import Progressbar from "../../components/progressbar";
+import ProgressbarCirculer from "../../components/progressbarCirculer";
 import "./index.css";
 
 //! icon
@@ -460,7 +461,7 @@ function Index() {
                         />
                      </div>
 
-                     <h1 style={{marginTop:"45px"}}> Widget: widgetInbox </h1>
+                     <h1 style={{marginTop:"45px"}}> Widget: progressbar </h1>
                      <div style={{ display:"flex", gap:"10px", flexDirection:"column"}}>
                         <div style={{ width:"200px" }}> 
                            <Progressbar 
@@ -475,6 +476,30 @@ function Index() {
                            />
                         </div>
                      </div>
+
+                     <h1 style={{marginTop:"45px"}}> Widget: progressbarCirculer </h1>
+                     <div style={{ width:"150px" }}> 
+                             <ProgressbarCirculer 
+                                title="Toplam Yemek Hakları"
+                                titleSize={"13px"}
+                                titleColor={"rgb(52, 69, 99)"}
+                                titleWeight={"300"}
+                                thickness={8}
+                                percentileIcon={false}
+                                /*  backColor={"#0052CC"} */
+                                marginTop={"0px"}
+                                text={"Kişi"}
+                                value={100}
+                                maxValue={200}
+                                textColor={"#0052CC"}
+                                textSize={"25px"}
+                                textWeight={"bold"}
+                                subTextSize={"11px"}
+                                subtextWeight={"bold"}    
+                                timer={80}
+                                disableAnim={true}
+                             />
+                          </div>
 
                     </div>
                </div>

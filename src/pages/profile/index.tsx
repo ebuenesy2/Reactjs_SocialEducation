@@ -40,7 +40,7 @@ function Index() {
                                 titleWeight={"300"}
                                 thickness={8}
                                 percentileIcon={false}
-                                backColor={"#0052CC"}
+                                /*  backColor={"#0052CC"} */
                                 marginTop={"0px"}
                                 text={"Kişi"}
                                 value={100}
@@ -50,8 +50,8 @@ function Index() {
                                 textWeight={"bold"}
                                 subTextSize={"11px"}
                                 subtextWeight={"bold"}    
-                                timer={10}
-                                disableAnim={false}
+                                timer={100}
+                                disableAnim={true}
                              />
                           </div>
                         </div>

@@ -53,15 +53,15 @@ export const Index =(props: any) => {  //console.log("proops:",props);
        let valueCount = 0;
 
       var interval = setInterval(() => { //! Start
-         console.log("1sn çalışıyor");
-
+         //console.log("1sn çalışıyor");
          valueCount= valueCount + 1;
+         setValueState(valueCount);
 
-         if(valueCount == 5) {
+         if(valueCount == props.value) {
             clearInterval(interval); //! Stop
-            console.log("timer durdu");
+            //console.log("timer durdu");
          }
-      },5)
+      },props.timer ? props.timer : 100)
 
    }, [])
 
@@ -75,7 +75,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
                      strokeWidth={ props.thickness ? props.thickness : 5} /* Kalınlık */
                      
                      styles={buildStyles({
-                        pathColor: props.backColor ? props.backColor: colorChoose((( props.value/ props.maxValue)*100)),  /* ProgressBar Rengi */
+                        pathColor: props.backColor ? props.backColor: colorChoose((( (props.disableAnim==true ? valueState : props.value)/ props.maxValue)*100)),  /* ProgressBar Rengi */
                         textSize: props.textSize ? props.textSize : "16px",
                      })}
             />
@@ -83,7 +83,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
          
             <div style={{ position:"absolute", display:"flex", justifyContent:"center", flexDirection:"column", alignItems:"center"}}>
                <div  style={{ display:"flex", justifyContent:"center"}} > 
-                     <p style={{ marginTop:"auto", marginBottom:"auto",  color: props.textColor ? props.textColor : '#344563', fontSize: props.textSize ? props.textSize :  "12px", fontWeight: props.textWeight ? props.textWeight : "normal"}}> {props.value} </p> 
+                     <p style={{ marginTop:"auto", marginBottom:"auto",  color: props.textColor ? props.textColor : '#344563', fontSize: props.textSize ? props.textSize :  "12px", fontWeight: props.textWeight ? props.textWeight : "normal"}}> {props.disableAnim==true ? valueState : props.value} </p> 
                      <p style={{ marginTop:"auto", marginBottom:"auto",  fontSize: props.textSize ? props.textSize :  "12px", fontWeight: props.textWeight ? props.textWeight : "normal" }}>  {props.percentileIcon && "%" }  </p>  
                </div>
                <div style={{fontWeight: props.subtextWeight ? props.subtextWeight : "normal"  ,fontSize: props.subTextSize ? props.subTextSize : "16px", textTransform:"uppercase" , marginTop: props.marginTop ? props.marginTop : "0px"}} > {props.text} </div>
@@ -93,6 +93,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
          </div>
             <p style={{ color:  props.titleColor ? props.titleColor: "#344563", fontWeight: props.titleWeight ? props.titleWeight : "normal", fontSize: props.titleSize ? props.titleSize : "12px" , marginTop:"10px"}}> {props.title} </p>
          </div>
+         
   )
 }
 
