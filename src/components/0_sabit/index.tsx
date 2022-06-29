@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./index.css"
 
 
@@ -12,6 +13,10 @@ export const Index =(props: any) => {  //console.log("proops:",props);
    console.log("created_at:",props.created_at);
    console.log("Moment:",Moment(props.created_at).format('L'));
    console.log("Moment:",Moment(props.created_at).format('LTS'));
+
+   //! State
+   const [ widgetControlStatus , setWidgetControlStatus] = useState(true);
+   const [ widgetControlStatus1 , setWidgetControlStatus1] = useState(false);
 
 
     
