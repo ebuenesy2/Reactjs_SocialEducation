@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import ProgressbarCirculer from "../../components/progressbarCirculer";
+import ProgressbarCirculerDone from "../../components/progressbarCirculerDone";
 
 
 
@@ -33,25 +33,8 @@ function Index() {
                    
                         <div style={{ display:"flex", gap:"5px" }}>
                           <div style={{ width:"150px" }}> 
-                             <ProgressbarCirculer 
-                                title="Toplam Yemek Hakları"
-                                titleSize={"13px"}
-                                titleColor={"rgb(52, 69, 99)"}
-                                titleWeight={"300"}
-                                thickness={8}
-                                percentileIcon={false}
-                                /*  backColor={"#0052CC"} */
-                                marginTop={"0px"}
-                                text={"Kişi"}
-                                value={100}
-                                maxValue={200}
-                                textColor={"#0052CC"}
-                                textSize={"25px"}
-                                textWeight={"bold"}
-                                subTextSize={"11px"}
-                                subtextWeight={"bold"}    
-                                timer={100}
-                                disableAnim={true}
+                             <ProgressbarCirculerDone 
+                              
                              />
                           </div>
                         </div>

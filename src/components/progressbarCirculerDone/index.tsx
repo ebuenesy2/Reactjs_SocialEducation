@@ -15,7 +15,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
    console.log("Moment:",Moment(props.created_at).format('LTS'));
 
    //! State
-   const [ widgetControlStatus , setWidgetControlStatus] = useState(10);
+   const [ widgetControlStatus , setWidgetControlStatus] = useState(0);
    const [ widgetControlStatus1 , setWidgetControlStatus1] = useState(false);
 
 
