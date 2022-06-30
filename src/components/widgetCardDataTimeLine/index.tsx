@@ -8,12 +8,8 @@ import EjectIcon from '@material-ui/icons/Eject';
 import Moment from 'moment'; //! Date
 Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
 
-export const Index =(props: any) => {  console.log("widgetCardDataTimeLineProps:",props); 
-console.log("JsonData:",props.JsonData);
-console.log("IconCssJson:",props.IconCssJson);
-
-console.log("IconCssJson Arama:", props.IconCssJson.find((el: { table: any }) => el.table === 'user')?.backgroundColor);
-       
+export const Index =(props: any) => { console.log("widgetCardDataTimeLineProps:",props); 
+     
   return (
         <div className='widgetCardDataTimeLine' style={{ backgroundColor: props.backgroundColor ? props.backgroundColor : "azure"  }} >
            <div className="widgetCardDataTimeLineContainer">
@@ -28,11 +24,11 @@ console.log("IconCssJson Arama:", props.IconCssJson.find((el: { table: any }) =>
                <div className="widgetCardDataTimeLineBottom" >
 
                   {
-                     props.JsonData.map((jsondat : any)=> {
+                     props.productsData.map((jsondat : any)=> {
                           return (
                               <>
                                  <div className="widgetCardDataTimeLineBottomBox">
-                                    <div className="widgetCardDataTimeLineBottomIconBox" style={{ background: "red" }} > {props.IconCssJson.find((el:any) => el.table === 'user')?.icon} </div>
+                                    <div className="widgetCardDataTimeLineBottomIconBox" style={{ background: props.IconCssJson.find((el:any) => el.table === jsondat?.table)?.backgroundColor }} > {props.IconCssJson.find((el:any) => el.table === jsondat?.table)?.icon} </div>
                                  <div className="widgetCardDataTimeLineBottomInfoBox">
                                     <div className="widgetCardDataTimeLineBottomInfoBoxTitle" style={{ color: props.colorBoxTitle ? props.colorBoxTitle : "black", fontSize: props.fontSizeBoxTitle ? props.fontSizeBoxTitle : "16px", fontWeight:props.fontWeightBoxTitle ? props.fontWeightBoxTitle : "700"  }} > {jsondat?.description} </div>
                                     <div className="widgetCardDataTimeLineBottomInfoBoxDescription" style={{ color: props.colorBoxDescription ? props.colorBoxDescription : "black", fontSize: props.fontSizeBoxDescription ? props.fontSizeBoxDescription : "14px", fontWeight:props.fontWeightBoxDescription ? props.fontWeightBoxDescription : "400"  }} > {jsondat?.created_at} </div>

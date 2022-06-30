@@ -18,6 +18,7 @@ export enum myFavoriteColor {
      green="#43B37A",
      grey="#D0E1FD",
      orange="#FEDDC7",
+     coral="#FF2F50",
      blue="#0052CC",
      steelblue="#4682B4"
      

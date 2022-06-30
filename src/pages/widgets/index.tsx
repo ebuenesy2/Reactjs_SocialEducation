@@ -17,6 +17,10 @@ import ProgressbarCirculer from "../../components/progressbarCirculer";
 import "./index.css";
 
 //! icon
+import NoteIcon from '@material-ui/icons/Note';
+import PersonIcon from '@material-ui/icons/Person';
+import TimerIcon from '@material-ui/icons/Timer';
+
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'; 
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
@@ -86,6 +90,93 @@ function Index() {
           }
           
      ];
+
+     //! Sabit Data
+      const JsonDataApi = [
+         {
+            "id":1,
+            "table": "user",
+            "title": "user_update_successful",
+            "description": "Kullanıcı Güncelleme Başarılı",
+            "logStatus": "success",
+            "created_at": "2022-06-19T18:18:08+03:00"
+         },
+         {
+            "id":2,
+            "table": "file",
+            "title": "file_add_successful",
+            "description": "Dosya Ekleme Başarılıı",
+            "logStatus": "success",
+            "created_at": "2022-06-30T06:42:19+03:00"
+         },
+         {
+            "id":3,
+            "table": "note",
+            "title": "note_add_successful",
+            "description": "Not Ekleme Başarılı",
+            "logStatus": "success",
+            "created_at": "2022-06-30T06:43:50+03:00"
+         },
+         {
+            "id":4,
+            "table": "time",
+            "title": "time_add_successful",
+            "description": "Time Ekleme Başarılı",
+            "logStatus": "success",
+            "created_at": "2022-06-30T06:43:50+03:00"
+         },
+         {
+            "id":5,
+            "table": "note",
+            "title": "note_add_successful",
+            "description": "Not Ekleme Başarılı",
+            "logStatus": "success",
+            "created_at": "2022-06-30T06:43:50+03:00"
+         },
+         {
+            "id":6,
+            "table": "time",
+            "title": "time_add_successful",
+            "description": "Time Ekleme Başarılı",
+            "logStatus": "success",
+            "created_at": "2022-06-30T06:43:50+03:00"
+         },
+         {
+            "id":7,
+            "table": "file",
+            "title": "file_add_successful",
+            "description": "Dosya Ekleme Başarılıı",
+            "logStatus": "success",
+            "created_at": "2022-06-30T06:43:50+03:00"
+         }
+      ];
+
+      const IconCssJson =[
+         {
+            "table": "user",
+            "icon": <PersonIcon style={{ fontSize:"20px"}}/>,
+            "backgroundColor":"rgb(76, 175, 80)",
+            "onClick":()=> { alert("Toplam User"); }
+         },
+         {
+            "table": "note",
+            "icon": <NoteIcon style={{ fontSize:"20px"}}/>,
+            "backgroundColor":"rgb(244, 67, 53)",
+            "onClick":()=> { alert("Toplam Note"); }
+         },
+         {
+               "table": "file",
+               "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
+               "backgroundColor":"#FF2F50",
+               "onClick":()=> { alert("Toplam File"); }
+         },
+         {
+            "table": "time",
+            "icon": <TimerIcon style={{ fontSize:"20px"}}/>,
+            "backgroundColor":"#4682B4",
+            "onClick":()=> { alert("Toplam Time"); }
+         }
+      ]
 
     
   return (
@@ -336,7 +427,8 @@ function Index() {
                             fontSizeDetailContent={"15px"}
                             fontWeightDetailContent={"700"}
                             
-                            JsonData={JsonData}
+                            productsData={JsonDataApi}
+                            IconCssJson={IconCssJson}
                             colorBoxTitle={"#344563"}
                             fontSizeBoxTitle={"14px"}
                             fontWeightBoxTitle={"700"}

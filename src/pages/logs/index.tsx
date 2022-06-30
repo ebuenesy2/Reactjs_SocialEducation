@@ -13,66 +13,12 @@ import WidgetCardDataTimeLine from "../../components/widgetCardDataTimeLine";
 //! icon
 import NoteIcon from '@material-ui/icons/Note';
 import PersonIcon from '@material-ui/icons/Person';
-
 import AttachFileIcon from '@material-ui/icons/AttachFile';
-import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
-import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
+import TimerIcon from '@material-ui/icons/Timer';
+
 
 
 //! Data
-const JsonData = [
-      {
-            "title":"Toplam Dosyalar",
-            "content":"Sayısı: 1451 / 1 TB 200 GB 150 MB 100 KB",
-            "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Dosyalar"); },
-            "backgroundColor":"rgb(76, 175, 80)"
-      },
-      {
-            "title":"Toplam Fotoğraflar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <PhotoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Fotoğraflar"); },
-            "backgroundColor":"rgb(244, 67, 53)"
-      },
-      {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-      },
-      {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-      },
-      {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-      },
-      {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-      },
-      {
-            "title":"Toplam Videolar",
-            "content":"Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB",
-            "icon": <VideoLibraryIcon style={{ fontSize:"20px"}}/>,
-            "onClick":()=> { alert("Toplam Videolar"); },
-            "backgroundColor":"rgb(26, 115, 232)"
-      }
-            
-];
-
 const JsonDataApi = [
     {
       "id":1,
@@ -105,19 +51,25 @@ const IconCssJson =[
          "table": "user",
          "icon": <PersonIcon style={{ fontSize:"20px"}}/>,
          "backgroundColor":"rgb(76, 175, 80)",
-         "onClick":()=> { alert("Toplam user"); }
+         "onClick":()=> { alert("Toplam User"); }
       },
       {
          "table": "note",
          "icon": <NoteIcon style={{ fontSize:"20px"}}/>,
          "backgroundColor":"rgb(244, 67, 53)",
-         "onClick":()=> { alert("Toplam note"); }
+         "onClick":()=> { alert("Toplam Note"); }
       },
       {
           "table": "file",
           "icon": <AttachFileIcon style={{ fontSize:"20px"}}/>,
-          "backgroundColor":"rgb(26, 115, 232)",
-          "onClick":()=> { alert("Toplam file"); }
+          "backgroundColor":"#FF2F50",
+          "onClick":()=> { alert("Toplam File"); }
+      },
+      {
+         "table": "time",
+         "icon": <TimerIcon style={{ fontSize:"20px"}}/>,
+         "backgroundColor":"#4682B4",
+         "onClick":()=> { alert("Toplam Time"); }
       }
 ]
 
@@ -125,14 +77,9 @@ const IconCssJson =[
 
 function Index() {
 
-
-      useEffect(() => {
-           // console.log("Başlangiç");
-           // console.log("JsonDataApi:",JsonDataApi);
-           // console.log("IconCss:",IconCss);
-      }, []);
-
+      //! --- Api ------------
       const [productsCount, setProductsCount] = useState<[]>([])
+      const [products, setProducts] = useState<any[]>([])
       const [productsData, setProductsData] = useState<any[]>([])
 
       const apiGet = () => {  console.log("api");
@@ -143,11 +90,12 @@ function Index() {
             .then(response => {
       
                   //! State
-                  setProductsCount(response.data.onlineCount);
+                  setProductsCount(response.data.size);
+                  setProducts(response.data);
                   setProductsData(response.data.DB);
 
                   console.log("response:",response);
-                 //      console.log("data:",response.data);
+                 // console.log("data:",response.data);
                  // console.log("onlineCount:",response.data?.table);
                   
             })
@@ -156,6 +104,18 @@ function Index() {
       };
 
       useEffect(() => { apiGet(); }, []);
+      //! ------ Api Son -----------
+
+
+      
+      useEffect(() => {
+         console.log("Başlangiç");
+         //console.log("productsData:",productsData);
+         //console.log("productsCount:",productsCount)
+       
+       }, []);
+
+
 
   return (
         <div className='logs'>
@@ -175,7 +135,7 @@ function Index() {
                                         fontSizeTitle={"16px"}
                                         fontWeightTitle={"700"}
                                         status={"positive"}
-                                        titleDetailDescription={"20%"}
+                                        titleDetailDescription={productsCount}
                                         fontSizeDetailDescription={"14px"}
                                         fontWeightDetailDescription={"400"}
 
@@ -184,8 +144,10 @@ function Index() {
                                         fontSizeDetailContent={"15px"}
                                         fontWeightDetailContent={"700"}
                                     
+                                        
+                                        JsonData={products}
+                                        productsData={productsData}
                                         IconCssJson={IconCssJson}
-                                        JsonData={productsData}
                                         colorBoxTitle={"#344563"}
                                         fontSizeBoxTitle={"14px"}
                                         fontWeightBoxTitle={"700"}
@@ -197,21 +159,8 @@ function Index() {
 
                                <div>
                                     <p> Api: {ApiUrl.localApi}  </p>
-                               
-                                    {IconCssJson.find(el =>el.table === 'user')?.icon}
+                                    {IconCssJson.find((el:any) =>el.table === 'user')?.icon}
 
-                                    <div style={{ width:"100px", height:"100px",  backgroundColor:IconCssJson.find(el =>el.table === 'user')?.backgroundColor }}>  Kutu </div>
-                                    
-                                    {
-                                          IconCssJson.map((data:any)=>{
-                                                return(
-                                                      <>
-                                                         <div> {data?.table} </div>
-                                                         <div> {data?.backgroundColor} </div>
-                                                      </>
-                                                )
-                                          })
-                                    }
                                   
 
                                </div>
