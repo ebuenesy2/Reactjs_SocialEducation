@@ -8,7 +8,11 @@ import EjectIcon from '@material-ui/icons/Eject';
 import Moment from 'moment'; //! Date
 Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
 
-export const Index =(props: any) => {  //console.log("proops:",props);
+export const Index =(props: any) => {  console.log("widgetCardDataTimeLineProps:",props); 
+console.log("JsonData:",props.JsonData);
+console.log("IconCssJson:",props.IconCssJson);
+
+console.log("IconCssJson Arama:", props.IconCssJson.find((el: { table: any }) => el.table === 'user')?.backgroundColor);
        
   return (
         <div className='widgetCardDataTimeLine' style={{ backgroundColor: props.backgroundColor ? props.backgroundColor : "azure"  }} >
@@ -23,16 +27,22 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
                <div className="widgetCardDataTimeLineBottom" >
 
-                  {Array(props.JsonData.length).fill(0).map((el, i) => 
-                     <div className="widgetCardDataTimeLineBottomBox">
-                        <div className="widgetCardDataTimeLineBottomIconBox" style={{ background: props.JsonData[i].backgroundColor ? props.JsonData[i].backgroundColor : "black" }} > {props.JsonData[i].icon} </div>
-                     <div className="widgetCardDataTimeLineBottomInfoBox">
-                         <div className="widgetCardDataTimeLineBottomInfoBoxTitle" style={{ color: props.colorBoxTitle ? props.colorBoxTitle : "black", fontSize: props.fontSizeBoxTitle ? props.fontSizeBoxTitle : "16px", fontWeight:props.fontWeightBoxTitle ? props.fontWeightBoxTitle : "700"  }} > {props.JsonData[i].title} </div>
-                         <div className="widgetCardDataTimeLineBottomInfoBoxDescription" style={{ color: props.colorBoxDescription ? props.colorBoxDescription : "black", fontSize: props.fontSizeBoxDescription ? props.fontSizeBoxDescription : "14px", fontWeight:props.fontWeightBoxDescription ? props.fontWeightBoxDescription : "400"  }} > {props.JsonData[i].content} </div>
-                     </div>                   
+                  {
+                     props.JsonData.map((jsondat : any)=> {
+                          return (
+                              <>
+                                 <div className="widgetCardDataTimeLineBottomBox">
+                                    <div className="widgetCardDataTimeLineBottomIconBox" style={{ background: "red" }} > {props.IconCssJson.find((el:any) => el.table === 'user')?.icon} </div>
+                                 <div className="widgetCardDataTimeLineBottomInfoBox">
+                                    <div className="widgetCardDataTimeLineBottomInfoBoxTitle" style={{ color: props.colorBoxTitle ? props.colorBoxTitle : "black", fontSize: props.fontSizeBoxTitle ? props.fontSizeBoxTitle : "16px", fontWeight:props.fontWeightBoxTitle ? props.fontWeightBoxTitle : "700"  }} > {jsondat?.description} </div>
+                                    <div className="widgetCardDataTimeLineBottomInfoBoxDescription" style={{ color: props.colorBoxDescription ? props.colorBoxDescription : "black", fontSize: props.fontSizeBoxDescription ? props.fontSizeBoxDescription : "14px", fontWeight:props.fontWeightBoxDescription ? props.fontWeightBoxDescription : "400"  }} > {jsondat?.created_at} </div>
+                                 </div>                   
 
-                     </div>
-                  )}
+                                 </div>
+                              </>
+                          )
+                     })
+                  }
 
                </div>
 
