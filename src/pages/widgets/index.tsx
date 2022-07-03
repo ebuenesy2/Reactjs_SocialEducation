@@ -14,6 +14,8 @@ import WidgetInbox from "../../components/widgetInbox";
 
 import Progressbar from "../../components/progressbar";
 import ProgressbarCirculer from "../../components/progressbarCirculer";
+
+import WidgetCardChart from "../../components/widgetCardChart";
 import "./index.css";
 
 //! icon
@@ -177,6 +179,21 @@ function Index() {
             "onClick":()=> { alert("Toplam Time"); }
          }
       ]
+
+     const ChartJsonData = [
+         { name: 'Ocak', pv: 0 },
+         { name: 'Şubat', pv:25 },
+         { name: 'Mart', pv: 100 },
+         { name: 'Nisan', pv:25 },
+         { name: 'Mayis', pv: 100 },
+         { name: 'Haziran', pv: 25 },
+         { name: 'Temmuz', pv: 100 },
+         { name: 'Ağustos', pv:25 },
+         { name: 'Eylül', pv:100},
+         { name: 'Ekim', pv:25 },
+         { name: 'Kasim', pv: 50 },
+         { name: 'Aralik', pv: 125},
+      ];
 
     
   return (
@@ -592,7 +609,39 @@ function Index() {
                            disableAnim={true}
                         />
                      </div>
+              
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetCardChart </h1>
+                     <div style={{ width:"1055px" }}> 
+                        <WidgetCardChart
+                           backgroundColor={"#F1F1F1"}
+                           
+                           WidgetBoxColor={"#0052CC"}
+                           WidgetBoxWidth={"48px"}
+                           WidgetBoxHeight={"48px"}
+                           icon={<BatteryFullIcon style={{ fontSize: "35px", color: "#fff" }} />}
+         
+                           title={"Tüm Veriler"}
+                           colorTitle={'#344563'}
+                           fontSizeTitle={"14px"}
+                           fontWeightTitle={"400"}
 
+                           value={"500"}
+                           colorValue={'#344563'}
+                           fontSizeValue={"20px"}
+                           fontWeightValue={"700"}
+                           marginTopValue={"-14px"}
+                     
+         
+                           progressBarValue={Math.ceil(Math.random() * (100 - 5))}
+                           progressBarMaxValue={100}
+                           colorProgressBarText={'#344563'}
+                           //colorProgressBarValue={'0052CC'}
+                           
+                           chartLineColor={'#0052CC'}
+                           JsonData={ChartJsonData}
+                        />
+                     </div>        
+              
                     </div>
                </div>
         </div>
