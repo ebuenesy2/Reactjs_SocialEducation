@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
+import axios from 'axios'
 
 import ProgressbarCirculer from "../../components/progressbarCirculer";
 
@@ -23,6 +24,18 @@ function Index() {
             //console.log("urlParams_id:",urlParams_id);
            
      }, []);
+    
+    
+    const [ip, setIP] = useState('');
+      const getData = async () => {
+        const res = await axios.get('https://geolocation-db.com/json/')
+        console.log("location:",res.data);
+        setIP(res.data.IPv4)
+      }
+    
+    useEffect(() => {
+        getData();
+    },[])
 
   return (
         <div className='profile'>
@@ -32,27 +45,9 @@ function Index() {
                     <div className="profileContainer">
                    
                         <div style={{ display:"flex", gap:"5px" }}>
-                            <div style={{ width:"150px" }}> 
-                                   <ProgressbarCirculer 
-                                   title="Toplam Yemek Hakları"
-                                   titleSize={"13px"}
-                                   titleColor={"rgb(52, 69, 99)"}
-                                   titleWeight={"300"}
-                                   thickness={8}
-                                   percentileIcon={false}
-                                   /*  backColor={"#0052CC"} */
-                                   marginTop={"0px"}
-                                   text={"Kişi"}
-                                   value={100}
-                                   maxValue={200}
-                                   textColor={"#0052CC"}
-                                   textSize={"25px"}
-                                   textWeight={"bold"}
-                                   subTextSize={"11px"}
-                                   subtextWeight={"bold"}    
-                                   timer={80}
-                                   disableAnim={true}
-                                   />
+                            <div style={{ width:"550px" }}> 
+                                   <h2>Your IP Address is</h2>
+                                    <h4>{ip}</h4>
                             </div>
                         </div>
                    
