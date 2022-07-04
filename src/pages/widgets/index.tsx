@@ -12,8 +12,8 @@ import WidgetDataIstatistics from "../../components/widgetDataIstatistics";
 import WidgetPost from "../../components/widgetPost";
 import WidgetInbox from "../../components/widgetInbox";
 
-import Progressbar from "../../components/progressbar";
-import ProgressbarCirculer from "../../components/progressbarCirculer";
+import WidgetProgressbar from "../../components/widgetProgressbar";
+import WidgetProgressbarCirculer from "../../components/widgetProgressbarCirculer";
 
 import WidgetCardChart from "../../components/widgetCardChart";
 import WidgetCardChartMini  from "../../components/widgetCardChartMini";
@@ -299,68 +299,69 @@ function Index() {
                      <h1 style={{marginTop:"15px"}}> Widget: widgetValue </h1>
                      <div style={{ width:"420px", display:"flex", gap:"10px" }}>
                                      
-                     <div style={{ width:"200px" }}>
-                         <WidgetValue
-                            backgroundColor={"#F1F1F1"}
-                            
-                            value={"21"}
-                            colorValue={"red"}
-                            fontSizeValue={"44px"}
-                            fontWeightValue={"700"}
-                            
-                            valueKey={"°C"}
-                            colorValueKey={"red"}
-                            fontSizeValueKey={"18px"}
-                            fontWeightValueKey={"700"}
+                        <div style={{ width:"200px" }}>
+                           <WidgetValue
+                              backgroundColor={"#F1F1F1"}
+                              
+                              value={"21"}
+                              colorValue={"red"}
+                              fontSizeValue={"44px"}
+                              fontWeightValue={"700"}
+                              
+                              valueKey={"°C"}
+                              colorValueKey={"red"}
+                              fontSizeValueKey={"18px"}
+                              fontWeightValueKey={"700"}
 
-                            title={"Mutfak Odası"}
-                            colorTitle={"black"}
-                            fontSizeTitle={"16px"}
-                            fontWeightTitle={"700"}
-                            
-                            type={"Sıcaklık"}
-                            colorType={"rgb(103, 116, 142)"}
-                            fontSizeType={"12px"}
-                            fontWeightType={"500"}
+                              title={"Mutfak Odası"}
+                              colorTitle={"black"}
+                              fontSizeTitle={"16px"}
+                              fontWeightTitle={"700"}
+                              
+                              type={"Sıcaklık"}
+                              colorType={"rgb(103, 116, 142)"}
+                              fontSizeType={"12px"}
+                              fontWeightType={"500"}
 
-                            onlineStatus={true}
-                            fontSizeStatus={"14px"}
-                            fontWeightStatus={"700"}
-                         />
+                              onlineStatus={true}
+                              fontSizeStatus={"14px"}
+                              fontWeightStatus={"700"}
+                           />
+                        </div>
+                                                   
+                        <div style={{ width:"200px" }}>
+                           <WidgetValue
+                              backgroundColor={"#F1F1F1"}
+                              
+                              value={"45"}
+                              colorValue={"blue"}
+                              fontSizeValue={"44px"}
+                              fontWeightValue={"700"}
+                              
+                              valueKey={"%"}
+                              colorValueKey={"blue"}
+                              fontSizeValueKey={"18px"}
+                              fontWeightValueKey={"700"}
+
+                              title={"Yemek Odası"}
+                              colorTitle={"black"}
+                              fontSizeTitle={"16px"}
+                              fontWeightTitle={"700"}
+                              
+                              type={"Nem"}
+                              colorType={"rgb(103, 116, 142)"}
+                              fontSizeType={"12px"}
+                              fontWeightType={"500"}
+
+                              onlineStatus={false}
+                              fontSizeStatus={"14px"}
+                              fontWeightStatus={"700"}
+                           />
+                        </div>
+
                      </div>
-                                                 
-                     <div style={{ width:"200px" }}>
-                         <WidgetValue
-                            backgroundColor={"#F1F1F1"}
-                            
-                            value={"45"}
-                            colorValue={"blue"}
-                            fontSizeValue={"44px"}
-                            fontWeightValue={"700"}
-                            
-                            valueKey={"%"}
-                            colorValueKey={"blue"}
-                            fontSizeValueKey={"18px"}
-                            fontWeightValueKey={"700"}
-
-                            title={"Yemek Odası"}
-                            colorTitle={"black"}
-                            fontSizeTitle={"16px"}
-                            fontWeightTitle={"700"}
-                            
-                            type={"Nem"}
-                            colorType={"rgb(103, 116, 142)"}
-                            fontSizeType={"12px"}
-                            fontWeightType={"500"}
-
-                            onlineStatus={false}
-                            fontSizeStatus={"14px"}
-                            fontWeightStatus={"700"}
-                         />
-                     </div>
-
-                     </div>
-                     <h1 style={{marginTop:"15px"}}> Widget: widgetControl </h1>
+                 
+                     <h1 style={{ marginTop: "15px" }}> Widget: widgetControl </h1>
                      <div style={{ width:"420px", display:"flex", gap:"10px" }}>
                                                         
                           <div style={{ width:"200px" }}>
@@ -413,7 +414,6 @@ function Index() {
                             onClick={()=> {alert("yeni")}}
                          />
                       </div>
-
                      
                      <h1 style={{marginTop:"45px"}}> Widget: widgetCategories </h1>
                      <div style={{ width:"450px", display:"flex", gap:"10px" }}>
@@ -464,7 +464,7 @@ function Index() {
                             fontSizeBoxDescription={"12px"}
                             fontWeightBoxDescription={"400"}
                         />
-                     </div>
+                    </div>
 
                      <h1 style={{marginTop:"45px"}}> Widget: widgetDataIstatistics </h1>                                        
                      <div style={{ width:"450px" }}>
@@ -581,25 +581,25 @@ function Index() {
                         />
                      </div>
 
-                     <h1 style={{marginTop:"45px"}}> Widget: progressbar </h1>
+                     <h1 style={{marginTop:"45px"}}> Widget: WidgetProgressbar </h1>
                      <div style={{ display:"flex", gap:"10px", flexDirection:"column"}}>
                         <div style={{ width:"200px" }}> 
-                           <Progressbar 
+                           <WidgetProgressbar 
                               value="70"
                               maxValue="100"
                            />
                         </div>
                         <div style={{ width:"200px" }}> 
-                           <Progressbar 
+                           <WidgetProgressbar 
                               value="80"
                               maxValue="100"
                            />
                         </div>
                      </div>
 
-                     <h1 style={{marginTop:"45px"}}> Widget: progressbarCirculer </h1>
+                     <h1 style={{marginTop:"45px"}}> Widget: widgetProgressbarCirculer </h1>
                      <div style={{ width:"150px" }}> 
-                        <ProgressbarCirculer 
+                        <WidgetProgressbarCirculer 
                            title="Toplam Yemek Hakları"
                            titleSize={"13px"}
                            titleColor={"rgb(52, 69, 99)"}
@@ -651,38 +651,38 @@ function Index() {
                            chartLineColor={'#0052CC'}
                            JsonData={ChartJsonData}
                         />
-                      </div> 
+                     </div> 
               
                       <h1 style={{marginTop:"45px"}}> Widget: widgetCardChartMini </h1>
-                        <div style={{ width:"380px" }}> 
-                           <WidgetCardChartMini
-                              backgroundColor={"#F1F1F1"}
-               
-               
-                              title={"Yemek Siparişleri"}
-                              colorTitle={"#344563"}
-                              fontSizeTitle={"14px"}
-                              fontWeightTitle={"400"}
+                     <div style={{ width:"380px" }}> 
+                        <WidgetCardChartMini
+                           backgroundColor={"#F1F1F1"}
+            
+            
+                           title={"Yemek Siparişleri"}
+                           colorTitle={"#344563"}
+                           fontSizeTitle={"14px"}
+                           fontWeightTitle={"400"}
 
-                              value={"480"}
-                              colorValue={"#344563"}
-                              fontSizeValue={"20px"}
-                              fontWeightValue={"700"}
+                           value={"480"}
+                           colorValue={"#344563"}
+                           fontSizeValue={"20px"}
+                           fontWeightValue={"700"}
 
-                              status={"negative"}
-                              titleDetailDescription={"20%"}
-                              fontSizeDetailDescription={"14px"}
-                              fontWeightDetailDescription={"700"}
-                              
-                              titleDetailTimeDescription={"Bu Hafta"}
-                              colorDetailTimeDescription={"#344563"}
-                              fontSizeDetailTimeDescription={"14px"}
-                              fontWeightDetailTimeDescription={"700"}
-               
-                              chartLineColor={"#344563"}
-                              JsonData={ChartWeekJsonData}
-                           />
-                        </div>
+                           status={"negative"}
+                           titleDetailDescription={"20%"}
+                           fontSizeDetailDescription={"14px"}
+                           fontWeightDetailDescription={"700"}
+                           
+                           titleDetailTimeDescription={"Bu Hafta"}
+                           colorDetailTimeDescription={"#344563"}
+                           fontSizeDetailTimeDescription={"14px"}
+                           fontWeightDetailTimeDescription={"700"}
+            
+                           chartLineColor={"#344563"}
+                           JsonData={ChartWeekJsonData}
+                        />
+                     </div>
               
                     </div>
                </div>

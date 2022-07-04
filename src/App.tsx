@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import NotFound from './pages/notfound';
 import Home from './pages/home';
 import Widgets from './pages/widgets';
+import Widgets2 from './pages/widgets2';
 import Login from './pages/login';
 import Users from './pages/users';
 import Clients from './pages/clients';
@@ -21,6 +22,7 @@ import Profile from './pages/profile';
           <Route path="*" element={<NotFound/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/widgets" element={<Widgets/>} />
+          <Route path="/widgets2" element={<Widgets2/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/users" element={<Users/>} />
           <Route path="/clients" element={<Clients/>} />
