@@ -10,19 +10,12 @@ import WidgetToggleButton  from "../../components/widgetToggleButton";
 function Index() {    
     
   useEffect(() => {
-    console.log("Profile");
+    //console.log("Profile");
   }, [])
 
 
   
-  const ToggleButtonJsonData = [
-    { id:1, text:"1"},
-    { id:2, text:"2"},
-    { id:3, text:"3"},
-    { id:4, text:"4"},
-    { id:5, text:"5"},
-    { id:6, text:"6"}
-  ];
+
 
 
   return (
@@ -34,11 +27,7 @@ function Index() {
                    
                         <div style={{ display:"flex", gap:"5px" }}>
                             <div style={{ width:"380px" }}> 
-                              <WidgetToggleButton
-                                backgroundColor={"#F1F1F1"}
-                                onClick={(index: any) => { /*  alert("tiklama");  */ console.log("index:", index);  }}  
-                                JsonData={ToggleButtonJsonData}
-                              />
+                                <h1> Profile </h1>
                             </div>
                         </div>
                    
