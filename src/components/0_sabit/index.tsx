@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.css"
 
 
@@ -12,7 +12,12 @@ export const Index =(props: any) => {  //console.log("proops:",props);
    console.log("props:",props);
    console.log("created_at:",props.created_at);
    console.log("Moment:",Moment(props.created_at).format('L'));
-   console.log("Moment:",Moment(props.created_at).format('LTS'));
+   console.log("Moment:", Moment(props.created_at).format('LTS'));
+   
+
+  useEffect(() => {
+    console.log("Profile");
+  }, [])
 
    //! State
    const [ widgetControlStatus , setWidgetControlStatus] = useState(10);
@@ -20,12 +25,13 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
 
     
-  return (
+  return ( 
+  <>
         <div className='sbtwidgetInfo'>
            <p> {props.title} </p>
            <p> {widgetControlStatus} </p>
-               
         </div>
+   </>
      
   )
 }
