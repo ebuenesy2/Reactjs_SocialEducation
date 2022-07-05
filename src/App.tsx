@@ -23,7 +23,7 @@ import Profile from './pages/profile';
           <Route path="*" element={<NotFound/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/widgets" element={<Widgets/>} />
-          <Route path="/widgets2" element={<Widgets2/>} />
+          <Route path="/widgetstwo" element={<Widgets2/>} />
           <Route path="/mycolor" element={<MyColor/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/users" element={<Users/>} />

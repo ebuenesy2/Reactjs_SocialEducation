@@ -48,7 +48,7 @@ function Index() {
                      </a>
                   </li>
                   <li>
-                     <a href="/widgets2">
+                     <a href="/widgetstwo">
                         <WidgetsIcon className="icon"/>
                         <span> Widgets V2 </span>
                      </a>

@@ -10,7 +10,7 @@ function Index() {
                <div className="widgets2Home">
                     <Navbar />
                     <div className="widgets2Container">
-                       <h1> Widget: widgetInfo </h1>
+                       <h1> Widget: widgetInfo 2 </h1>
                        <div style={{ width:"720px", display:"flex", gap:"10px"}}>
                             
                        </div>
