@@ -21,5 +21,12 @@ export enum myFavoriteColor {
      coral="#FF2F50",
      blue="#0052CC",
      steelblue="#4682B4"
-     
+}
+
+export enum otherColor {
+    active1 = "#323748",
+    green1 = "#20404B",
+    green2 = "#175229",
+    pink1 = "#A86296",
+    nice1 = "#7E817C"
 }
