@@ -72,11 +72,11 @@ function Index() {
                      console.log("obj:",obj);
 
                    // Bağlantı Bilgileri
-                     if(obj.dataType == "Connect" &&  obj.fromUserID == userId ) { 
+                     if(obj.dataType === "Connect" &&  obj.fromUserID === userId ) { 
                             //console.log("Bağlantı Durumu:",obj.dataTypeDescription);
                       }
-                     if( obj.dataType == "Time" && obj.dataTypeTitle =="time_add_successful" ) { console.log("objConnectCount:",obj.count); apiGet();  }
-                     if( obj.dataType == "Connect" && obj.dataTypeTitle =="disConnect" ) { console.log("objConnectCount:",obj.count); apiGet();  }
+                     if( obj.dataType === "Time" && obj.dataTypeTitle === "time_add_successful" ) { console.log("objConnectCount:",obj.count); apiGet();  }
+                     if( obj.dataType === "Connect" && obj.dataTypeTitle === "disConnect" ) { console.log("objConnectCount:",obj.count); apiGet();  }
                      // Bağlantı Bilgileri Son
 
               });

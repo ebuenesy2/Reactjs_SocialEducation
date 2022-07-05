@@ -194,18 +194,17 @@ function Index() {
          { name: 'Ekim', pv:25 },
          { name: 'Kasim', pv: 50 },
          { name: 'Aralik', pv: 125},
+     ];   
+
+     const ChartWeekJsonData = [
+       { name: 'Ocak', pv: 0 },
+       { name: 'Şubat', pv:25 },
+       { name: 'Mart', pv: 100 },
+       { name: 'Nisan', pv:25 },
+       { name: 'Mayis', pv: 100 },
+       { name: 'Haziran', pv: 50 },
+       { name: 'Temmuz', pv: 100 },
      ];
-   
-   
-      const ChartWeekJsonData = [
-         { name: 'Ocak', pv: 0 },
-         { name: 'Şubat', pv:25 },
-         { name: 'Mart', pv: 100 },
-         { name: 'Nisan', pv:25 },
-         { name: 'Mayis', pv: 100 },
-         { name: 'Haziran', pv: 50 },
-         { name: 'Temmuz', pv: 100 },
-      ];
     
   return (
         <div className='widgets'>
