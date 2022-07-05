@@ -1,23 +1,5 @@
 
-
-  function perc2color(perc:any) { //! Otamatik Renk Seçme
-    var r, g, b = 0;
-    if(perc < 50) {
-      r = 255;
-      g = Math.round(5.1 * perc);
-    }
-    else {
-      g = 255;
-      r = Math.round(510 - 5.10 * perc);
-    }
-  //C64E13
-  //43B37A
-  
-    var h = r * 0x10000 + g * 0x100 + b * 0x1;
-    return '#' + ('000000' + h.toString(16)).slice(-6);
-  }
-  
-  function colorChoose(perc :any) { //! Renk Ayarlama
+function colorChoose(perc :any) { //! Renk Ayarlama
          
      if(perc > -1 && perc < 10) {  return '#C64E13'; }
      else if(perc >= 10 && perc<20) {  return '#ff1f78'; }
@@ -29,7 +11,7 @@
      else if(perc >= 70 && perc<80) {  return '#6a1b9a'; }
      else if(perc >= 80 && perc<90) {  return '#91F33C'; }
      else if(perc >= 90 && perc<100) {  return '#51DE96'; }
-     else if(perc==100) {  return '#00695c'; }
+     else if(perc===100) {  return '#00695c'; }
   }
 
 

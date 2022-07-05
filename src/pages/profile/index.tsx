@@ -4,7 +4,7 @@ import Sidebar from "../../components/sidebar";
 import "./index.css";
 
 
-import WidgetToggleButton  from "../../components/widgetToggleButton";
+import WidgetFileCard  from "../../components/widgetFileCard";
 
 
 function Index() {    
@@ -26,8 +26,11 @@ function Index() {
                     <div className="profileContainer">
                    
                         <div style={{ display:"flex", gap:"5px" }}>
-                            <div style={{ width:"380px" }}> 
-                                <h1> Profile </h1>
+                            <div style={{ width:"300px" }}> 
+                              <WidgetFileCard
+                                value={"60"}
+                                maxValue={"100"}
+                              />
                             </div>
                         </div>
                    

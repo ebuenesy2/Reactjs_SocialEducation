@@ -1,4 +1,9 @@
-import "./index.css"
+import { useEffect } from "react";
+import "./index.css";
+
+//! İcons
+import MovieIcon from '@material-ui/icons/Movie';
+
 
 //! Renk Seçimi
 function colorChoose(perc:any) { //! Renk Ayarlama
@@ -16,12 +21,30 @@ function colorChoose(perc:any) { //! Renk Ayarlama
    else if(perc === 100) {  return '#43B37A'; }
 }
 
+
 export const Index =(props: any) => {  //console.log("proops:",props);
   
+  //console.log("props:",props);
 
-  return (
-       <>
-         <div className="ProgressBarValueBackColor"  ><span style={{
+  useEffect(() => {
+    //console.log("Profile");
+  }, [])
+
+    
+  return ( 
+  <>
+      <div className='widgetFileCard'>
+        <div className="widgetFileCardContainer">
+          <div className="widgetFileCardTop"> <MovieIcon style={{ fontSize:"35px",color:"#fff"}} /> </div>
+          <div className="widgetFileCardBottom">
+            <div className="widgetFileCardBottomLeft">
+                <div className="widgetFileCardBottomLeftTitle">Videolar</div>   
+                <div className="widgetFileCardBottomLeftDescription"> Sayısı: 14 / 0 TB 20 GB 150 MB 100 KB </div> 
+            </div>
+            <div className="widgetFileCardBottomRight" > {(props.value/props.maxValue)*100} %  </div>
+              
+          </div>
+          <div className="ProgressBarValueBackColor"  ><span style={{
             display: "block",
             height: "8px",
             position: "absolute",
@@ -30,9 +53,10 @@ export const Index =(props: any) => {  //console.log("proops:",props);
             width: (8+ (props.value/props.maxValue)*100)+"%",
             borderRadius: "0 50px 50px 0"
             }}  ></span>
-          </div>
-
-       </>
+          </div>         
+        </div>
+      </div>
+   </>
      
   )
 }

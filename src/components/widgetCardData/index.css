@@ -46,10 +46,7 @@
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.02857em;
-    opacity: 1;
     text-transform: capitalize;
-    vertical-align: unset;
-    text-decoration: none;
     color: rgb(123, 128, 154);
 }
 
@@ -59,10 +56,6 @@
     line-height: 1.375;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     letter-spacing: 0em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
     color: rgb(52, 71, 103);
     font-weight: 700;
 }
