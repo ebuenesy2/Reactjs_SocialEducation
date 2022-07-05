@@ -1,6 +1,7 @@
 import "./index.css"
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import WidgetsIcon from '@material-ui/icons/Widgets';
+import ColorLensIcon from '@material-ui/icons/ColorLens';
 import PersonIcon from '@material-ui/icons/Person';
 import PeopleIcon from '@material-ui/icons/People';
 import StoreIcon from '@material-ui/icons/Store';
@@ -50,6 +51,13 @@ function Index() {
                      <a href="/widgets2">
                         <WidgetsIcon className="icon"/>
                         <span> Widgets V2 </span>
+                     </a>
+                   </li>
+              
+                   <li>
+                     <a href="/mycolor">
+                        <ColorLensIcon className="icon"/>
+                        <span> My Color </span>
                      </a>
                   </li>
 
