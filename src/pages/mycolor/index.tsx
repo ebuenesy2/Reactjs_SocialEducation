@@ -49,12 +49,12 @@ function Index() {
                         <div className="myColorColorBox">
                                                                
                             {colorBoxJsonData.map((el, i) => (
-                                   <div style={{ width:"210px" }}> 
-                                     <WidgetColorBox
-                                       title={colorBoxJsonData[i].title}
-                                       color= {colorBoxJsonData[i].color}
-                                     />
-                                   </div>
+                              <div style={{ width:"210px" }}> 
+                                <WidgetColorBox
+                                  title={colorBoxJsonData[i].title}
+                                  color= {colorBoxJsonData[i].color}
+                                />
+                              </div>
                             ))}
                                      
                         </div>
