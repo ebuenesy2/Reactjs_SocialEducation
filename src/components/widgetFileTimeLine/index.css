@@ -40,9 +40,10 @@
    flex-direction: column;
    gap: 20px;
    border-left: 2px solid #2222;
-   height: max-content;
-   margin-bottom: 10px;
+   height: 130px;
 }
+
+.widgetFileTimeLineBox:last-child { height: max-content; }
 
 .widgetFileTimeLineHeader {
     width: 100%;
