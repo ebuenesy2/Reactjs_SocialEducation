@@ -7,7 +7,7 @@ export enum standart {
 export enum standartColor {
     active="#344563",
     hover="#0052CC",
-    passive="RGBA(107, 119, 140, 0.2)",
+    passive="#6B778C33",
     positive="darkgreen",
     negative="red"
 }

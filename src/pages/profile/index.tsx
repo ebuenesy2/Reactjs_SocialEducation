@@ -25,7 +25,7 @@ function Index() {
                     <div className="profileContainer">
                    
                         <div style={{ display:"flex", gap:"5px" }}>
-                            <div style={{ width:"450px", height:"400px" }}> 
+                            <div style={{ width:"450px", height:"700px" }}> 
                                 <WidgetFileTimeLine
                                    backgroundColor={"#F1F1F1"}
                                 />
