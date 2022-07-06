@@ -19,30 +19,19 @@
 }
 
 .widgetCardDataTimeLineBox {
-    margin: 0px;
-    /*   font-family: SF Compact Display Thin; */
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.6;
     letter-spacing: 0.01071em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
     color: rgb(123, 128, 154);
 }
 
 .widgetCardDataTimeLineDetailTitle {
-    margin: 0px;
     font-size: 18px;
     font-weight: 700;
     color:#344563;
     line-height: 1.625;
     letter-spacing: 0.0075em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
 }
 
 .widgetCardDataTimeLineDetailBox {

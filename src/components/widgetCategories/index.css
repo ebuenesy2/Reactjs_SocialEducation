@@ -12,15 +12,10 @@
 }
 
 .widgetCategories .widgetCategoriesTop {
-    margin: 0px;
     font-size: 1rem;
     line-height: 1.625;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     letter-spacing: 0.0075em;
-    opacity: 1;
-    text-transform: capitalize;
-    vertical-align: unset;
-    text-decoration: none;
     color: rgb(52, 71, 103);
     font-weight: 600;
     margin-bottom: -13px;
@@ -52,7 +47,6 @@
     height: 2rem;
     margin-right: 16px;
     font-size: 0.875rem;
-    opacity: 1;
     background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
     color: rgb(255, 255, 255);
     border-radius: 0.5rem;
@@ -65,28 +59,18 @@
     font-size: 0.875rem;
     line-height: 1.5;
     letter-spacing: 0.02857em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
     color: rgb(52, 71, 103);
     font-weight: 600;
 }
 
 .widgetCategories .widgetCategoriesBottomBoxLeftIconBoxTextContent{
-    margin: 0px;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 300;
     line-height: 1.25;
     letter-spacing: 0.03333em;
-    opacity: 1;
-    text-transform: none;
-    vertical-align: unset;
-    text-decoration: none;
     color: rgb(123, 128, 154);
 }
-
 
 .widgetCategories .widgetCategoriesBottomBoxRight{
     cursor: pointer;
@@ -96,5 +80,3 @@
 .widgetCategories .widgetCategoriesBottomBoxRight:hover{
     transform: translateX(5px);
 }
-
-

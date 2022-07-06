@@ -4,8 +4,14 @@ export const Index =(props: any) => {  //console.log("proops:",props);
 
 return ( 
    <>
-      <div className='sbtwidgetInfo'>
+      <div className='widgetFileTimeLine'>
+         <div className="widgetFileTimeLineContainer">
+            <div className="widgetFileTimeLineTitle" > File TimeLines </div>
+            <div className="widgetFileTimeLineDetails">
+               
+            </div>
 
+         </div>
       </div>
    </>
      
