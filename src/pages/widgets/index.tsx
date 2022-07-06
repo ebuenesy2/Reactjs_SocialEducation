@@ -423,7 +423,8 @@ function Index() {
                               colorTitle={"#344563"}
                               fontSizeTitle={"16px"}
                               fontWeightTitle={"900"}
-
+                    
+                              arrowShow={true}
                               JsonData={JsonData}
                               colorBoxTitle={"#344563"}
                               fontSizeBoxTitle={"14px"}

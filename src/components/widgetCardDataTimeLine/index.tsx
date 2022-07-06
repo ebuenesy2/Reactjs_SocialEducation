@@ -3,12 +3,7 @@ import EjectIcon from '@material-ui/icons/Eject';
 
 
 
-
-//! Date
-import Moment from 'moment'; //! Date
-Moment.locale(Moment.locale()); // Lokasyona göre Zaman alıyor
-
-export const Index =(props: any) => { console.log("widgetCardDataTimeLineProps:",props); 
+export const Index =(props: any) => { //console.log("widgetCardDataTimeLineProps:",props); 
      
   return (
         <div className='widgetCardDataTimeLine' style={{ backgroundColor: props.backgroundColor ? props.backgroundColor : "azure"  }} >

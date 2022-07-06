@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import Sidebar from "../../components/sidebar";
 import "./index.css";
 
-import WidgetFileCard from "../../components/widgetFileCard";
+import WidgetFileTimeLine from "../../components/widgetFileTimeLine";
 
 
 function Index() {    
@@ -26,7 +26,9 @@ function Index() {
                    
                         <div style={{ display:"flex", gap:"5px" }}>
                             <div style={{ width:"300px" }}> 
-                               
+                                <WidgetFileTimeLine
+                                   backgroundColor={"#F1F1F1"}
+                                />
                             </div>
                         </div>
                    
