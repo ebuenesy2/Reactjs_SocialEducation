@@ -13,6 +13,7 @@ import Message from './pages/message';
 import Gallery from './pages/gallery';
 import Logs from './pages/logs';
 import Profile from './pages/profile';
+import Setting from './pages/setting';
 
 
  export default function App() {
@@ -33,8 +34,7 @@ import Profile from './pages/profile';
           <Route path="/gallery" element={<Gallery/>} />
           <Route path="/logs" element={<Logs/>} />
           <Route path="/profile" element={<Profile/>} />
-        
-        
+          <Route path="/setting" element={<Setting/>} />
          
        </Routes>
     </React.Fragment>

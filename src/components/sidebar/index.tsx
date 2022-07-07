@@ -194,7 +194,7 @@ function Index() {
                      </a>
                    </li>
                    <li>
-                     <a href="/#">
+                     <a href="/setting">
                         <SettingsIcon className="icon" />
                         <span> Settings </span>
                      </a>
