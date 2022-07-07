@@ -5,6 +5,7 @@ import Sidebar from "../../components/sidebar";
 import WidgetToggleButton from "../../components/widgetToggleButton";
 
 import WidgetFileCard from "../../components/widgetFileCard";
+import WidgetFileTimeLine from "../../components/widgetFileTimeLine";
 import "./index.css"
 
 //! icon
@@ -16,8 +17,6 @@ function Index() {
     //console.log("Profile");
   }, [])
 
-
-  
   const ToggleButtonJsonData = [
     { id:1, text:"1"},
     { id:2, text:"2"},
@@ -25,6 +24,49 @@ function Index() {
     { id:4, text:"4"},
     { id:5, text:"5"},
     { id:6, text:"6"}
+  ];
+  
+  const FileTimelineJsonData = [
+    {
+      id: 1, time: "10:10", description: "8 tane resim yüklendi",
+      data: [
+        { id: 1, imgUrl: "./assets/img/1.jpg", type: "img", url: "./assets/img/1.jpg" },
+        { id: 2, imgUrl: "./assets/img/2.jpg", type: "img", url: "./assets/img/2.jpg" },
+        { id: 3, imgUrl: "./assets/img/3.jpg", type: "img", url: "./assets/img/3.jpg" },
+        { id: 4, imgUrl: "./assets/img/4.jpg", type: "img", url: "./assets/img/4.jpg" },
+        { id: 5, imgUrl: "./assets/img/5.jpg", type: "img", url: "./assets/img/5.jpg" },
+        { id: 6, imgUrl: "./assets/img/6.jpg", type: "img", url: "./assets/img/6.jpg" },
+        { id: 7, imgUrl: "./assets/img/7.jpg", type: "img", url: "./assets/img/7.jpg" },
+        { id: 8, imgUrl: "./assets/img/8.jpg", type: "img", url: "./assets/img/8.jpg" }
+      ]
+    },
+    {
+      id: 2, time: "12:40", description: "3 tane resim yüklendi",
+      data: [
+        { id: 1, imgUrl: "./assets/img/10.jpg", type: "img", url: "./assets/img/10.jpg" },
+        { id: 2, imgUrl: "./assets/img/12.jpg", type: "img", url: "./assets/img/12.jpg" },
+        { id: 3, imgUrl: "./assets/img/13.jpg", type: "img", url: "./assets/img/13.jpg" }
+      ]
+    },    
+    {
+      id: 3, time: "15:45", description: "3 tane video yüklendi",
+      data: [
+        { id: 1, imgUrl: "./assets/img/15.jpg", type: "video", url: "./assets/img/15.jpg" },
+        { id: 2, imgUrl: "./assets/img/16.jpg", type: "video", url: "./assets/img/16.jpg" },
+        { id: 3, imgUrl: "./assets/img/17.jpg", type: "video", url: "./assets/img/17.jpg" }
+      ]
+    },
+        
+    {
+      id: 4, time: "19:45", description: "4 tane ses yüklendi",
+      data: [
+        { id: 1, imgUrl: "./assets/img/18.jpg", type: "voice", url: "./assets/img/18.jpg" },
+        { id: 2, imgUrl: "./assets/img/11.jpg", type: "voice", url: "./assets/img/11.jpg" },
+        { id: 3, imgUrl: "./assets/img/13.jpg", type: "voice", url: "./assets/img/13.jpg" },
+        { id: 4, imgUrl: "./assets/img/14.jpg", type: "voice", url: "./assets/img/14.jpg" }
+      ]
+    },
+
   ];
     
   return (
@@ -72,7 +114,32 @@ function Index() {
                           />
                         </div>
                     </div>
+          
+                    <div style={{ marginTop:"20px" }}>
+                        <h1> Widget: widgetFileTimeLine </h1> 
+                        <div style={{ display:"flex", gap:"5px" }}>
+                            <div style={{ width:"450px", height:"600px" }}> 
+                                <WidgetFileTimeLine
+                                  backgroundColor={"#F1F1F1"}                                  
+                            
+                                  title={"File Timelenes"}
+                                  colorTitle={"#344563"}
+                                  fontSizeTitle={"20px"}
+                                  fontWeightTitle={"700"}
 
+                                  JsonData={FileTimelineJsonData}
+                                
+                                  JsonDataColorTitle={"#43B37A"}
+                                  JsonDataFontSizeTitle={"12px"}
+                                  JsonDataFontWeightTitle={"700"}
+                                                
+                                  JsonDataColorDescrtion={"#344563"}
+                                  JsonDataFontSizeDescrtion={"12px"}
+                                  JsonDataFontWeightDescrtion={"700"}
+                                />
+                            </div>
+                        </div>
+                    </div>
           
                     </div>
                </div>

@@ -68,8 +68,22 @@ function Index() {
                         <div style={{ display:"flex", gap:"5px" }}>
                             <div style={{ width:"450px", height:"700px" }}> 
                                 <WidgetFileTimeLine
-                                  backgroundColor={"#F1F1F1"}
+                                  backgroundColor={"#F1F1F1"}                                  
+                            
+                                  title={"File Timelenes"}
+                                  colorTitle={"#344563"}
+                                  fontSizeTitle={"20px"}
+                                  fontWeightTitle={"700"}
+
                                   JsonData={FileTimelineJsonData}
+                                
+                                  JsonDataColorTitle={"#43B37A"}
+                                  JsonDataFontSizeTitle={"12px"}
+                                  JsonDataFontWeightTitle={"700"}
+                                                
+                                  JsonDataColorDescrtion={"#344563"}
+                                  JsonDataFontSizeDescrtion={"12px"}
+                                  JsonDataFontWeightDescrtion={"700"}
                                 />
                             </div>
                         </div>

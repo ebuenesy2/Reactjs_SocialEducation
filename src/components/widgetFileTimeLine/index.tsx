@@ -8,16 +8,16 @@ export const Index =(props: any) => {  //console.log("widgetFileTimeLine Props:"
 
 return ( 
    <>
-      <div className='widgetFileTimeLine'>
+      <div className='widgetFileTimeLine' style={{ backgroundColor: props.backgroundColor ? props.backgroundColor : "#43B37A" }} >
          <div className="widgetFileTimeLineContainer">
-            <div className="widgetFileTimeLineTitle" > File TimeLines </div>
+            <div className="widgetFileTimeLineTitle" style={{ color: props.colorTitle ? props.colorTitle : "black", fontSize: props.fontSizeTitle ? props.fontSizeTitle : "16px", fontWeight:props.fontWeightTitle ? props.fontWeightTitle : "700"  }} > {props.title ? props.title : "Title"} </div>
                <div className="widgetFileTimeLineDetails">
 
                   {Array(props.JsonData.length).fill(0).map((el, i) => 
                      <div className="widgetFileTimeLineBox" >
                         <div className="widgetFileTimeLineHeader">
                            <div className="widgetFileTimeLineHeaderBox"></div>
-                           <div className="widgetFileTimeLineHeaderTitle"> {props.JsonData[i].time} </div>
+                           <div className="widgetFileTimeLineHeaderTitle"  style={{ color: props.JsonDataColorTitle ? props.JsonDataColorTitle : "black", fontSize: props.JsonDataFontSizeTitle ? props.JsonDataFontSizeTitle : "16px", fontWeight:props.JsonDataFontWeightTitle ? props.JsonDataFontWeightTitle : "700"  }} > {props.JsonData[i].time} </div>
                         </div>
                         <div className="widgetFileTimeLineFileBoxesFlex" >
                            <div className="widgetFileTimeLineFileBoxes">
@@ -36,7 +36,7 @@ return (
                            ))}
 
                            </div>
-                           <div className="widgetFileTimeLineFileTitle" > {props.JsonData[i].description} </div>
+                           <div className="widgetFileTimeLineFileTitle"  style={{ color: props.JsonDataColorDescrtion ? props.JsonDataColorDescrtion : "black", fontSize: props.JsonDataFontSizeDescrtion ? props.JsonDataFontSizeDescrtion : "16px", fontWeight:props.JsonDataFontWeightDescrtion ? props.JsonDataFontWeightDescrtion : "700"  }} > {props.JsonData[i].description} </div>
                         </div>
                      </div>
                   )}
