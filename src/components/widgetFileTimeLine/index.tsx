@@ -4,7 +4,7 @@ import "./index.css"
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import MusicNoteIcon from '@material-ui/icons/MusicNote';
 
-export const Index =(props: any) => {  console.log("widgetFileTimeLine Props:",props);
+export const Index =(props: any) => {  //console.log("widgetFileTimeLine Props:",props);
 
 return ( 
    <>
