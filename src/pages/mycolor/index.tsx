@@ -22,6 +22,7 @@ function Index() {
     { title:"Standart - Passive", color:standartColor.passive },
     { title:"Standart - Negative", color:standartColor.negative },
     { title: "Standart - Positive", color: standartColor.positive },
+    { title: "Standart - Background", color: standartColor.background },
     
     { title: "myFavoriteColor - Blue", color: myFavoriteColor.blue },
     { title: "myFavoriteColor - Coral", color: myFavoriteColor.coral },

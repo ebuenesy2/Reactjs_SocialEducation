@@ -9,7 +9,8 @@ export enum standartColor {
     hover="#0052CC",
     passive="#6B778C33",
     positive="darkgreen",
-    negative="red"
+    negative = "red",
+    background = "#F1F1F1"
 }
 
 
