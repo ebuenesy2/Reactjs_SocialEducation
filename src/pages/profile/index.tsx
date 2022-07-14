@@ -22,7 +22,6 @@ function Index() {
                    
                         <div style={{ display:"flex", gap:"5px" }}>
                             <div style={{ width:"450px", height:"700px" }}> 
-                            <h1> Profile </h1>
                                <WidgetFileUpload />
                             </div>
                         </div>
