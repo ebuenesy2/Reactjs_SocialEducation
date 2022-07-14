@@ -15,7 +15,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
           
     console.log("acceptedFiles:", acceptedFiles); //! Yüklenenler
     console.log("acceptedFiles Count:", acceptedFiles.length); //! Yüklenen Sayısı
-    console.log("acceptedFiles[0]:", acceptedFiles[0]);
+    console.log("acceptedFi les[0]:", acceptedFiles[0]);
     console.log("acceptedFiles[0] name:", acceptedFiles[0].name);
 
   }, []);
@@ -25,7 +25,8 @@ export const Index =(props: any) => {  //console.log("proops:",props);
   return ( 
   <>
         <div className='widgetFileUpload'>
-          <div className="drop">
+        <div className="drop">
+          
             <div {...getRootProps()}>
               <input {...getInputProps()} />
               <div>Drag and drop your images here.</div>
