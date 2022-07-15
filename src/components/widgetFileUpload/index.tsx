@@ -5,7 +5,6 @@ import {useDropzone} from 'react-dropzone';
 
 //! İcons
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import ImageIcon from '@material-ui/icons/Image';
 import CheckIcon from '@material-ui/icons/Check';
 import axios from "axios";
 
@@ -15,13 +14,16 @@ export const Index =(props: any) => {  //console.log("proops:",props);
   }, [])
 
   const [ fileUploadFiles , setFileUploadFiles] = useState([] as any); 
+  
+  const [denemeValue, setDenemeValue] = useState(0);
 
-  const onDrop = useCallback((acceptedFiles: string | any[]) => {     
+  const onDrop = useCallback((acceptedFiles: string | any[]) => {
+    setDenemeValue(0);
    
-      console.log("acceptedFiles:", acceptedFiles);
-      console.log("acceptedFiles Sayısı:", acceptedFiles.length);
-      console.log("acceptedFiles Name:", acceptedFiles[0].name);
-      console.log("acceptedFiles Url:", (URL.createObjectURL(acceptedFiles[0])));  
+    console.log("acceptedFiles:", acceptedFiles);
+    console.log("acceptedFiles Sayısı:", acceptedFiles.length);
+    console.log("acceptedFiles Name:", acceptedFiles[0].name);
+    console.log("acceptedFiles Url:", (URL.createObjectURL(acceptedFiles[0])));  
   
 
     //! Array 
@@ -39,11 +41,14 @@ export const Index =(props: any) => {  //console.log("proops:",props);
       }); //! status : upload | done | error
     }
 
-    setFileUploadFiles(xArrayPreview); //! Verileri alıyor
+    var newxArrayPreview = xArrayPreview;
+    setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
+    console.log("newxArrayPreview:", newxArrayPreview);
+
+
+    setDenemeValue(0);
     
-    
-    //! File Upload 
-  
+      //! File Upload 
       const url = 'http://localhost:3002/api/file/upload';
     
       //! File
@@ -59,19 +64,25 @@ export const Index =(props: any) => {  //console.log("proops:",props);
           const { loaded, total } = progressEvent;
           let percent = Math.floor(loaded * 100 / total); //! Yüzdelik
           console.log(loaded + 'kb of ' + total + 'kb | ' + percent + '%'); //! Yükleme Bilgileri
-          //xArrayPreview[0].progressValue = percent + '%'; //! State Verileri - Yüzdelik
-          //xArrayPreview[0].status = "upload"; //! State Verileri - Status
+          newxArrayPreview[0].progressValue = percent + '%'; //! State Verileri - Yüzdelik
+          newxArrayPreview[0].status = "upload"; //! State Verileri - Status
+          setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
+         
         }
       }
 
       //Post
       axios.post(url, data, options).then((response) => {
-        //alert("yüklendi");
+        // alert("yüklendi");
         console.log("data:", response.data);
-        //acceptedFiles[0].status = response.data.status === 1 ? "done" : "error";
-        //acceptedFiles[0].size = response.data.DB.fileSizeConvert;
+        newxArrayPreview[0].status = response.data.status === 1 ? "done" : "error";
+        newxArrayPreview[0].name = response.data.DB.fileId;
+        newxArrayPreview[0].size = response.data.DB.fileSizeConvert;
+        setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
       });
-    //! File Upload End
+      //! File Upload End
+
+setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
    
   }, []);
 
@@ -96,6 +107,8 @@ export const Index =(props: any) => {  //console.log("proops:",props);
           </div>
         </form>
 
+        <p> denemeValue: {denemeValue} </p>
+        
         {fileUploadFiles.map((item: any) => (
           <>
             {item.status === "upload" ? 
@@ -120,7 +133,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
                     <img className="fileUploadWrapperFileBoxImg" src={item.previewUrl} />
                     <div className="fileUploadWrapperFileBoxContent" >
                       <div className="fileUploadWrapperFileBoxContentDetails" >
-                        <span className="fileUploadWrapperFileBoxContentName" > {item.tokenId} * {item.status === "upload" ? "Uploading" : item.status === "done" ? "Done" : item.status } </span>
+                        <span className="fileUploadWrapperFileBoxContentName" > {item.name}</span>
                         <span className="fileUploadWrapperFileBoxContentSize" > {item.size} </span>
                       </div>
                               
