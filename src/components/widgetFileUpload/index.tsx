@@ -5,6 +5,7 @@ import {useDropzone} from 'react-dropzone';
 
 //! İcons
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import ImageIcon from '@material-ui/icons/Image';
 import CheckIcon from '@material-ui/icons/Check';
 import axios from "axios";
 
@@ -44,11 +45,8 @@ export const Index =(props: any) => {  //console.log("proops:",props);
     var newxArrayPreview = xArrayPreview;
     setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
     console.log("newxArrayPreview:", newxArrayPreview);
-
-
-    setDenemeValue(0);
     
-      //! File Upload 
+    //! File Upload 
       const url = 'http://localhost:3002/api/file/upload';
     
       //! File
@@ -80,9 +78,9 @@ export const Index =(props: any) => {  //console.log("proops:",props);
         newxArrayPreview[0].size = response.data.DB.fileSizeConvert;
         setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
       });
-      //! File Upload End
+    //! File Upload End
 
-setFileUploadFiles(newxArrayPreview); //! Verileri güncelliyor
+
    
   }, []);
 
