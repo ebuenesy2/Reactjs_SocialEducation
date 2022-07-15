@@ -53,6 +53,14 @@
     font-weight: 700;
 }
 
+.fileUploadWrapperFormFlexInput {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding: 30px;
+   cursor: pointer;
+}
+
 .fileUploadWrapperFileBox {
     display: flex;
     flex-direction: row;
@@ -62,14 +70,20 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 130px;
+}
+
+.fileUploadWrapperFileBoxImg {
+   width: 40px;
+   object-fit: contain;
 }
 
 .fileUploadWrapperFileBoxContentDetails {
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    width: 100%;
+    width: 150px;
     flex-direction: row;
     gap: 10px;
 }
