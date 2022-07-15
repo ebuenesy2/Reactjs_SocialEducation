@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback,useState } from "react";
 import "./index.css";
 import { useDropzone } from 'react-dropzone';
 import axios from "axios";
@@ -10,20 +10,16 @@ import CheckIcon from '@material-ui/icons/Check';
 import CancelIcon from '@material-ui/icons/Cancel';
 
 
-export const Index =(props: any) => {  //console.log("proops:",props);
-  useEffect(() => {
-    console.log("widgetFileUpload");
-    console.log("widgetFileUpload props:", props);
-  }, [])
-
+export const Index =(props: any) => {  //console.log("widgetFileUpload props:", props);
+  
   const [fileUploadFiles, setFileUploadFiles] = useState([] as any);   //! Tüm Veriler
 
-  const onDrop = useCallback((acceptedFiles: string | any[]) => {
+  const onDrop = useCallback(async (acceptedFiles: string | any[]) => {
        
-    console.log("acceptedFiles:", acceptedFiles);
-    console.log("acceptedFiles Sayısı:", acceptedFiles.length);
-    console.log("acceptedFiles Name:", acceptedFiles[0].name);
-    console.log("acceptedFiles Url:", (URL.createObjectURL(acceptedFiles[0])));  
+    // console.log("acceptedFiles:", acceptedFiles);
+    // console.log("acceptedFiles Sayısı:", acceptedFiles.length);
+    // console.log("acceptedFiles Name:", acceptedFiles[0].name);
+    // console.log("acceptedFiles Url:", (URL.createObjectURL(acceptedFiles[0])));  
   
 
     //! Array 
@@ -44,11 +40,12 @@ export const Index =(props: any) => {  //console.log("proops:",props);
     setFileUploadFiles(ArrayPreview); //! Verileri güncelliyor    
     
     //! File Upload 
-      const url = 'http://localhost:3002/api/file/upload';
+    const url = 'http://localhost:3002/api/file/upload';
     
+    for (var indexFiles = 0; indexFiles < acceptedFiles.length; indexFiles++) {
       //! File
       let data = new FormData();
-      data.append('file', acceptedFiles[0]);
+      data.append('file', acceptedFiles[indexFiles]);
       data.append('role', 'role admin');
       data.append('usedPage', 'user');
       data.append('created_byToken', 'created_byToken');
@@ -58,41 +55,47 @@ export const Index =(props: any) => {  //console.log("proops:",props);
         onUploadProgress: (progressEvent: any) => {
           const { loaded, total } = progressEvent;
           let percent = Math.floor(loaded * 100 / total); //! Yüzdelik
-          console.log(loaded + 'kb of ' + total + 'kb | ' + percent + '%'); //! Yükleme Bilgileri
-
+          console.log("indexFiles: "+indexFiles +" -  "+loaded + 'kb of ' + total + 'kb | ' + percent + '%'); //! Yükleme Bilgileri
+          
+                     
           //! FileUploadState
           let temp_state = [...ArrayPreview];
-          let temp_element = { ...temp_state[0] };
-
+          let temp_element = { ...temp_state[indexFiles] };
+          
           temp_element.status = "upload"; //! State Verileri - Status
           temp_element.progressValue = percent + '%';
 
-          temp_state[0] = temp_element;
+          temp_state[indexFiles] = temp_element;
+          ArrayPreview[indexFiles] = temp_element;
           setFileUploadFiles(temp_state);
-          
+          //! FileUploadState Son
+                     
         }
       }
-
+      
       //Post
-      axios.post(url, data, options).then((response) => {
-        // alert("yüklendi");
+      await axios.post(url, data, options).then((response) => {
+        // alert("yüklendi");  console.log("yüklendi");
         console.log("responseData:", response.data);
-            
+           
         //! FileUploadState
         let temp_state = [...ArrayPreview];
-        let temp_element = { ...temp_state[0] };
-
+        let temp_element = { ...temp_state[indexFiles] };
+        
         temp_element.status = response.data.status === 1 ? "done" : "error";
         temp_element.name = response.data.DB.fileId;
         temp_element.size = response.data.DB.fileSizeConvert;
-        
-        temp_state[0] = temp_element;
-        setFileUploadFiles(temp_state);
 
-        console.log("temp_state:", temp_state);
+        temp_state[indexFiles] = temp_element;
+        ArrayPreview[indexFiles] = temp_element;
+        setFileUploadFiles(temp_state);
+        //! FileUploadState Son
             
       });
-    //! File Upload End
+      //! File Upload End
+
+    }
+    
    
   }, []);
 
