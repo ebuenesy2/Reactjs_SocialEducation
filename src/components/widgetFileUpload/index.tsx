@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 import "./index.css";
-import {useDropzone} from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
+import axios from "axios";
 
 
 //! İcons
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import CheckIcon from '@material-ui/icons/Check';
-import axios from "axios";
+import CancelIcon from '@material-ui/icons/Cancel';
+
 
 export const Index =(props: any) => {  //console.log("proops:",props);
   useEffect(() => {
@@ -59,7 +61,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
           console.log(loaded + 'kb of ' + total + 'kb | ' + percent + '%'); //! Yükleme Bilgileri
 
           //! FileUploadState
-          let temp_state = [...fileUploadFiles];
+          let temp_state = [...ArrayPreview];
           let temp_element = { ...temp_state[0] };
 
           temp_element.status = "upload"; //! State Verileri - Status
@@ -74,10 +76,10 @@ export const Index =(props: any) => {  //console.log("proops:",props);
       //Post
       axios.post(url, data, options).then((response) => {
         // alert("yüklendi");
-        console.log("data:", response.data);
+        console.log("responseData:", response.data);
             
         //! FileUploadState
-        let temp_state = [...fileUploadFiles];
+        let temp_state = [...ArrayPreview];
         let temp_element = { ...temp_state[0] };
 
         temp_element.status = response.data.status === 1 ? "done" : "error";
@@ -86,6 +88,8 @@ export const Index =(props: any) => {  //console.log("proops:",props);
         
         temp_state[0] = temp_element;
         setFileUploadFiles(temp_state);
+
+        console.log("temp_state:", temp_state);
             
       });
     //! File Upload End
@@ -98,7 +102,7 @@ export const Index =(props: any) => {  //console.log("proops:",props);
   return ( 
   <>
      <div className="fileUploadWrapper" >
-        <header className="fileUploadWrapperHeader"  >File Upload</header>
+        <header className="fileUploadWrapperHeader" >File Upload</header>
         <form action="#">
           <div className="fileUploadWrapperFormFlex" >
             <div {...getRootProps()}>
@@ -111,9 +115,45 @@ export const Index =(props: any) => {  //console.log("proops:",props);
           </div>
         </form>
     
-         {Array(fileUploadFiles.length).fill(0).map((el, i) => 
-            <p> JsonData: id:{i} name:{fileUploadFiles[i].name}  status:{fileUploadFiles[i].status} progressValue:{fileUploadFiles[i].progressValue} </p>   
-         )}
+        {fileUploadFiles.map((item: any) => (
+          <>
+            {item.status === "upload" ? 
+              <section className="fileUploadWrapperSection" >
+                <div className="fileUploadWrapperFileBox" >
+                <img className="fileUploadWrapperFileBoxImg" src={item.previewUrl} />
+                  <div className="fileUploadWrapperFileBoxContent" >
+                    <div className="fileUploadWrapperFileBoxContentDetails" >
+                      <span className="fileUploadWrapperFileBoxContentName" > {item.name} * {item.status === "upload" ? "Uploading" : item.status === "done" ? "Done" : item.status }</span>
+                      <span className="fileUploadWrapperFileBoxContentPercent" > {item.progressValue} </span>
+                    </div>
+                            
+                      <div className="fileUploadWrapperFileBoxContentProgresBar" >
+                        <div className="fileUploadWrapperFileBoxContentProgres" style={{ width: item.progressValue }} ></div>
+                      </div>
+                  </div>
+                </div>
+              </section> :
+              
+              <section className="fileUploadWrapperSection" >
+                <div className="fileUploadWrapperFileBox" >
+                    <img className="fileUploadWrapperFileBoxImg" src={item.previewUrl} />
+                    <div className="fileUploadWrapperFileBoxContent" >
+                      <div className="fileUploadWrapperFileBoxContentDetails" >
+                        <span className="fileUploadWrapperFileBoxContentName" > {item.name}</span>
+                        <span className="fileUploadWrapperFileBoxContentSize" > {item.size} </span>
+                      </div>
+
+                      {item.status === "error" ? <CancelIcon className="fileUploadWrapperFileBoxContentDone error" /> 
+                                               :   <CheckIcon className="fileUploadWrapperFileBoxContentDone" /> } 
+                     
+                     
+                    </div>
+                </div>
+              </section>
+            }
+             
+          </>
+        ))}
       
      
      </div>
