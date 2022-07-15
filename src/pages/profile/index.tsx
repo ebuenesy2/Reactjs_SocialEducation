@@ -22,7 +22,9 @@ function Index() {
                    
                         <div style={{ display:"flex", gap:"5px" }}>
                             <div style={{ width:"450px", height:"700px" }}> 
-                               <WidgetFileUpload />
+                              <WidgetFileUpload
+                                apiUrl={"http://localhost:3002/api/file/upload"}  
+                              />
                             </div>
                         </div>
                    
