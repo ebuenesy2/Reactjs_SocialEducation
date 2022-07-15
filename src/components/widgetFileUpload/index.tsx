@@ -36,7 +36,7 @@ export const Index =(props: any) => {  //console.log("widgetFileUpload props:", 
       }); //! status : upload | done | error
     }
     
-    console.log("ArrayPreview:", ArrayPreview);
+    //console.log("ArrayPreview:", ArrayPreview);
     setFileUploadFiles(ArrayPreview); //! Verileri güncelliyor    
     
     //! File Upload 
@@ -55,7 +55,7 @@ export const Index =(props: any) => {  //console.log("widgetFileUpload props:", 
         onUploadProgress: (progressEvent: any) => {
           const { loaded, total } = progressEvent;
           let percent = Math.floor(loaded * 100 / total); //! Yüzdelik
-          console.log("indexFiles: "+indexFiles +" -  "+loaded + 'kb of ' + total + 'kb | ' + percent + '%'); //! Yükleme Bilgileri
+          //console.log("indexFiles: "+indexFiles +" -  "+loaded + 'kb of ' + total + 'kb | ' + percent + '%'); //! Yükleme Bilgileri
           
                      
           //! FileUploadState
@@ -76,14 +76,14 @@ export const Index =(props: any) => {  //console.log("widgetFileUpload props:", 
       //Post
       await axios.post(url, data, options).then((response) => {
         // alert("yüklendi");  console.log("yüklendi");
-        console.log("responseData:", response.data);
+        // console.log("responseData:", response.data);
            
         //! FileUploadState
         let temp_state = [...ArrayPreview];
         let temp_element = { ...temp_state[indexFiles] };
         
         temp_element.status = response.data.status === 1 ? "done" : "error";
-        temp_element.name = response.data.DB.fileId;
+        temp_element.name = response.data.status === 1 ? response.data.DB.fileId : temp_element.name;
         temp_element.size = response.data.DB.fileSizeConvert;
 
         temp_state[indexFiles] = temp_element;
