@@ -40,15 +40,15 @@ export const Index =(props: any) => {  //console.log("widgetFileUpload props:", 
     setFileUploadFiles(ArrayPreview); //! Verileri güncelliyor    
     
     //! File Upload 
-    const url = 'http://localhost:3002/api/file/upload';
+    const url = props.apiUrl;
     
     for (var indexFiles = 0; indexFiles < acceptedFiles.length; indexFiles++) {
       //! File
       let data = new FormData();
       data.append('file', acceptedFiles[indexFiles]);
-      data.append('role', 'role admin');
-      data.append('usedPage', 'user');
-      data.append('created_byToken', 'created_byToken');
+      data.append('role', props.postRole ? props.postRole : "role admin");
+      data.append('usedPage', props.postUsedPage ? props.postUsedPage : "user");
+      data.append('created_byToken', props.postCreated_byToken ? props.postCreated_byToken : "created_byToken");
 
       const options = {
         headers: { 'content-type': 'multipart/form-data' },
@@ -104,15 +104,15 @@ export const Index =(props: any) => {  //console.log("widgetFileUpload props:", 
     
   return ( 
   <>
-     <div className="fileUploadWrapper" >
-        <header className="fileUploadWrapperHeader" >File Upload</header>
+     <div className="fileUploadWrapper"  style={{ backgroundColor: props.backgroundColor ? props.backgroundColor : "#43B37A" }} >
+        <header className="fileUploadWrapperHeader" style={{ color: props.colorTitle ? props.colorTitle : "black", fontSize: props.fontSizeTitle ? props.fontSizeTitle : "16px", fontWeight:props.fontWeightTitle ? props.fontWeightTitle : "700"  }}  >{props.title ? props.title : "File Upload"} </header>
         <form action="#">
           <div className="fileUploadWrapperFormFlex" >
             <div {...getRootProps()}>
               <input {...getInputProps()} />
               <div className="fileUploadWrapperFormFlexInput">
                 <CloudUploadIcon className="fileUploadWrapperFormFlexIcon" />
-                <p className="fileUploadWrapperFormFlexText" > Browse File to Upload or Drag and drop your images here </p>
+                <p className="fileUploadWrapperFormFlexText"  style={{ color: props.colorUploadTitle ? props.colorUploadTitle : "black", fontSize: props.fontSizeUploadTitle ? props.fontSizeUploadTitle : "16px", fontWeight:props.fontWeightUploadTitle ? props.fontWeightUploadTitle : "700"  }} > {props.uploadTitle ? props.uploadTitle : "Browse File to Upload or Drag and drop your files here"} </p>
               </div>              
             </div>
           </div>
